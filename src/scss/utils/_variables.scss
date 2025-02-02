@@ -1,0 +1,64 @@
+@use 'utils/mixins' as mixin;
+:root {
+    --black: #000;
+    --gray: #838383;
+    --accent: #BAFE35;
+    --light-gray: #F9F9F9;
+    --mid-gray: #F4F4F4;
+}
+
+.wrapper {
+    @include mixin.wrapper;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    padding: 0 2em;
+    height: 68px;
+    border: none;
+    border-radius: 1em;
+    font-family: 'Stolzl';
+    gap: .5em;
+    cursor: pointer;
+    svg {
+        width: 22px;
+        height: 22px;
+    }
+    &.btn--primary {
+        background-color: var(--black);
+        color: #fff;
+        svg path {
+            fill: #fff;
+        }
+        svg {
+            stroke: #fff;
+        }
+    }
+}
+
+a.hovered {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        height: 12px;
+        left: -1px;
+        right: -1px;
+        transform-origin: 50% 100%;
+        transform: scale(0.98, 0) translateZ(0px);
+        backface-visibility: hidden;
+        z-index: -1;
+        display: inline-block;
+        background: 0% 0% / 100% 100% repeat-x rgb(186, 254, 53);
+        transition: transform 0.38s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    &:hover {
+        &::before {
+            transform: scale(1) translateZ(0px);
+        }
+    }
+}

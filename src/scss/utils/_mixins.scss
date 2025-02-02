@@ -1,0 +1,6 @@
+@mixin wrapper($dflex: flex, $align: center, $justify: space-between, $gap: 0 ) {
+    display: $dflex;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}

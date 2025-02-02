@@ -1,0 +1,14 @@
+@use 'utils/mixins' as mixin;
+.header {
+    padding: 32px 0;
+    &__logo {
+        width: 141px;
+        height: 38px;
+    }
+    &__nav {
+        ul {
+            @include mixin.wrapper($justify: flex-start, $gap: 24px);
+            width: fit-content;
+        }
+    }
+}
