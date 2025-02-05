@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+.projects {
+    &__desk {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        margin-top: 6.125em;
+    }
+    &__item {
+        width: 50%;
+        border-radius: 3.5em;
+        &:not(.image) {
+            height: 441px;
+            background-color: var(--light-gray);
+            padding: 2em 4em;
+        }
+        &.image {
+            height: 456px;
+        }
+    }
+    .project {
+        overflow: hidden;
+        position: relative;
+        &-title {
+            font-size: 3.5em;
+            text-transform: uppercase;
+            margin-top: 3.25rem;
+        }
+        &-info {
+            max-width: 432px;
+        } 
+        .digit {
+            font-size: 400px;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1;
+            font-family: 'Ubuntu';
+            font-weight: 600;
+            transform: translateY(41%);
+            &.shaded {
+                color: var(--gray);
+                transform: translateY(-70%);
+            }
+        }
+        .globe {
+            position: absolute;
+            right: 42px;
+            top: 47px;
+            svg {
+                fill: #000;
+                stroke: #000;
+                path {
+                    fill: #000;
+                    stroke: #000;
+                }
+                
+            }
+        }
+        .last-txt {
+            position: absolute;
+            right: 48px;
+            bottom: 36px;
+            max-width: 450px;
+            text-align: right;
+        }
+    }
+}

@@ -4,3 +4,7 @@
     justify-content: $justify;
     gap: $gap;
 }
+
+@function tint($color, $percent: $mix-percent-default){
+	@return mix(white, $color, $percent);
+}

@@ -70,3 +70,38 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Helvetica';
+    src: url('HelveticaNeue-Light.otf');
+    src: local('Helvetica'), local('Helvetica'),
+        url('HelveticaNeue-Light.otf') format('otf');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('HelveticaNeue-Roman.otf');
+    src: local('Helvetica'), local('Helvetica'),
+        url('HelveticaNeue-Roman.otf') format('otf');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('HelveticaNeue-Medium.otf');
+    src: local('Helvetica'), local('Helvetica'),
+        url('HelveticaNeue-Medium.otf') format('otf');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('HelveticaNeue-Bold.otf');
+    src: local('Helvetica'), local('Helvetica'),
+        url('HelveticaNeue-Bold.otf') format('otf');
+    font-weight: 600;
+    font-style: normal;
+}
