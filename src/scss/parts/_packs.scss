@@ -1,0 +1,86 @@
+.packs {
+    &__wrapper {
+        display: flex;
+        gap: 90px;
+    }
+    &__title {
+        width: 35%;
+    }
+    &__content {
+        width: calc(65% - 91px);
+    }
+    .accordion {
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 3em;
+            gap: 2em;
+            span {
+                width: calc(100% - 2em);
+            }
+            svg {
+                width: 28px;
+                height: 28px;
+                transition: all .2s linear;
+            }
+            &.active {
+                svg {
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+        &-content {
+            display: none;
+            .content {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 2em;
+            }
+            .text {
+                color: var(--gray);
+            }
+            .price {
+                margin-top: 3em;
+                font-weight: 500;
+                display: block;
+            }
+            .left {
+                width: 55%;
+            }
+            .list {
+                width: 35%;
+                display: flex;
+                flex-direction: column;
+                gap: 0.85em;
+                li {
+                    position: relative;
+                    padding-left: 30px;
+                    color: var(--gray);
+                    &:before {
+                        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M5.96421 12.1566C5.73325 12.1564 5.50947 12.0763 5.33087 11.9299L2.3442 9.48322C1.93582 9.12845 1.8836 8.51323 2.22636 8.0947C2.56912 7.67618 3.18256 7.60611 3.61087 7.93656L5.92421 9.82989L12.5909 3.68989C12.8415 3.39194 13.2422 3.2665 13.6179 3.36839C13.9937 3.47028 14.2761 3.78098 14.3418 4.16471C14.4076 4.54843 14.2446 4.93542 13.9242 5.15656L6.64421 11.8899C6.46 12.0625 6.21664 12.1579 5.96421 12.1566Z' fill='%23000000'/%3E%3C/svg%3E");
+                        width: 21px;
+                        height: 21px;
+                        border-radius: 50%;
+                        background-color: var(--accent);
+                        padding: 3px;
+                        position: absolute;
+                        left: 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 21px;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+        }
+        &-item {
+            border-bottom: 1px solid var(--gray);
+            padding: 3rem 0;
+            &:first-child {
+                padding-top: 0;
+            }
+        }
+    }
+}

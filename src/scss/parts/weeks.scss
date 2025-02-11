@@ -1,0 +1,107 @@
+.weeks {
+    min-height: 300vh;
+    --width: 50%;
+    --scale: 1;
+    --color-opacity: 0;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5em;
+        min-height: 300vh;
+
+        // &:after {
+        //     content: '';
+        //     display: block;
+        //     flex: 1 1 300vh;
+        //     order: 9;
+        // }
+    }
+
+    .image {
+        position: sticky;
+        top: 100px;
+        width: var(--width);
+        scale: var(--scale);
+        height: 100vh;
+
+        img {
+            border-radius: 3.5em;
+            height: 665px;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+
+    .inner {
+        position: sticky;
+        top: 100px;
+        left: calc(55% + 3.5em);
+        width: calc(45% - 3.5em);
+    }
+
+    .mask-text {
+        --scale: 8;
+        --color-opacity: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        transition: opacity linear .5s;
+
+
+        svg {
+            // position: absolute;
+            // width: 100%;
+            // height: 100%;
+            // top: 0;
+            // left: 0;
+            // transform: scale(300);
+            // opacity: 0;
+
+            text {
+                font-size: 100px;
+                font-weight: bold;
+                fill: white;
+                background: linear-gradient(90deg, rgba(255, 223, 101, var(--color-opacity)) 0, rgba(255, 193, 101, var(--color-opacity)) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+
+    .image-gradient-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, var(--accent) 0%, #FFC165 100%);
+        opacity: var(--color-opacity);
+        /* регулируйте прозрачность по необходимости */
+    }
+
+    .main-image {
+        object-fit: cover;
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    .masked-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+    }
+
+    .masked-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

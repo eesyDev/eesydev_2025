@@ -7,6 +7,10 @@
       transform: translateY(-10px);
     }
   }
+
+.op-16 {
+    opacity: .16;
+}
 .u-pointer {
     pointer-events: none;
 }
@@ -162,7 +166,7 @@
                 left: 0;
                 bottom: 0;
                 right: 0;
-                background-color: #b4e300;
+                background-color: #bafe35;
                 z-index: -1;
                 transform-origin: center top;
                 transform: scale3d(1, 0, 1);
@@ -261,11 +265,6 @@
         left: 0%;
         right: 0%;
     }
-    // &-canvas-wrapper {
-    //     width: 120vw;
-    //     margin-left: -10vw;
-    //     position: relative;
-    // }
     &-main-path {
         position: relative;
         width: 100%;
@@ -337,13 +336,6 @@
                 margin-top: 35px;
             }
         }
-        // &-right-p2, &-right-p3 {
-        //     margin-top: 35px;
-        // }
-    }
-    .u-hscroll-wrapper {
-        position: relative;
-        height: 600vh;
     }
     .u-hscroll {
         position: sticky;
