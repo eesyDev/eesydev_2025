@@ -1,0 +1,73 @@
+.contacts {
+    padding: 5.125em 0;
+    background-color: var(--light-gray);
+    position: relative;
+    overflow: hidden;
+    height: 996px;
+    &__wrapper {
+        display: flex;
+        gap: 2em;
+    }
+    &__title {
+        width: 41%;
+    }
+    &__row {
+        width: calc(100% - (41% + 2em));
+        display: flex;
+        gap: 100px;
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        .divider {
+            display: block;
+            background-color: #000;
+            height: 3px;
+            width: 27px;
+        }
+        .worktime {
+            display: flex;
+            flex-direction: column;
+        }
+        .socials {
+            display: flex;
+            gap: 8px;
+            .social {
+                width: 32px;
+                height: 32px;
+                padding: 4px;
+                border: 1px solid #000;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 100%;
+                transition: all .3s ease-in-out;
+                svg {
+                    width: 18px;
+                    height: 18px;
+                }
+                &:hover {
+                    background-color: #000;
+                    svg {
+                        path {
+                            fill: var(--accent);
+                            // stroke: var(--accent);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .txt-large {
+        position: absolute;
+        font-size: 472px;
+        line-height: 392px;
+        font-weight: 500;
+        left: -198px;
+        bottom: -125px;
+        .gray {
+            color: var(--gray);
+        }
+    }
+}

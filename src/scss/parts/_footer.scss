@@ -1,0 +1,59 @@
+.footer {
+    background-color: var(--black);
+    padding: 3.5em 0;
+    color: #fff;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding-right: 208px;
+    }
+    &__right {
+        display: flex;
+        gap: 108px;
+    }
+    .motto {
+        max-width: 190px;
+        margin-top: 21px;
+    }
+    .socials {
+        margin-top: 3em;
+        display: flex;
+        gap: 24px;
+        .social {
+            width: 50px;
+            height: 50px;
+            border: 1px solid var(--gray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all .2s ease-in-out;
+            &:hover {
+                background-color: var(--accent);
+                svg {
+                    path {
+                        fill: var(--black);
+                        // stroke: var(--accent);
+                    }
+                }
+            }
+        }
+        
+    }
+    .copyright {
+        margin-top: 40px;
+    }
+    .title {
+        font-weight: 600;
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+    }
+}

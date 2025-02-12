@@ -1,0 +1,98 @@
+.circle {
+    animation: pulse 1.5s infinite;
+    opacity: 0.2;
+  }
+  
+  #circle1 { animation-delay: 0s; }
+  #circle2 { animation-delay: 0.2s; }
+  #circle3 { animation-delay: 0.5s; }
+  #circle4 { animation-delay: 0.8s; }
+  #circle5 { animation-delay: 1.1s; }
+  
+  @keyframes pulse {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+  }
+  
+  .input-group {
+    position: relative;
+    input, .input {
+      width: 100%;
+      padding: 10px 10px 32px 10px;
+      border: none;
+      border-bottom: 1px solid var(--gray);
+      outline: none;
+      font-size: 16px;
+      &.input-large {
+        padding: 10px 10px 100px 10px;
+        ~ label {
+          top: 10px;
+          &.active {
+            top: -10px;
+          }
+        }
+      }
+    }
+    label {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      // background-color: white;
+      padding: 0 5px;
+      color: var(--gray);
+      transition: 0.2s ease all;
+      pointer-events: none;
+    }
+  }
+  
+  /* Анимация при фокусе или когда поле заполнено */
+  .input-group input:focus ~ label, .input-group label.active  {
+    top: -10px;
+    font-size: 12px;
+    color: #37d536;
+  }
+  
+  .input-group input:focus {
+    border-color: #37d536;
+  }
+
+  .form-section {
+    &__heading {
+      display: flex;
+      justify-content: space-between;
+    }
+    .form-row {
+      margin-top: 48px;
+    }
+    .btn {
+      margin-top: 48px;
+    }
+    &__form {
+      margin-top: .5em;
+    }
+    &__socials {
+      display: flex;
+      flex-direction: column;
+      width: 50px;
+      gap: 1.5em;
+      a {
+        width: 50px;
+        height: 50px;
+        border: 1px solid var(--gray);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .2s ease-in-out;
+        &:hover {
+          background-color: var(--accent);
+          border: 1px solid var(--accent);
+        }
+        svg {
+          width: 18px;
+          height: 18px;
+        }
+      }
+    }
+  }
