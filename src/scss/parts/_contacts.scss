@@ -3,7 +3,7 @@
     background-color: var(--light-gray);
     position: relative;
     overflow: hidden;
-    height: 996px;
+    height: 756px;
     &__wrapper {
         display: flex;
         gap: 2em;
@@ -61,11 +61,14 @@
     }
     .txt-large {
         position: absolute;
-        font-size: 472px;
-        line-height: 392px;
+        font-size: 382px;
+        line-height: 312px;
         font-weight: 500;
-        left: -198px;
-        bottom: -125px;
+        left: -98px;
+        bottom: -95px;
+        max-width: 1814px;
+        text-align: right;
+        pointer-events: none;
         .gray {
             color: var(--gray);
         }

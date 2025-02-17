@@ -1,0 +1,77 @@
+<div class="dialogs">
+    <div class="close-bg"></div>
+    <div class="flex-popup">
+        <div class="popup" id="call">
+            <div class="popup__wrapper">
+                <div class="close">
+                    <svg class="ico">
+                        <use xlink:href="/assets/img/sprite.svg#ico-close"></use>
+                    </svg>
+                </div>
+                <div class="popup__content">
+                    <h5 class="h5">Обратный звонок</h5>
+                    <form method="POST" class="popup__form">
+                        <div class="input-group w-1_3">
+                            <input type="text" id="name" name="name" class="input inpt-name" data-required="true"
+                                data-error="Please fill this field">
+                            <label for="name">Ваше имя *</label>
+                        </div>
+                        <div class="input-group w-1_3">
+                            <input type="tel" id="tel" name="tel" class="input inpt-tel" data-required="true"
+                                data-error="Please fill this field">
+                            <label for="tel">Номер телефона *</label>
+                        </div>
+                        <div class="input-group w-full">
+                            <input type="text" id="message" name="message" class="input input-large inpt-message"
+                                data-error="Please fill this field">
+                            <label for="message">Сообщение (опционально)</label>
+                        </div>
+                        <div class="input-group w-full">
+                            <p class="form-description">Нажимая отправить, Вы даете согласие на обработку ваших данных и соглашаетесь с нашей <a href="#policy" class="underlined">политикой конфиденциальности</a></p>
+                        </div>
+                        <button class="btn btn--primary" type="submit">
+                            Оставить заявку
+                        </button>
+                        <input type="hidden" name="action" value="call">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="consultation">
+            <div class="popup__wrapper">
+                <div class="close">
+                    <svg class="ico">
+                        <use xlink:href="/assets/img/sprite.svg#ico-close"></use>
+                    </svg>
+                </div>
+                <div class="popup__content">
+                    <h5 class="h5">Консультация</h5>
+                    <form method="POST" class="popup__form">
+                        <div class="input-group w-1_3">
+                            <input type="text" id="name" name="name" class="input inpt-name" data-required="true"
+                                data-error="Please fill this field">
+                            <label for="name">Ваше имя *</label>
+                        </div>
+                        <div class="input-group w-1_3">
+                            <input type="tel" id="tel" name="tel" class="input inpt-tel" data-required="true"
+                                data-error="Please fill this field">
+                            <label for="tel">Номер телефона *</label>
+                        </div>
+                        <div class="input-group w-full">
+                            <input type="text" id="message" name="message" class="input input-large inpt-message"
+                                data-error="Please fill this field">
+                            <label for="message">Сообщение (опционально)</label>
+                        </div>
+                        <div class="input-group w-full">
+                            <p class="form-description">Нажимая отправить, Вы даете согласие на обработку ваших данных и соглашаетесь с нашей <a href="#policy" class="underlined">политикой конфиденциальности</a></p>
+                        </div>
+                        <button class="btn btn--primary" type="submit">
+                            Оставить заявку
+                        </button>
+                        <input type="hidden" name="action" value="call">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,3 +12,29 @@
         }
     }
 }
+
+@media screen and (max-width: 1350px) {
+    .header {
+        &__nav {
+            font-size: 14px;
+            ul {
+                gap: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .header {
+        &__nav {
+            ul {
+                gap: 16px;
+            }
+        }
+        &__logo {
+            width: 110px;
+            height: 28px;
+        }
+    }
+
+}

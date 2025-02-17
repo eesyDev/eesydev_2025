@@ -1,6 +1,6 @@
 <section class="form-section">
     <div class="container">
-        <div class="form-section__wrapper">
+        <div class="form-section__wrapper stagger-in">
             <div class="form-section__heading">
                 <h2 class="h2 imaged">Наши <span class="gray">контакты</span> и форма
                     <div class="row">
@@ -61,10 +61,10 @@
                 </div>
             </div>
             <div class="form-section__form">
-                <form action="">
+                <form method="POST">
                     <div class="form-row row gap-2">
                         <div class="input-group w-1_3">
-                            <input type="text" id="name" name="name" required class="input inpt-name" data-required="true" data-error="Please fill this field">
+                            <input type="text" id="name" name="name" class="input inpt-name" data-required="true" data-error="Please fill this field">
                             <label for="name">Ваше имя *</label>
                           </div>
                           <div class="input-group w-1_3">
@@ -72,7 +72,7 @@
                             <label for="email">Email </label>
                           </div>
                           <div class="input-group w-1_3" >
-                            <input type="tel" id="tel" name="tel" required class="input inpt-email" data-required="true" data-error="Please fill this field">
+                            <input type="tel" id="tel" name="tel" class="input inpt-tel" data-required="true" data-error="Please fill this field">
                             <label for="tel">Номер телефона *</label>
                           </div>
                     </div>
@@ -82,12 +82,13 @@
                             <label for="message">Сообщение (опционально)</label>
                           </div>
                     </div>
-                    <button class="btn btn--primary">
+                    <button class="btn btn--primary" type="submit">
                         Оставить заявку
                         <svg>
                             <use xlink:href="assets/img/sprite.svg#arrow-right-white"></use>
                         </svg>
                     </button>
+                    <input type="hidden" name="action" value="call">
                 </form>
             </div>
         </div>

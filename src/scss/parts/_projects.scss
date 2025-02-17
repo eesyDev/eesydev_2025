@@ -11,27 +11,32 @@
         width: 50%;
         border-radius: 3.5em;
         &:not(.image) {
-            height: 441px;
+            height: 350px;
             background-color: var(--light-gray);
             padding: 2em 4em;
         }
         &.image {
-            height: 456px;
+            height: 365px;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 3.5em;
+            }
         }
     }
     .project {
         overflow: hidden;
         position: relative;
         &-title {
-            font-size: 3.5em;
+            font-size: 2.75em;
             text-transform: uppercase;
-            margin-top: 3.25rem;
+            margin-top: 2.5rem;
         }
         &-info {
             max-width: 432px;
         } 
         .digit {
-            font-size: 400px;
+            font-size: 330px;
             text-align: center;
             font-weight: 600;
             line-height: 1;
@@ -63,6 +68,83 @@
             bottom: 36px;
             max-width: 450px;
             text-align: right;
+        }
+    }
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    // padding-bottom: 100px;
+}
+
+.projects__desk {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.projects__desk.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+.slider-nav {
+    position: absolute;
+    bottom: 25px;
+    left: auto;
+    right: 25px;
+    // transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        svg {
+            width: 30px;
+            height: 30px;
+
+        }
+        &:hover {
+            svg path {
+                fill: var(--accent);
+            }
+        }
+    }
+    a {
+        font-weight: 600;
+        font-size: 1.25em;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .projects {
+        &__item {
+            border-radius: 2.5em;
+            &:not(.image) {
+                height: 300px;
+                padding: 1.5em 3em;
+            }
+            &.image {
+                height: 315px;
+                img {
+                    border-radius: 2.5em;
+                }
+            }
+        }
+        .project {
+            .digit {
+                font-size: 290px;
+                transform: translateY(36%);
+                &.shaded {
+                    transform: translateY(-66%);
+                }
+            }
         }
     }
 }

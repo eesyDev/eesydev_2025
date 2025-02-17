@@ -100,3 +100,70 @@ p {
         width: calc(33.33% - ((var(--gap) * 2) / 3));
     }
 }
+
+@media screen and (max-width: 1350px) {
+    .container {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    h1, .h1 {
+        font-size: 6em;
+    }
+    
+    h2, .h2 {
+        font-size: 4em;
+    }
+    
+    h3, .h3 {
+        font-size: 3.5em;
+    }
+    
+    h4, .h4 {
+        font-size: 3em;
+    }
+    
+    h5, .h5 {
+        font-size: 2.5em;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    body {
+        font-size: 14px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .container {
+        padding-left: 48px;
+        padding-right: 48px;
+    }
+
+    h1, .h1 {
+        font-size: 5.5em;
+    }
+    
+    h2, .h2 {
+        font-size: 3.5em;
+        &.imaged {
+            img {
+                width: 110px;
+            }
+            .row {
+                margin-top: 12px;
+            }
+        }
+    }
+    
+    h3, .h3 {
+        font-size: 3em;
+    }
+    
+    h4, .h4 {
+        font-size: 2.5em;
+    }
+    
+    h5, .h5 {
+        font-size: 2em;
+    }
+}

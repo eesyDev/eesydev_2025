@@ -5,6 +5,7 @@
     --accent: #BAFE35;
     --light-gray: #F9F9F9;
     --mid-gray: #F4F4F4;
+    --error: #e64832;
 }
 
 .wrapper {
@@ -25,6 +26,7 @@
     font-weight: 500;
     letter-spacing: 0.35px;
     cursor: pointer;
+    position: relative;
     svg {
         width: 22px;
         height: 22px;
@@ -35,23 +37,23 @@
         overflow: hidden;
         position: relative;
         &:after {
-            background: #fff;
+            background: #ffffff;
             content: "";
             height: 155px;
             left: -75px;
-            opacity: .2;
+            opacity: .35;
             position: absolute;
             top: -50px;
             transform: rotate(35deg);
-            transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
-            width: 50px;
+            transition: all 850ms cubic-bezier(0.19, 1, 0.22, 1);
+            width: 40px;
             z-index: 0;
           }
           &:hover {
   
             &:after {
               left: 120%;
-              transition: all 550ms cubic-bezier(0.19, 1, 0.22, 1);
+              transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
             }
         }
         svg path {
@@ -66,11 +68,25 @@
         background-color: var(--accent);
         border-color: var(--black);
         transition: all 0.15s;
-        &:hover {
-            box-shadow: inset 0 2.75em 0em 0em var(--black),
-            inset 0 -2.75em 0em 0em var(--black);
-            border-color: var(--black);
-            color: #fff;
+        &:after {
+            background: #fff;
+            content: "";
+            height: 155px;
+            left: -75px;
+            opacity: .25;
+            position: absolute;
+            top: -50px;
+            transform: rotate(35deg);
+            transition: all 850ms cubic-bezier(0.19, 1, 0.22, 1);
+            width: 50px;
+            z-index: 0;
+          }
+          &:hover {
+  
+            &:after {
+              left: 120%;
+              transition: all 850ms cubic-bezier(0.19, 1, 0.22, 1);
+            }
         }
         svg path {
             fill: var(--black);
@@ -78,6 +94,13 @@
         svg {
             stroke: var(--black);
         }
+    }
+    @media screen and (max-width: 1350px) {
+        height: 56px;
+        padding: 0 24px;
+    }
+    @media screen and (max-width: 1250px) {
+        font-size: 14px;
     }
 }
 
@@ -112,6 +135,22 @@ a.hovered {
     }
 }
 
+a.underlined {
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    display: block;
+    &:before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        height: 1px;
+        left: -1px;
+        right: -1px;
+        background-color: var(--black);
+    }
+}
+
 .spacer {
     display: block;
     &.spacer--8 {
@@ -121,3 +160,4 @@ a.hovered {
         height: 12em;
     }
 }
+
