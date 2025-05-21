@@ -233,4 +233,13 @@ console.log('popup')
     }
     );
     wow.init();
+
+    $('.header__burger').on('click', function() {
+        $(this).toggleClass('active');
+        if ($(this).hasClass('active')) {
+            $('.burger-menu').addClass('active');
+        } else {
+            $('.burger-menu').removeClass('active');
+        }
+    })
 })(jQuery);

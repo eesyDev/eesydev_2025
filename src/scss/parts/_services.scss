@@ -34,3 +34,18 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .services {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__item {
+            width: calc(50% - 0.75em);
+            border-radius: 1.5em;
+            &:last-child {
+                width: 100%;
+            }
+        }
+    }
+}

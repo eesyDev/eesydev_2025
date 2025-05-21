@@ -74,3 +74,34 @@
         }
     }
 }
+
+@media screen and (max-width: 1250px) {
+    .contacts {
+        height: 570px;
+        .txt-large {
+            font-size: 220px;
+            line-height: 180px;
+            left: -440px;
+            bottom: -50px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .contacts {
+        height: 530px;
+        &__title {
+            font-size: 1.5em;
+            width: 35%;
+        }
+        &__row {
+            width: calc(100% - (35% + 2em));
+        }
+        .txt-large {
+            font-size: 200px;
+            line-height: 160px;
+            left: -550px;
+            bottom: -50px;
+        }
+    }
+}

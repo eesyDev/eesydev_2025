@@ -84,3 +84,17 @@
         }
     }
 }
+
+@media screen and (max-width: 1250px) {
+    .packs {
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__title {
+            width: 100%;
+        }
+        &__content {
+            width: 100%;
+        }
+    }
+}

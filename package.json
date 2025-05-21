@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
-  "author": "tactic.team",
+  "author": "eesydev.team",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.29.3",

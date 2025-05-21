@@ -99,3 +99,21 @@
         }
     }
 }
+
+@media screen and (max-width: 1024px) {
+    .hero {
+        .h1.huge {
+            font-size: 5.5em;
+        }
+        &__illustr {
+            max-width: 320px;
+            .globe {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .h3 {
+            font-size: 2.2em;
+        }
+    }
+}

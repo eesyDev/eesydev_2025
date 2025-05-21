@@ -101,6 +101,7 @@
     }
     @media screen and (max-width: 1250px) {
         font-size: 14px;
+        padding: 0 16px;
     }
 }
 
@@ -158,6 +159,12 @@ a.underlined {
     }
     &.spacer--12 {
         height: 12em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .spacer.spacer--12 {
+        height: 10em;
     }
 }
 

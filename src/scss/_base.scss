@@ -5,6 +5,9 @@
 }
 body {
     font-family: 'Stolzl';
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 .container {
     width: 100%;
@@ -165,5 +168,12 @@ p {
     
     h5, .h5 {
         font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding-left: 36px;
+        padding-right: 36px;
     }
 }
