@@ -1,5 +1,4 @@
 (function ($) {
-	console.log('j')
     window.App = window.App || {};
 
     App.isScrollTopBody  = true;
@@ -42,7 +41,6 @@
 	// opening popups
     App.$body.on('click touch', '.open-dialog, .open-popup, .open-form, .open-modal', function (event) {
         event.preventDefault();
-console.log('popup')
         const category = $(this).attr('href');
         const $dialogs = $('.dialogs');
         const $categoryDialogs = $dialogs.find(category);
@@ -241,5 +239,24 @@ console.log('popup')
         } else {
             $('.burger-menu').removeClass('active');
         }
-    })
+    });
+    $(document).ready(function() {
+        $(".cases-img").on("load", function() {
+          $(this).closest(".cases-shot-loader").hide();
+        });
+      });
+      
+      
+      $(document).ready(function() {
+        $(".tab-nav a").click(function(event) {
+          event.preventDefault();
+          var tabId = $(this).attr("href");
+          
+          $(".tab-nav li").removeClass("active");
+          $(this).parent().addClass("active");
+          
+          $(".tab-content").removeClass("active");
+          $(tabId).addClass("active");
+        });
+      });
 })(jQuery);

@@ -1,10 +1,14 @@
 'use strict';
 
 import gulp from 'gulp';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import tailwindcss from 'tailwindcss';
 import prefixer from 'gulp-autoprefixer';
 import uglify from 'gulp-uglify';
 import dartSass from 'gulp-dart-sass';
-import rigger from 'gulp-rigger';
+// import rigger from 'gulp-rigger';
+import fileInclude from 'gulp-file-include';
 import cleanCSS from 'gulp-clean-css';
 import imagemin from 'gulp-imagemin';
 import mozjpeg from 'imagemin-mozjpeg';
@@ -79,13 +83,21 @@ gulp.task('clean', async function () {
 
 // Задачи сборки
 
-gulp.task('html:build', async function () {
+/* gulp.task('html:build', async function () {
     return gulp.src(projectPaths.src.html)
         .pipe(rigger())
         .pipe(gulp.dest(projectPaths.build.html))
         .pipe(browserSync.stream());
-});
-
+}); */
+gulp.task('html:build', function () {
+    return gulp.src(projectPaths.src.html)
+      .pipe(fileInclude({
+        prefix: '@@',
+        basepath: '@file'
+      }))
+      .pipe(gulp.dest(projectPaths.build.html))
+      .pipe(browserSync.stream());
+  });
 gulp.task('js:build', async function () {
     return gulp.src(projectPaths.src.js)
         .pipe(sourcemaps.init())
@@ -96,11 +108,26 @@ gulp.task('js:build', async function () {
         .pipe(browserSync.stream());
 });
 
+// gulp.task('style:build', async function () {
+//     return gulp.src(projectPaths.src.style)
+//         .pipe(sourcemaps.init())
+//         .pipe(dartSass().on('error', dartSass.logError))
+//         .pipe(prefixer())
+//         .pipe(cleanCSS())
+//         .pipe(sourcemaps.write('.'))
+//         .pipe(gulp.dest(projectPaths.build.css))
+//         .pipe(gulp.dest(projectPaths.wp.css))
+//         .pipe(browserSync.stream());
+// });
+
 gulp.task('style:build', async function () {
     return gulp.src(projectPaths.src.style)
         .pipe(sourcemaps.init())
         .pipe(dartSass().on('error', dartSass.logError))
-        .pipe(prefixer())
+        .pipe(postcss([
+            tailwindcss(),
+            autoprefixer()
+        ]))
         .pipe(cleanCSS())
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(projectPaths.build.css))

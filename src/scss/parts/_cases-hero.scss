@@ -1,0 +1,42 @@
+@keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+.cases-hero {
+    overflow: hidden;
+    > .container {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            left: -578px;
+            top: -622px;
+            width: 1446px;
+            height: 1346px;
+            background: radial-gradient(50.03% 50.03% at 50% 49.97%, rgba(22, 23, 26, 0) 0, #16171a 100%);
+            z-index: 1;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            left: -578px;
+            top: -622px;
+            width: 1446px;
+            height: 1346px;
+            opacity: .2;
+            z-index: -1;
+            background: linear-gradient(270deg, #fb8c61, #fdd68d 39.1%, #4eebd5 68.27%, #0e96ee);
+        }
+    }
+    &-wrapper {
+        padding-top: 180px;
+        padding-bottom: 250px;
+        position: relative;
+        z-index: 2;
+    }
+   
+}

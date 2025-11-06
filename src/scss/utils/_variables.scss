@@ -1,6 +1,7 @@
 @use 'utils/_mixins' as mixin;
 :root {
     --black: #000;
+    --dark-bg: #16171a;
     --gray: #838383;
     --accent: #BAFE35;
     --light-gray: #F9F9F9;
@@ -165,6 +166,14 @@ a.underlined {
 @media screen and (max-width: 1024px) {
     .spacer.spacer--12 {
         height: 10em;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .btn {
+        height: 44px;
+        border-radius: .75em;
     }
 }
 

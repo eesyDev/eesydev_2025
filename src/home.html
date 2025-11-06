@@ -1,29 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-//= utilities/head.html
-<body>
-    //= sections/header.html
-    //= sections/hero.html
+  @@include('utilities/head.html')
+  <body>
+    @@include('sections/header.html')
+    @@include('sections/hero.html')
+
     <div class="spacer spacer--12"></div>
-    //= sections/advantages.html
+    @@include('sections/advantages.html')
+
     <div class="spacer spacer--8"></div>
-    //= sections/request.html
+    @@include('sections/request.html')
+
     <div class="spacer spacer--8"></div>
-    //= sections/services.html
+    <!-- @@include('sections/about-us-2-words.html') -->
+
     <div class="spacer spacer--8"></div>
-    //= sections/projects.html
+    @@include('sections/services.html')
+
     <div class="spacer spacer--8"></div>
-    //= sections/work.html
+    @@include('sections/projects.html')
+
     <div class="spacer spacer--8"></div>
-    //= sections/packs.html
+    @@include('sections/work.html')
+
+    <div class="spacer spacer--8"></div>
+    @@include('sections/packs.html')
+
     <div class="spacer spacer--12"></div>
-    //= sections/video-box.html
+    @@include('sections/video-box.html')
+
     <div class="spacer spacer--8"></div>
-    //= sections/form.html
+    @@include('sections/form.html')
+
     <div class="spacer spacer--8"></div>
-    //= sections/contacts.html
-    //= sections/footer.html
-    //= sections/dialogs.html
-    //= utilities/scripts.html
-</body>
+    @@include('sections/contacts.html')
+
+    @@include('sections/footer.html')
+    @@include('sections/dialogs.html')
+    @@include('utilities/scripts.html')
+  </body>
 </html>

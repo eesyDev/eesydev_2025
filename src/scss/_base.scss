@@ -1,5 +1,8 @@
 @use 'utils/fonts';
 @use 'utils/variables';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 * {
     box-sizing: border-box;
 }
@@ -175,5 +178,12 @@ p {
     .container {
         padding-left: 36px;
         padding-right: 36px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        padding-left: 24px;
+        padding-right: 24px;
     }
 }
