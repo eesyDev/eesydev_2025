@@ -54,10 +54,12 @@ h6 {
 
 h1, .h1 {
     font-size: 6.5em;
+    line-height: normal;
 }
 
 h2, .h2 {
-    font-size: 4.5em;
+    font-size: 64px;
+    line-height: normal;
     &.imaged {
         .row {
             display: flex;
@@ -66,20 +68,40 @@ h2, .h2 {
             gap: 26px;
         }
     }
+    &.h2-block {
+        display: flex;
+        flex-direction: column;
+    }
+    &-small {
+        font-size: 24px;
+    }
+    &.h2-sm {
+        font-size: 48px;
+        line-height: normal;
+    }
 }
 
 h3, .h3 {
-    font-size: 4em;
+    font-size: 32px;
+    line-height: normal;
 }
 
 h4, .h4 {
     font-size: 3.5em;
+    line-height: normal;
 }
 
 h5, .h5 {
     font-size: 3em;
+    line-height: normal;
 }
 
+.h2-block-wrap {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
 
 p {
     font-size: 16px;
