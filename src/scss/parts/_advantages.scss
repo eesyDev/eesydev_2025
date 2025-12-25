@@ -1,22 +1,28 @@
 .advantages {
+    &__main-wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
     &__wrapper {
         display: flex;
-        margin-top: 6.125em;
+        margin-top: 20px;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: 58%;
-        margin-left: auto;
-        row-gap: 4.875em;
+        width: calc(67% - 20px);
+        row-gap: 50px;
     }
     &__item {
         width: calc(50% - 7%);
         .title {
-            margin-top: 1.5em;
-            font-size: 19px;
+            margin-top: 20px;
+            font-size: 18px;
         }
         .text {
-            margin-top: 1em;
-            
+            margin-top: 10px;
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--gray);
         }
     }
 }

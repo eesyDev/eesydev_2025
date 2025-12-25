@@ -2,24 +2,51 @@
     margin-top: 30px;
     .h1 {
         &.huge {
-            font-size: 12em;
+            font-size: 148px;
             line-height: 1;
+            font-weight: 900;
+            gap: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        &-small {
+            font-size: 32px;
+            padding-left: 15px;
         }
     }
     &__wrapper {
         position: relative;
+        align-items: flex-start;
     }
     &__info {
-        width: 66.66%;
-        .btn {
-            margin-top: 2.5em;
+        width: 58%;
+        &-txt {
+            padding-left: 15px;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 85%;
+            font-weight: 300;
+            color: var(--grey);
+        }
+    }
+    &__btn-block {
+        padding-left: 15px;
+        display: flex;
+        align-items: center;
+        margin-top: 50px;
+        gap: 30px;
+        .btn-lil-txt {
+            font-size: 12px;
         }
     }
     &__illustr {
-        position: absolute;
-        right: 0;
-        top: 0;
-        left: auto;
+        width: 40%;
+        // position: absolute;
+        // right: 0;
+        // top: 0;
+        // left: auto;
         .hero__mask {
             position: relative;
         }

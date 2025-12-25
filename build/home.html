@@ -12,23 +12,32 @@
     <div class="container">
         <div class="header__wrapper wrapper">
             <a href="" class="header__logo">
-                <img src="/assets/img/logo.svg" alt="">
+                <img src="/assets/img/logo-eezydev.svg" alt="logo">
             </a>
-            <div class="header__nav burger-menu">
-                <a href="" class="header__nav-logo">
-                    <img src="/assets/img/logo.svg" alt="">
-                </a>
-                <nav>
-                    <ul class="">
-                        <li><a href="" class="hovered">О нас</a></li>
-                        <li><a href="" class="hovered">Услуги</a></li>
-                        <li><a href="portfoilo.html" class="hovered">Портфолио</a></li>
-                        <li><a href="" class="hovered">Этапы работы</a></li>
-                        <li><a href="" class="hovered">Контакты</a></li>
-                        <li><a href="" class="hovered">Пакеты услуг</a></li>
-                    </ul>
-                </nav>
-                <div class="header__nav-cta">
+            <div class="header__right-wrapper">
+                <div class="header__nav burger-menu">
+                    <a href="" class="header__nav-logo">
+                        <img src="/assets/img/logo-eezydev.svg" alt="logo">
+                    </a>
+                    <nav>
+                        <ul class="">
+                            <li><a href="" class="hovered">Главная</a></li>
+                            <li><a href="" class="hovered">Услуги</a></li>
+                            <li><a href="portfoilo.html" class="hovered">Портфолио</a></li>
+                            <li><a href="" class="hovered">Сотрудничество</a></li>
+                            <li><a href="" class="hovered">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__nav-cta">
+                        <a href="#call" class="btn btn--primary open-popup">
+                            Оставить заявку
+                            <svg>
+                                <use xlink:href="assets/img/sprite.svg#arrow-right-white"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__cta">
                     <a href="#call" class="btn btn--primary open-popup">
                         Оставить заявку
                         <svg>
@@ -36,16 +45,8 @@
                         </svg>
                     </a>
                 </div>
+                <div class="header__burger"><span></span><span></span><span></span></div>
             </div>
-            <div class="header__cta">
-                <a href="#call" class="btn btn--primary open-popup">
-                    Оставить заявку
-                    <svg>
-                        <use xlink:href="assets/img/sprite.svg#arrow-right-white"></use>
-                    </svg>
-                </a>
-            </div>
-            <div class="header__burger"><span></span><span></span><span></span></div>
         </div>
     </div>
 </header>
@@ -54,70 +55,96 @@
         <div class="hero__wrapper wrapper">
             <div class="hero__info">
                 <h1 class="h1 huge wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
-                    Создаем сайты
+                    <span>Создаем сайты</span>
+                    <span class="h1-small wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">Которые приносят результат</span>
                 </h1>
-                <h3 class="h3 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">которые работают</h3>
-                <a href="#consultation" class="btn btn--accent btn-6 wow fadeInUp open-popup" data-wow-duration="1s" data-wow-delay="0.7s">
-                    Получить консультацию
-                    <svg>
-                        <use xlink:href="assets/img/sprite.svg#arrow-right-black"></use>
-                    </svg>
-                    <span></span>
-                </a>
+                <div class="hero__info-txt wow fadeInUp" data-wow-duration='1s' data-wow-delay='0.7s'>
+                    <span>Разрабатываем проекты любой сложности от лендингов до сложных интернет-магазинов</span>
+                    <span>Подберём решение под ваши задачи</span>
+                </div>
+                <div class="hero__btn-block">
+                    <a href="#consultation" class="btn btn--accent btn-6 wow fadeInUp open-popup" data-wow-duration="1s" data-wow-delay="1.0s">
+                        Оставить заявку
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#arrow-right-black"></use>
+                        </svg>
+                        <span></span>
+                    </a>
+                    <div class="btn-lil-txt wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.2s">Получите бесплатную консультацию <br> уже сегодня</div>
+                </div>
             </div>
-            <div class="hero__illustr wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
-                <div class="hero__mask">
+            <div class="hero__illustr wow fadeIn" data-wow-duration="2s" data-wow-delay="0s">
+                <!-- <div class="hero__mask">
                     <img src="/assets/img/masked.svg" alt="">
                     <img src="/assets/img/globe.svg" alt="" class="globe">
-                </div>
-
+                </div> -->
+                <img src="/assets/img/hero-image (1).png" alt="image-hero" class="hero-img">
             </div>
         </div>
     </div>
 </section>
 
-    <div class="spacer spacer--12"></div>
+    <div class="spacer spacer--8"></div>
     <section class="advantages">
     <div class="container">
-        <h2 class="h2 head-animated-scroll wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
-            Развивайте бизнес с нашими <span class="gray">профессиональными</span> решениями
-        </h2>
-        <div class="advantages__wrapper">
-            <div class="advantages__item stagger-in">
-                <img src="/assets/img/adv1.svg" alt="individual" class="icon">
-                    <h5 class="title">
-                        Индивидуальный подход к каждому проекту
-                    </h5>
-                    <p class="text">
-                        Не используем шаблонные решения. Разрабатываем уникальную стратегию и дизайн под ваши бизнес-цели и особенности целевой аудитории.
-                    </p>
-                </img>
-            </div>
-            <div class="advantages__item stagger-in">
-                <img src="/assets/img/adv2.svg" alt="fast" class="icon">
-                    <h5 class="title">
-                        Скорость без потери качества
-                    </h5>
-                    <p class="text">Оптимизированные процессы разработки позволяют создавать качественные проекты в короткие сроки.</p>
-                </img>
-            </div>
-            <div class="advantages__item stagger-in">
-                <img src="/assets/img/adv3.svg" alt="modern" class="icon">
-                    <h5 class="title">
-                        Современные технологии 
-                    </h5>
-                    <p class="text">
-                        Используем передовые инструменты разработки и дизайна. Ваш проект будет соответствовать последним тенденциям и останется актуальным долгое время.
-                    </p>
-                </img>
-            </div>
-            <div class="advantages__item stagger-in">
-                <img src="/assets/img/adv4.svg" alt="complex solution" class="icon">
-                    <h5 class="title">
-                        Комплексные решения
-                    </h5>
-                    <p class="text">Предоставляем полный спектр услуг: от разработки концепции до продвижения готового продукта.</p>
-                </img>
+        <div class="advantages__main-wrapper">
+            <h2 class="h2 h2-block head-animated-scroll wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
+                <span>Почему</span>
+                <span class="h2-small">Нам доверяют <span class="gray">бизнес</span><br> и агентства?</span>
+            </h2>
+            <div class="advantages__wrapper">
+                <div class="advantages__item stagger-in">
+                    <img src="/assets/img/adv1-dark.svg" alt="individual" class="icon">
+                        <h5 class="title">
+                            Гибкий формат работы
+                        </h5>
+                        <p class="text">
+                            Берём проект под ключ или подключаемся на любом этапе
+                        </p>
+                    </img>
+                </div>
+                <div class="advantages__item stagger-in">
+                    <img src="/assets/img/adv2-dark.svg" alt="fast" class="icon">
+                        <h5 class="title">
+                            Чёткие сроки
+                        </h5>
+                        <p class="text">Работаем в оговоренные сроки без переносов и «задержек на пару дней»</p>
+                    </img>
+                </div>
+                <div class="advantages__item stagger-in">
+                    <img src="/assets/img/adv3-dark.svg" alt="modern" class="icon">
+                        <h5 class="title">
+                            Понятные процессы
+                        </h5>
+                        <p class="text">
+                            Вы всегда знаете, что уже сделано и что будет дальше
+                        </p>
+                    </img>
+                </div>
+                <div class="advantages__item stagger-in">
+                    <img src="/assets/img/adv4-dark.svg" alt="complex solution" class="icon">
+                        <h5 class="title">
+                            Конкурентные цены
+                        </h5>
+                        <p class="text">Наша ценовая политика позволяет держать конкурентные цены на веб-разработку</p>
+                    </img>
+                </div>
+                <div class="advantages__item stagger-in">
+                    <img src="/assets/img/adv5-dark.svg" alt="complex solution" class="icon">
+                        <h5 class="title">
+                            Проверенные технологии
+                        </h5>
+                        <p class="text">Используем только проверенные временем технологии, которые просты и практичны в обслуживании </p>
+                    </img>
+                </div>
+                <div class="advantages__item stagger-in">
+                    <img src="/assets/img/adv6-dark.svg" alt="complex solution" class="icon">
+                        <h5 class="title">
+                            Фокус на результат
+                        </h5>
+                        <p class="text">Наша основная цель - возможное долгосрочное сотрудничество, мы заинтересованы в успешном результате не меньше вас</p>
+                    </img>
+                </div>
             </div>
         </div>
     </div>
@@ -126,9 +153,9 @@
     <div class="spacer spacer--8"></div>
     <section class="request">
     <div class="container">
-        <div class="request__wrapper block-animated-scale wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
-            <h3 class="h3">Оставьте заявку</h3>
-            <p class="paragraph">мы свяжемся с Вами в ближайшее время</p>
+        <div class="request__wrapper block-animated-scale wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
+            <h2 class="h2-sm">Оставьте заявку</h2>
+            <p class="paragraph">Мы свяжемся с Вами в ближайшее время</p>
             <button class="btn btn--primary">
                 Оставить заявку
             </button>
@@ -138,6 +165,241 @@
 
     <div class="spacer spacer--8"></div>
     <section class="two-words"></section>
+
+    <div class="spacer spacer--8"></div>
+    <section class="packs">
+    <div class="container">
+        <div class="packs__wrapper">
+            <div class="h2-block-wrap">
+                <h2 class="h2 h2-block packs__title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0s">
+                    <span>Сайты</span>
+                    <span class="h2-small"><span class="gray">Которые</span> мы создаем</span>
+                </h2>
+                <a href="" class="h2-block-link hovered-underline">Все услуги</a>
+            </div>
+            <div class="packs__content wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
+                <div class="packs__accordion accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header active">
+                            <h3 class="h3">Одностраничный сайт</h3>
+                            <i>
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#Interface_essential--Close"></use>
+                                </svg>
+                            </i>
+                        </div>
+                        <div class="accordion-content active">
+                            <div class="content">
+                                <div class="left">
+                                    <div class="txt-block">
+                                        <p class="highlight">Максимум конверсии с одной страницы</p>
+                                        <p class="text">Идеальное решение для презентации вашего бизнеса или продукта. Современный дизайн, понятная структура и все необходимые элементы для привлечения клиентов. Оптимально подходит для запуска нового продукта, услуги или для компаний, которым важно быстро начать привлекать клиентов через интернет</p>
+                                        <p class="aim"><span>Цель</span> - сбор контактных данных покупателя</p>
+                                    </div>
+                                    <div class="btn-block">
+                                        <span class="price"><span>Цена:</span> от 40 000 ₽ / 250 000 ₸</span>
+                                        <button class="btn btn--primary">Связаться</button>
+                                    </div>
+                                </div>
+                                <ul class="list">
+                                    <p>Что входит:</p>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Дизайн с упором на продажи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Адаптивная верстка</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Четкая структура: оффер, преимущества, отзывы, призыв к действию</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Весь каталог секций предусмотренный выбранной платформой</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Индивидуальный дизайн секции на Zeroblock (Tilda) при необходимости</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Формы приема заявок и обратной связи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Административная панель для редактирования контента</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Базовые анимации и оптимизация</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 class="h3">Интернет-магазин</h3>
+                            <i>
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#Interface_essential--Close"></use>
+                                </svg>
+                            </i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="content">
+                                <div class="left">
+                                    <div class="txt-block">
+                                        <p class="highlight">Продажи 24/7</p>
+                                        <p class="text">Онлайн-площадка, которая продаёт без выходных. Удобный каталог, быстрая корзина и готовность к росту продаж. От нескольких товаров до крупных каталогов продукции для бизнеса любого масштаба</p>
+                                        <p class="aim"><span>Цель</span> - продажа товаров вашей компании через интернет (Ecommerce)</p>
+                                    </div>
+                                    <div class="btn-block">
+                                        <span class="price"><span>Цена:</span> от 100 000 ₽ / 650 000 ₸</span>
+                                        <button class="btn btn--primary">Связаться</button>
+                                    </div>
+                                </div>
+                                <ul class="list">
+                                    <p>Что входит:</p>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Дизайн с упором на продажи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Адаптивная верстка</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Четкая структура: оффер, преимущества, отзывы, призыв к действию</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Весь каталог секций предусмотренный выбранной платформой</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Индивидуальный дизайн секции на Zeroblock (Tilda) при необходимости</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Формы приема заявок и обратной связи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Административная панель для редактирования контента</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Базовые анимации и оптимизация</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 class="h3">Корпоративный сайт</h3>
+                            <i>
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#Interface_essential--Close"></use>
+                                </svg>
+                            </i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="content">
+                                <div class="left">
+                                    <div class="txt-block">
+                                        <p class="highlight">Лицо вашей компании</p>
+                                        <p class="text">Подробно рассказывает о компании, услугах, истории и ценностях. Помогает сформировать правильное впечатление, выделиться среди конкурентов и укрепить позиции бренда в глазах клиентов и партнёров. Для бизнеса, который хочет показать экспертность и надёжность в своей сфере</p>
+                                        <p class="aim"><span>Цель</span> - формирование доверия и привлечение партнёров или клиентов</p>
+                                    </div>
+                                    <div class="btn-block">
+                                        <span class="price"><span>Цена:</span> от 150 000 ₽ / 1 000 000 ₸</span>
+                                        <button class="btn btn--primary">Связаться</button>
+                                    </div>
+                                </div>
+                                <ul class="list">
+                                    <p>Что входит:</p>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Дизайн с упором на продажи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Адаптивная верстка</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Четкая структура: оффер, преимущества, отзывы, призыв к действию</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Весь каталог секций предусмотренный выбранной платформой</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Индивидуальный дизайн секции на Zeroblock (Tilda) при необходимости</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Формы приема заявок и обратной связи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Административная панель для редактирования контента</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Базовые анимации и оптимизация</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 class="h3">Сайт услуг</h3>
+                            <i>
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#Interface_essential--Close"></use>
+                                </svg>
+                            </i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="content">
+                                <div class="left">
+                                    <div class="txt-block">
+                                        <p class="highlight">Чёткое представление вашего предложения</p>
+                                        <p class="text">Создан для компаний, предоставляющих услуги — от ремонта и строительства до консалтинга и IT. Показывает преимущества, стоимость, отзывы клиентов и удобные формы связи. Помогает быстро получить заявки от заинтересованных клиентов</p>
+                                        <p class="aim"><span>Цель</span> - генерация заявок и обращений по конкретным услугам</p>
+                                    </div>
+                                    <div class="btn-block">
+                                        <span class="price"><span>Цена:</span> от 90 000 ₽ / 580 000 ₸</span>
+                                        <button class="btn btn--primary">Связаться</button>
+                                    </div>
+                                </div>
+                                <ul class="list">
+                                    <p>Что входит:</p>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Дизайн с упором на продажи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Адаптивная верстка</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Четкая структура: оффер, преимущества, отзывы, призыв к действию</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Весь каталог секций предусмотренный выбранной платформой</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Индивидуальный дизайн секции на Zeroblock (Tilda) при необходимости</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Формы приема заявок и обратной связи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Административная панель для редактирования контента</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Базовые анимации и оптимизация</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 class="h3">Сайт-каталог</h3>
+                            <i>
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#Interface_essential--Close"></use>
+                                </svg>
+                            </i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="content">
+                                <div class="left">
+                                    <div class="txt-block">
+                                        <p class="highlight">Витрина вашего бизнеса онлайн</p>
+                                        <p class="text">Представляет товары или услуги в удобном формате с описаниями, характеристиками и фотографиями. Отличается от интернет-магазина отсутствием функции онлайн-оплаты, но идеально подходит для компаний, которым важно показать ассортимент и дать клиенту возможность связаться напрямую</p>
+                                        <p class="aim"><span>Цель</span> - демонстрация продукции и генерация обращений от заинтересованных клиентов</p>
+                                    </div>
+                                    <div class="btn-block">
+                                        <span class="price"><span>Цена:</span> от 90 000 ₽ / 580 000 ₸</span>
+                                        <button class="btn btn--primary">Связаться</button>
+                                    </div>
+                                </div>
+                                <ul class="list">
+                                    <p>Что входит:</p>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Дизайн с упором на продажи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Адаптивная верстка</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Четкая структура: оффер, преимущества, отзывы, призыв к действию</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Весь каталог секций предусмотренный выбранной платформой</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Индивидуальный дизайн секции на Zeroblock (Tilda) при необходимости</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Формы приема заявок и обратной связи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Административная панель для редактирования контента</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Базовые анимации и оптимизация</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <h3 class="h3">Сайт-визитка</h3>
+                            <i>
+                                <svg>
+                                    <use xlink:href="assets/img/sprite.svg#Interface_essential--Close"></use>
+                                </svg>
+                            </i>
+                        </div>
+                        <div class="accordion-content">
+                            <div class="content">
+                                <div class="left">
+                                    <div class="txt-block">
+                                        <p class="highlight">Ваш бизнес в мини-формате</p>
+                                        <p class="text">Мини-версия корпоративного сайта с самой необходимой информацией на несколько страниц с контактами, описанием компании и ключевым предложением. Быстро запускается и просто поддерживается. Подходит для специалистов, стартапов или малого бизнеса, которым важно заявить о себе в интернете</p>
+                                        <p class="aim"><span>Цель</span> - сбор контактных данных покупателя</p>
+                                    </div>
+                                    <div class="btn-block">
+                                        <span class="price"><span>Цена:</span> от 70 000 ₽ / 450 000 ₸</span>
+                                        <button class="btn btn--primary">Связаться</button>
+                                    </div>
+                                </div>
+                                <ul class="list">
+                                    <p>Что входит:</p>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Дизайн с упором на продажи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Адаптивная верстка</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Четкая структура: оффер, преимущества, отзывы, призыв к действию</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Весь каталог секций предусмотренный выбранной платформой</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Индивидуальный дизайн секции на Zeroblock (Tilda) при необходимости</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Формы приема заявок и обратной связи</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Административная панель для редактирования контента</li>
+                                    <li><img src="/assets/img/icon-markup.svg" alt="icon-markup">Базовые анимации и оптимизация</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <div class="spacer spacer--8"></div>
     <section class="services">
@@ -450,102 +712,6 @@
                 </div>
             </div>
             
-        </div>
-    </div>
-</section>
-
-    <div class="spacer spacer--8"></div>
-    <section class="packs">
-    <div class="container">
-        <div class="packs__wrapper">
-            <h3 class="h3 packs__title wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="0s">
-                Вместе дешевле - мы <span class="gray">предлагаем</span> пакеты услуг
-            </h3>
-            <div class="packs__content wow fadeInUp" data-wow-duration="2s" data-wow-delay="0s">
-                <div class="packs__accordion accordion">
-                    <div class="accordion-item">
-                        <div class="accordion-header active">
-                            <span>Одностраничный сайт </span>
-                            <i>
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#Interface_essential--Close"></use>
-                                </svg>
-                            </i>
-                        </div>
-                        <div class="accordion-content active">
-                            <div class="content">
-                                <div class="left">
-                                    <p class="text">Идеальное решение для презентации вашего бизнеса или продукта. Современный дизайн, удобная навигация и все необходимые элементы для привлечения клиентов на одной странице. Оптимально подходит для запуска нового продукта, услуги или для компаний, которым важно быстро начать привлекать клиентов через интернет.</p>
-                                    <span class="price">Цена: от 300,000 тенге</span>
-                                </div>
-                                <ul class="list">
-                                    <p>Что входит в пакет:</p>
-                                    <li>Уникальный дизайн</li>
-                                    <li>Адаптивная верстка</li>
-                                    <li>Базовые анимации</li>
-                                    <li>Интеграция форм связи</li>
-                                    <li>До 3 правок дизайна</li>
-                                    <li>Базовая оптимизация</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <span>Многостраничный сайт или Интернет магазин</span>
-                            <i>
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#Interface_essential--Close"></use>
-                                </svg>
-                            </i>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="content">
-                                <div class="left">
-                                    <p class="text">Идеальное решение для презентации вашего бизнеса или продукта. Современный дизайн, удобная навигация и все необходимые элементы для привлечения клиентов на одной странице. Оптимально подходит для запуска нового продукта, услуги или для компаний, которым важно быстро начать привлекать клиентов через интернет.</p>
-                                    <span class="price">Цена: от 300,000 тенге</span>
-                                </div>
-                                <ul class="list">
-                                    <p>Что входит в пакет:</p>
-                                    <li>Уникальный дизайн</li>
-                                    <li>Адаптивная верстка</li>
-                                    <li>Базовые анимации</li>
-                                    <li>Интеграция форм связи</li>
-                                    <li>До 3 правок дизайна</li>
-                                    <li>Базовая оптимизация</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-header">
-                            <span>Пакет SEO рподвижения</span>
-                            <i>
-                                <svg>
-                                    <use xlink:href="assets/img/sprite.svg#Interface_essential--Close"></use>
-                                </svg>
-                            </i>
-                        </div>
-                        <div class="accordion-content">
-                            <div class="content">
-                                <div class="left">
-                                    <p class="text">Идеальное решение для презентации вашего бизнеса или продукта. Современный дизайн, удобная навигация и все необходимые элементы для привлечения клиентов на одной странице. Оптимально подходит для запуска нового продукта, услуги или для компаний, которым важно быстро начать привлекать клиентов через интернет.</p>
-                                    <span class="price">Цена: от 300,000 тенге</span>
-                                </div>
-                                <ul class="list">
-                                    <p>Что входит в пакет:</p>
-                                    <li>Уникальный дизайн</li>
-                                    <li>Адаптивная верстка</li>
-                                    <li>Базовые анимации</li>
-                                    <li>Интеграция форм связи</li>
-                                    <li>До 3 правок дизайна</li>
-                                    <li>Базовая оптимизация</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>

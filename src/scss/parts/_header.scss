@@ -5,10 +5,24 @@
         width: 141px;
         height: 38px;
     }
+    &__right-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 70px;
+    }
     &__nav {
+        font-size: 14px;
         ul {
             @include mixin.wrapper($justify: flex-start, $gap: 24px);
             width: fit-content;
+            &:hover {
+                color: var(--gray);
+            }
+            li {
+                &:hover a {
+                    color: var(--black);
+                }
+            }
         }
         &-logo, &-cta {
             display: none;

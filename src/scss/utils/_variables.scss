@@ -7,6 +7,7 @@
     --light-gray: #F9F9F9;
     --mid-gray: #F4F4F4;
     --error: #e64832;
+    --grey: #606060;
 }
 
 .wrapper {
@@ -18,14 +19,15 @@
     align-items: center;
     justify-content: center;
     width: fit-content;
-    padding: 0 2em;
-    height: 68px;
+    padding: 0 32px;
+    min-width: 240px;
+    height: 58px;
     border: none;
-    border-radius: 1em;
+    border-radius: 16px;
     font-family: 'Stolzl';
     gap: .5em;
     font-weight: 500;
-    letter-spacing: 0.35px;
+    // letter-spacing: 0.35px;
     cursor: pointer;
     position: relative;
     svg {
@@ -103,6 +105,55 @@
     @media screen and (max-width: 1250px) {
         font-size: 14px;
         padding: 0 16px;
+    }
+}
+
+a.hovered-underline {
+    position: relative;
+    z-index: 1;
+    width: fit-content;
+    padding-right: 25px;
+    font-size: 18px;
+    color: var(--gray);
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        height: 28px;
+        left: -1px;
+        right: -1px;
+        transform-origin: 50% 100%;
+        transform: scale(0.98, 0.05) translateZ(0px);
+        backface-visibility: hidden;
+        z-index: -1;
+        display: inline-block;
+        background: 0% 0% / 100% 100% repeat-x var(--gray);
+        transition: transform 0.38s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    &::after {
+        content: "→";
+        color: var(--gray);
+        position: absolute;
+        bottom: 2px;
+        height: 24px;
+        right: 0;
+        display: inline-block;
+        transition: transform 0.38s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    &:hover {
+        color: var(--black);
+        &::before {
+            transform: scale(1) translateZ(0px);
+            background: 0% 0% / 100% 100% repeat-x var(--accent);
+        }
+        &::after {
+            color: var(--black);
+        }
+    }
+    &.gray {
+        &::before {
+            background: 0% 0% / 100% 100% repeat-x var(--gray);
+        }
     }
 }
 
