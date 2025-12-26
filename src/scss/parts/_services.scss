@@ -1,4 +1,20 @@
 .services {
+    .h2 {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        &__part {
+            display: flex;
+            flex-direction: column;
+            .small {
+                font-size: 45px;
+                font-weight: 300;
+            }
+        }
+        img {
+            margin-top: 20px;
+        }
+    }
     &__wrapper {
         margin-top: 4em;
         display: flex;
@@ -15,12 +31,19 @@
         text-align: center;
         .title {
             font-size: 1.5em;
-            margin-top: 2em;
+            margin-top: 30px;
             font-weight: 500;
         }
         .text {
-            margin-top: 1em;
+            margin-top: 15px;
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--grey);
         }
+    }
+    .hovered-underline {
+        display: block;
+        margin: 50px 0 0 20px;
     }
 }
 
