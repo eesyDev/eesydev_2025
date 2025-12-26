@@ -1,0 +1,104 @@
+.about-us {
+    position: relative;
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 70px;
+        position: relative;
+        z-index: 2;
+    }
+    &__upper {
+        display: flex;
+        gap: 8.33%;
+        .h2-block {
+            width: 25%;
+        }
+        &-blocks {
+            display: flex;
+            width: 58.5%;
+            gap: 14.3%;
+        }
+        &-block {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        &-title {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+            .big {
+                font-size: 56px;
+                font-weight: 700;
+            }
+        }
+        &-text {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--grey);
+            span {
+                font-weight: 500;
+            }
+        }
+    }
+    &__lower {
+        display: flex;
+        gap: 8.33%;
+        &-block {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            &:first-child {
+                width: 25%;
+            }
+            &:last-child {
+                width: 58.5%;
+                padding-right: 18%;
+            }
+        }
+        &-title {
+            font-size: 24px;
+            font-weight: 500;
+        }
+        &-text {
+            font-size: 14px;
+            font-weight: 300;
+            color: var(--grey);
+        }
+    }
+    &__circle {
+            position: absolute;
+            right: -250px;
+            top: 0;
+            max-height: 780px;
+        &-wrap {
+            position: relative;
+            padding-top: 30px;
+            pointer-events: none;
+            user-select: none;
+            z-index: 1;
+        }
+    }
+    &__bg {
+        color: #F9F9F9;
+        font-size: 350px;
+        font-weight: 700;
+        position: absolute;
+        z-index: 1;
+        top: 140px;
+        right: -130px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        line-height: 0.8;
+        &-wrap {
+            position: relative;
+            pointer-events: none;
+            z-index: 1;
+            user-select: none;
+        }
+    }
+}
