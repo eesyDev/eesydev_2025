@@ -1,27 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-//= utilities/head.html
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/lib/animate.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Document</title>
+</head>
 <body class="u-body">
     <div class="cursor"></div>
 	<div class="cursor-follower"></div>
-    //= sections/header.html
-    //= sections/cases-hero.html
-    //= sections/cases.html
-    //= sections/footer.html
-    //= sections/dialogs.html
-    //= utilities/scripts.html
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
-    <script src="./gsap-laz.js"></script>
-    <script async src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js" onload="initLazy()"></script>
-	<script async>
-		function initLazy() {
-			var lazyLoadInstance = new LazyLoad();
-		}
-	</script>
+    <header class="header">
+    <div class="container">
+        <div class="header__wrapper wrapper">
+            <a href="" class="header__logo">
+                <img src="/assets/img/logo-eezydev.svg" alt="logo">
+            </a>
+            <div class="header__right-wrapper">
+                <div class="header__nav burger-menu">
+                    <a href="" class="header__nav-logo">
+                        <img src="/assets/img/logo-eezydev.svg" alt="logo">
+                    </a>
+                    <nav>
+                        <ul class="">
+                            <li><a href="" class="hovered">Главная</a></li>
+                            <li><a href="" class="hovered">Услуги</a></li>
+                            <li><a href="portfoilo.html" class="hovered">Портфолио</a></li>
+                            <li><a href="" class="hovered">Сотрудничество</a></li>
+                            <li><a href="" class="hovered">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <div class="header__nav-cta">
+                        <a href="#call" class="btn btn--primary open-popup">
+                            Оставить заявку
+                            <svg>
+                                <use xlink:href="assets/img/sprite.svg#arrow-right-white"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="header__cta">
+                    <a href="#call" class="btn btn--primary open-popup">
+                        Оставить заявку
+                        <svg>
+                            <use xlink:href="assets/img/sprite.svg#arrow-right-white"></use>
+                        </svg>
+                    </a>
+                </div>
+                <div class="header__burger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </div>
+</header>
+    <section class="cases">
+    <div class="container">
+        <div class="cases__heading">
+            <h2 class="h2">Кейсы</h2>
+            <div class="casese__sub">
+                Выполненные <i class="text-accent">нашей</i><br> командой
+            </div>
+        </div>
+        <div class="cases__wrapper">
+            <div class="case-card">
+                <div class="case-card__image">
+                    <img src="assets/img/img.png" alt="" loading="lazy">
+                </div>
+                <div class="case-card__tags">
+                    <div class="tag tag--outline">Дизайн</div>
+                    <div class="tag tag--fill">Разработка</div>
+                    <div class="tag tag--outline-dotted">White Label</div>
+                </div>
+                <h6 class="case-card__title h6">Интернет-магазин для ювелирной компании <i class="text-bold">Anita Jewelry</i></h6>
+                <a href="" class="case-card__link btn btn--outlined">
+                    Подробнее
+                    <img src="assets/img/eye.svg" alt="learn more">
+                </a>
+            </div>
+            <div class="case-card">
+                <div class="case-card__image">
+                    <img src="assets/img/img.png" alt="" loading="lazy">
+                </div>
+                <div class="case-card__tags">
+                    <div class="tag tag--outline">Дизайн</div>
+                    <div class="tag tag--fill">Разработка</div>
+                    <div class="tag tag--outline-dotted">White Label</div>
+                </div>
+                <h6 class="case-card__title h6">Интернет-магазин для ювелирной компании <i class="text-bold">Anita Jewelry</i></h6>
+                <a href="" class="case-card__link btn btn--outlined">
+                    Подробнее
+                    <img src="assets/img/eye.svg" alt="learn more">
+                </a>
+            </div>
+            <div class="case-card">
+                <div class="case-card__image">
+                    <img src="assets/img/img.png" alt="" loading="lazy">
+                </div>
+                <div class="case-card__tags">
+                    <div class="tag tag--outline">Дизайн</div>
+                    <div class="tag tag--fill">Разработка</div>
+                    <div class="tag tag--outline-dotted">White Label</div>
+                </div>
+                <h6 class="case-card__title h6">Интернет-магазин для ювелирной компании <i class="text-bold">Anita Jewelry</i></h6>
+                <a href="" class="case-card__link btn btn--outlined">
+                    Подробнее
+                    <img src="assets/img/eye.svg" alt="learn more">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__col col-lg">
+                <div class="footer__logo-block">
+                    <a href="" class="footer__logo">
+                        <img src="/assets/img/logo-footer.svg" alt="logo-dark-version">
+                    </a>
+                    <p class="motto">Мы помогаем бизнесу выходить в онлайн</p>
+                </div>
+                <div class="socials">
+                    <a href="" class="social">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6 2.3C12.1 0.8 10.1 0 8 0C3.6 0 0 3.6 0 8C0 9.4 0.400006 10.8 1.10001 12L0 16L4.20001 14.9C5.40001 15.5 6.7 15.9 8 15.9C12.4 15.9 16 12.3 16 7.9C16 5.8 15.1 3.8 13.6 2.3ZM8 14.6C6.8 14.6 5.60001 14.3 4.60001 13.7L4.39999 13.6L1.89999 14.3L2.60001 11.9L2.39999 11.6C1.69999 10.5 1.39999 9.3 1.39999 8.1C1.39999 4.5 4.4 1.5 8 1.5C9.8 1.5 11.4 2.2 12.7 3.4C14 4.7 14.6 6.3 14.6 8.1C14.6 11.6 11.7 14.6 8 14.6ZM11.6 9.6C11.4 9.5 10.4 9 10.2 9C10 8.9 9.89999 8.9 9.79999 9.1C9.69999 9.3 9.30001 9.7 9.20001 9.9C9.10001 10 8.99999 10 8.79999 10C8.59999 9.9 8.00001 9.7 7.20001 9C6.60001 8.5 6.20001 7.8 6.10001 7.6C6.00001 7.4 6.10001 7.3 6.20001 7.2C6.30001 7.1 6.4 7 6.5 6.9C6.6 6.8 6.60001 6.7 6.70001 6.6C6.80001 6.5 6.70001 6.4 6.70001 6.3C6.70001 6.2 6.30001 5.2 6.10001 4.8C6.00001 4.5 5.80001 4.5 5.70001 4.5C5.60001 4.5 5.49999 4.5 5.29999 4.5C5.19999 4.5 4.99999 4.5 4.79999 4.7C4.59999 4.9 4.10001 5.4 4.10001 6.4C4.10001 7.4 4.79999 8.3 4.89999 8.5C4.99999 8.6 6.29999 10.7 8.29999 11.5C9.99999 12.2 10.3 12 10.7 12C11.1 12 11.9 11.5 12 11.1C12.2 10.6 12.2 10.2 12.1 10.2C12 9.7 11.8 9.7 11.6 9.6Z" fill="white"/>
+                            </svg>
+                                                          
+                    </a>
+                    <a href="" class="social">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_42_74)">
+                            <path d="M13.7317 2.39844H6.2335C4.16291 2.39844 2.48438 4.06732 2.48438 6.126V13.5811C2.48438 15.6398 4.16291 17.3087 6.2335 17.3087H13.7317C15.8023 17.3087 17.4809 15.6398 17.4809 13.5811V6.126C17.4809 4.06732 15.8023 2.39844 13.7317 2.39844Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12.9818 9.38448C13.0743 10.0049 12.9677 10.6386 12.6772 11.1953C12.3866 11.7521 11.9269 12.2036 11.3634 12.4856C10.7999 12.7676 10.1613 12.8657 9.53843 12.7661C8.91558 12.6664 8.34019 12.374 7.8941 11.9305C7.44802 11.487 7.15395 10.9149 7.05372 10.2957C6.9535 9.67639 7.05222 9.04146 7.33585 8.4812C7.61948 7.92093 8.07357 7.46385 8.63354 7.17496C9.19351 6.88607 9.83084 6.7801 10.4549 6.8721C11.0914 6.96595 11.6807 7.26086 12.1358 7.71327C12.5908 8.16568 12.8874 8.7516 12.9818 9.38448Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <ellipse cx="14.1055" cy="5.75108" rx="1.125" ry="1.11827" fill="white"/>
+                            </g>
+                            <defs>
+                            <clipPath id="clip0_42_74">
+                            <rect width="17.9958" height="17.8923" fill="white" transform="translate(0.984375 0.90625)"/>
+                            </clipPath>
+                            </defs>
+                            </svg>
+                            
+                                                          
+                    </a>
+                    <a href="" class="social">
+                        <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.07648 6.30693C6.37144 4.43568 9.23542 3.20204 10.6684 2.60601C14.7599 0.904213 15.6101 0.608593 16.1642 0.598727C16.2861 0.596685 16.5586 0.626889 16.7351 0.770122C16.8842 0.891065 16.9252 1.05444 16.9448 1.16911C16.9644 1.28378 16.9889 1.54499 16.9695 1.7491C16.7477 4.07873 15.7884 9.73212 15.3003 12.3413C15.0938 13.4454 14.6871 13.8156 14.2934 13.8518C13.4378 13.9306 12.7882 13.2864 11.9595 12.7432C10.6628 11.8932 9.93026 11.3641 8.67159 10.5346C7.21699 9.57607 8.15995 9.04923 8.98892 8.18822C9.20587 7.96289 12.9755 4.53409 13.0485 4.22305C13.0576 4.18415 13.0661 4.03914 12.9799 3.96257C12.8938 3.886 12.7667 3.91219 12.6749 3.93301C12.5448 3.96253 10.4734 5.3317 6.46045 8.04053C5.87247 8.44429 5.33989 8.64101 4.86272 8.6307C4.33668 8.61933 3.32478 8.33327 2.57254 8.08874C1.64989 7.78882 0.916584 7.63026 0.980439 7.1209C1.0137 6.8556 1.37904 6.58427 2.07648 6.30693Z" fill="white"/>
+                            </svg>
+                                                          
+                    </a>
+                </div>
+                <p class="copyright">
+                    2019-2025 all Right Reserved Term of use Eesydev
+                </p>
+            </div>
+            <div class="footer__right">
+                <div class="footer__col">
+                    <p class="title">Информация</p>
+                    <ul>
+                        <li><a href="" class="hovered gray">О нас</a></li>
+                        <li><a href="" class="hovered gray">Проекты</a></li>
+                        <li><a href="" class="hovered gray">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <p class="title">Информация</p>
+                    <ul>
+                        <li><a href="" class="hovered gray">О нас</a></li>
+                        <li><a href="" class="hovered gray">Проекты</a></li>
+                        <li><a href="" class="hovered gray">Блог</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <div class="dialogs">
+    <div class="close-bg"></div>
+    <div class="flex-popup">
+        <div class="popup" id="call">
+            <div class="popup__wrapper">
+                <div class="close">
+                    <svg class="ico">
+                        <use xlink:href="/assets/img/sprite.svg#ico-close"></use>
+                    </svg>
+                </div>
+                <div class="popup__content">
+                    <h5 class="h5">Обратный звонок</h5>
+                    <form method="POST" class="popup__form">
+                        <div class="input-group w-1_3">
+                            <input type="text" id="name" name="name" class="input inpt-name" data-required="true"
+                                data-error="Please fill this field">
+                            <label for="name">Ваше имя *</label>
+                        </div>
+                        <div class="input-group w-1_3">
+                            <input type="tel" id="tel" name="tel" class="input inpt-tel" data-required="true"
+                                data-error="Please fill this field">
+                            <label for="tel">Номер телефона *</label>
+                        </div>
+                        <div class="input-group w-full">
+                            <input type="text" id="message" name="message" class="input input-large inpt-message"
+                                data-error="Please fill this field">
+                            <label for="message">Сообщение (опционально)</label>
+                        </div>
+                        <div class="input-group w-full">
+                            <p class="form-description">Нажимая отправить, Вы даете согласие на обработку ваших данных и соглашаетесь с нашей <a href="#policy" class="underlined">политикой конфиденциальности</a></p>
+                        </div>
+                        <button class="btn btn--primary" type="submit">
+                            Оставить заявку
+                        </button>
+                        <input type="hidden" name="action" value="call">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="popup" id="consultation">
+            <div class="popup__wrapper">
+                <div class="close">
+                    <svg class="ico">
+                        <use xlink:href="/assets/img/sprite.svg#ico-close"></use>
+                    </svg>
+                </div>
+                <div class="popup__content">
+                    <h5 class="h5">Консультация</h5>
+                    <form method="POST" class="popup__form">
+                        <div class="input-group w-1_3">
+                            <input type="text" id="name" name="name" class="input inpt-name" data-required="true"
+                                data-error="Please fill this field">
+                            <label for="name">Ваше имя *</label>
+                        </div>
+                        <div class="input-group w-1_3">
+                            <input type="tel" id="tel" name="tel" class="input inpt-tel" data-required="true"
+                                data-error="Please fill this field">
+                            <label for="tel">Номер телефона *</label>
+                        </div>
+                        <div class="input-group w-full">
+                            <input type="text" id="message" name="message" class="input input-large inpt-message"
+                                data-error="Please fill this field">
+                            <label for="message">Сообщение (опционально)</label>
+                        </div>
+                        <div class="input-group w-full">
+                            <p class="form-description">Нажимая отправить, Вы даете согласие на обработку ваших данных и соглашаетесь с нашей <a href="#policy" class="underlined">политикой конфиденциальности</a></p>
+                        </div>
+                        <button class="btn btn--primary" type="submit">
+                            Оставить заявку
+                        </button>
+                        <input type="hidden" name="action" value="call">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- libs -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+<script defer src="assets/lib/svgxuse.min.js"></script>
+<script defer src="assets/lib/jquery.maskedinput.js"></script>
+<!-- project's js -->
+<script src="/assets/js/form.js"></script>
+<script src="/assets/js/animation.js"></script>
+<script src="/assets/js/script.js"></script>
+
     <script src="./index.js"></script>
 </body>
 </html>
