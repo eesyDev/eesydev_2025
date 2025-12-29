@@ -259,4 +259,23 @@
           $(tabId).addClass("active");
         });
       });
+
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+            const text = btn.dataset.copy;
+
+            try {
+                await navigator.clipboard.writeText(text);
+
+                btn.classList.add('copied');
+
+                setTimeout(() => {
+                btn.classList.remove('copied');
+                }, 1300);
+
+            } catch (err) {
+                console.error('Не удалось скопировать', err);
+            }
+        });
+    });
 })(jQuery);
