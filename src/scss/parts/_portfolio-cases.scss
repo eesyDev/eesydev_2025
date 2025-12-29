@@ -36,8 +36,9 @@
             padding: 4px 16px;
             font-size: 10px;
             font-weight: 500;
-            border: 1px solid transparent;
+            border: 1px solid #000;
             border-radius: 4px;
+            color: #000;
             &.tag--fill {
                 background-color: #E0E0E0;
             }
@@ -59,3 +60,40 @@
         }
     }
 }
+
+@media screen and (max-width: 1023.91px) {
+    .cases {
+        &__wrapper {
+            row-gap: 37px;
+        }
+      .case-card {
+        width: calc(50% - 37px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 767.91px) {
+    .cases {
+        &__wrapper {
+            row-gap: 20px;
+        }
+      .case-card {
+        width: calc(50% - 20px);
+        padding-right: 20px;
+        margin-right: 20px;
+        &__tags {
+            flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 639.91px) {
+    .cases {
+      .case-card {
+        width: calc(100% - 20px);
+        padding-right: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
