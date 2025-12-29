@@ -1,0 +1,99 @@
+.cases {
+    &__heading {
+        margin-top: 2.25rem;
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+    &__wrapper {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .case-card {
+        width: calc(33.33% - 37px);
+        padding-top: 21px;
+        padding-bottom: 21px;
+        padding-right: 37px;
+        margin-right: 37px;
+        position: relative;
+        &::after {
+            content: '';
+            height: 100%;
+            width: 1px;
+            background-color: var(--border-grey);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        &__tags {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .tag {
+            padding: 4px 16px;
+            font-size: 10px;
+            font-weight: 500;
+            border: 1px solid #000;
+            border-radius: 4px;
+            color: #000;
+            &.tag--fill {
+                background-color: #E0E0E0;
+            }
+            &.tag--outline {
+                border-color: var(--grey);
+                color: var(--blue-accent);
+            }
+            &.tag--outline-dotted {
+                border: 1px dotted var(--grey);
+            }
+        }
+        &__title {
+            font-weight: 400;
+            margin-top: 20px;
+        }
+        &__link {
+            margin-top: 30px;
+            min-width: 178px;
+        }
+    }
+}
+
+@media screen and (max-width: 1023.91px) {
+    .cases {
+        &__wrapper {
+            row-gap: 37px;
+        }
+      .case-card {
+        width: calc(50% - 37px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 767.91px) {
+    .cases {
+        &__wrapper {
+            row-gap: 20px;
+        }
+      .case-card {
+        width: calc(50% - 20px);
+        padding-right: 20px;
+        margin-right: 20px;
+        &__tags {
+            flex-wrap: wrap;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 639.91px) {
+    .cases {
+      .case-card {
+        width: calc(100% - 20px);
+        padding-right: 20px;
+        margin-right: 20px;
+      }
+    }
+  }
