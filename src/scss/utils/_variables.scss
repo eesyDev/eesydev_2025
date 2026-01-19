@@ -228,6 +228,9 @@ a.underlined {
 .gray {
     color: var(--gray);
 }
+.bold-text {
+    font-weight: 500;
+}
 
 @media screen and (max-width: 1024px) {
     .spacer.spacer--12 {

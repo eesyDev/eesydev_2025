@@ -207,8 +207,11 @@
 	});
 
 	$(document).ready(function () {
-		$('.accordion-header:first').addClass('active');
-		$('.accordion-content:first').show();
+		$('.accordion-header-packs:first').addClass('active');
+		$('.accordion-content-packs:first').show();
+
+		$('.accordion-header-faq:first').addClass('active');
+		$('.accordion-content-faq:first').show();
 
 		$('.accordion-header').click(function () {
 			const content = $(this).next('.accordion-content');
