@@ -100,4 +100,20 @@
         }
     });
 
+    $('.input-group textarea').each(function() {
+        // Проверяем при загрузке
+        if ($(this).val()) {
+        $(this).next('label').addClass('active');
+        }
+    });
+
+    $('.input-group textarea').on('focus blur input', function() {
+        var label = $(this).next('label');
+        if ($(this).val() || $(this).is(':focus')) {
+        label.addClass('active');
+        } else {
+        label.removeClass('active');
+        }
+    });
+
 })(jQuery);

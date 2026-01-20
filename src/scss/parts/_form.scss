@@ -19,17 +19,17 @@
     position: relative;
     input, .input {
       width: 100%;
-      padding: 10px 10px 32px 10px;
+      padding: 10px 10px 25px 0;
       border: none;
       border-bottom: 1px solid var(--gray);
       outline: none;
       font-size: 16px;
       &.input-large {
-        padding: 10px 10px 100px 10px;
+        padding: 10px 10px 100px 0;
         ~ label {
           top: 10px;
           &.active {
-            top: -10px;
+            top: -25px;
           }
         }
       }
@@ -39,7 +39,6 @@
       left: 0px;
       top: 10px;
       // background-color: white;
-      padding: 0 5px;
       color: var(--gray);
       transition: 0.2s ease all;
       pointer-events: none;
@@ -47,8 +46,8 @@
   }
   
   /* Анимация при фокусе или когда поле заполнено */
-  .input-group input:focus ~ label, .input-group label.active  {
-    top: -10px;
+  .input-group input:focus ~ label, .input-group label.active, .input-group textarea:focus ~ label  {
+    top: -25px;
     font-size: 12px;
     color: #37d536;
   }
@@ -76,6 +75,7 @@
       flex-direction: column;
       width: 50px;
       gap: 1.5em;
+      margin-top: 20px;
       a {
         width: 50px;
         height: 50px;
@@ -90,8 +90,8 @@
           border: 1px solid var(--accent);
         }
         svg {
-          width: 18px;
-          height: 18px;
+          width: 21px;
+          height: 21px;
         }
       }
     }
@@ -111,4 +111,10 @@
     ~ label {
       color: var(--error);
     }
+}
+
+.eezydev-big-letters {
+  width: 100%;
+  transform: translateY(2px);
+  margin-top: 50px;
 }

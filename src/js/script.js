@@ -281,4 +281,25 @@
             }
         });
     });
+
+    $(document).ready(function() {
+        $('.services-page-tabs__tab').on('click', function () {
+            const tab = $(this).data('tab');
+            const $tabs = $(this).closest('.services-page-tabs');
+
+            // активный таб
+            $tabs.find('.services-page-tabs__tab').removeClass('is-active');
+            $(this).addClass('is-active');
+
+            // активная панель
+            $tabs.find('.services-page-tabs__tab-panel').removeClass('is-active');
+            $tabs.find(`.services-page-tabs__tab-panel[data-tab="${tab}"]`).addClass('is-active');
+
+            $tabs.find('.services-page-tabs__tab-panel').hide();
+            $tabs.find(`.services-page-tabs__tab-panel[data-tab="${tab}"]`)
+            .fadeIn(200)
+            .addClass('is-active');
+        });
+    });
+
 })(jQuery);

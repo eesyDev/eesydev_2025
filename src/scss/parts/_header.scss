@@ -15,13 +15,22 @@
         ul {
             @include mixin.wrapper($justify: flex-start, $gap: 24px);
             width: fit-content;
-            &:hover {
-                color: var(--gray);
-            }
             li {
-                &:hover a {
-                    color: var(--black);
+                a {
+                    width: 100%;
+                    height: 100%;
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 5px 12px;
                 }
+            }
+            li:hover {
+                color: var(--black);
+            }
+            &:has(li:hover) {
+                color: var(--gray);
             }
         }
         &-logo, &-cta {

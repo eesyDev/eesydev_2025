@@ -71,6 +71,9 @@
             align-items: center;
             gap: 5px;
             transition: background 0.25s ease;
+            &:hover {
+                color: var(--grey-dark-ver);
+            }
         }
 
         .copy-btn .check {
@@ -93,7 +96,7 @@
         a {
             font-size: 24px;
             &:hover {
-                color: #c7c7c7;
+                color: var(--grey-dark-ver);
             }
         }
     }
