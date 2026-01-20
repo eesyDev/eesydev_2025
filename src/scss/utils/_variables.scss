@@ -10,8 +10,8 @@
     --mid-gray: #F4F4F4;
     --error: #e64832;
     --grey: #606060;
-    --light-grey: #9D9D9D;
-    --grey-dark-ver: #BABABA;
+    --border-grey: #DBDBDB;
+    --blue-accent: #0500FF;
 }
 
 .wrapper {
@@ -26,7 +26,7 @@
     padding: 0 32px;
     min-width: 240px;
     height: 58px;
-    border: none;
+    border: 1px solid transparent;
     border-radius: 16px;
     font-family: 'Stolzl';
     gap: .5em;
@@ -69,6 +69,10 @@
         svg {
             stroke: #fff;
         }
+    }
+    &.btn--outlined {
+        border-color: var(--black);
+        color: var(--black);
     }
     &.btn--accent {
         color: var(--black);
@@ -232,6 +236,15 @@ a.underlined {
 }
 .bold-text {
     font-weight: 500;
+}
+
+i.text-accent {
+    color: var(--grey);
+    font-style: normal;
+}
+i.text-bold {
+    font-weight: 600;
+    font-style: normal;
 }
 
 @media screen and (max-width: 1024px) {
