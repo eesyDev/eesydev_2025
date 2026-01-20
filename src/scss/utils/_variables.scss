@@ -1,6 +1,7 @@
 @use 'utils/_mixins' as mixin;
 :root {
     --black: #000;
+    --white: #fff;
     --light-black: #1F1F1F;
     --dark-bg: #16171a;
     --gray: #838383;
@@ -172,7 +173,7 @@ a.hovered {
         content: "";
         position: absolute;
         bottom: 0px;
-        height: 12px;
+        height: 20px;
         left: -1px;
         right: -1px;
         transform-origin: 50% 100%;
@@ -232,6 +233,9 @@ a.underlined {
 }
 .gray {
     color: var(--gray);
+}
+.bold-text {
+    font-weight: 500;
 }
 
 i.text-accent {

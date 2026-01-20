@@ -2,21 +2,153 @@
     background-color: var(--black);
     padding: 3.5em 0;
     color: #fff;
+    font-size: 14px;
+    font-weight: 400;
     &__wrapper {
         display: flex;
-        justify-content: space-between;
-        padding-right: 208px;
+    }
+    &__left, &__right {
+        display: flex;
+        width: 50%;
+        .footer__col {
+            width: 50%;
+            &:first-child {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            .motto {
+                margin-top: 10px;
+                font-size: 14px;
+                font-weight: 300;
+                line-height: 1.2;
+            }
+            .title {
+                font-size: 13px;
+                font-weight: 300;
+                color: var(--grey-dark-ver);
+                margin-bottom: 15px;
+            }
+        }
+    }
+    &__logo {
+        display: block;
+        width: fit-content;
+        &:hover {
+            opacity: .85;
+        }
+    }
+    &__nav {
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .hovered {
+            &::before {
+                height: 17px;
+                background: #3d3d3d;
+            }
+        }
     }
     &__right {
+        .footer__col {
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            &:last-child {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+    &__email {
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: background 0.25s ease;
+            &:hover {
+                color: var(--grey-dark-ver);
+            }
+        }
+
+        .copy-btn .check {
+            display: none;
+        }
+
+        .copy-btn.copied {
+            color: var(--accent); /* зелёный */
+        }
+
+        .copy-btn.copied .boxes {
+            display: none;
+        }
+
+        .copy-btn.copied .check {
+            display: inline;
+        }
+    }
+    &__phone {
+        a {
+            font-size: 24px;
+            &:hover {
+                color: var(--grey-dark-ver);
+            }
+        }
+    }
+    &__docs {
         display: flex;
-        gap: 108px;
+        flex-direction: column;
+        gap: 10px;
+        a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border: 1px solid #fff;
+            border-radius: 15px;
+            font-size: 12px;
+            transition: .38s cubic-bezier(.165, .84, .44, 1);
+            &:hover {
+                border: 1px solid var(--accent);
+                color: var(--black);
+                background: var(--accent);
+                svg path {
+                    fill: var(--black);
+                }
+            }
+        }
     }
-    .motto {
-        max-width: 190px;
-        margin-top: 21px;
+    &__under {
+        margin-top: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 11px;
+        font-weight: 200;
+        color: #989898;
     }
+    &__copyright {
+        span {
+            color: #B5B5B5;
+            font-weight: 400;
+        }
+    }
+    &__polytics {
+        a {
+            text-decoration: underline;
+            font-weight: 400;
+            &:hover {
+                color: #B5B5B5;
+            }
+        }
+    }
+    
     .socials {
-        margin-top: 3em;
         display: flex;
         gap: 24px;
         .social {
@@ -27,9 +159,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all .2s ease-in-out;
+            transition: .38s cubic-bezier(.165, .84, .44, 1);
             &:hover {
                 background-color: var(--accent);
+                border: 1px solid var(--accent);
                 svg {
                     path {
                         fill: var(--black);
@@ -40,29 +173,12 @@
         }
         
     }
-    .copyright {
-        margin-top: 40px;
-    }
-    .title {
-        font-weight: 600;
-    }
-    &__col {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 24px;
-        }
-    }
+    
 }
 
 
 @media screen and (max-width: 1024px) {
     .footer {
-        &__wrapper {
-            padding-right: 48px;
-        }
+        
     }
 }

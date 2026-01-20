@@ -1,0 +1,40 @@
+.platforms {
+    &__wrapper {
+        background: var(--light-gray);
+        padding: 70px;
+        border-radius: 56px;
+    }
+    .h2-highlight-block {
+        font-size: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        div:last-child {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+    }
+    &__type {
+        &-wrap {
+            margin-top: 50px;
+            display: flex;
+            gap: 50px;
+        }
+        &-text {
+            margin-top: 5px;
+            h3 {
+                font-size: 14px;
+                font-weight: 500;
+                color: var(--grey);
+                display: inline;
+            }
+            p {
+                font-size: 14px;
+                font-weight: 300;
+                color: var(--grey);
+                display: inline;
+            }
+        }
+    }
+}

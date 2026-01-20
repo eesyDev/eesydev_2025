@@ -1,0 +1,35 @@
+.faq {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__content {
+        width: calc(67% - 20px);
+        margin-top: 20px;
+    }
+    &__accordion {
+        .accordion {
+            &-item {
+                padding: 20px 0;
+                border-bottom: none;
+                &:first-child {
+                    padding-top: 0;
+                }
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+            &-header {
+                h3.h3 {
+                    font-size: 24px;
+                }
+            }
+            &-content {
+                font-size: 14px;
+                font-weight: 300;
+                color: var(--grey);
+                margin-top: 20px;
+            }
+        }
+    }
+}
