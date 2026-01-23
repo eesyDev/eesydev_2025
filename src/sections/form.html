@@ -2,9 +2,17 @@
     <div class="container">
         <div class="form-section__wrapper stagger-in">
             <div class="form-section__heading">
-                <h2 class="h2 imaged">Наши <span class="gray">контакты</span> и форма
-                    <div class="row">
-                        <svg width="128" height="86" viewBox="0 0 128 69" fill="none"
+                <h2 class="h2 imaged">
+                    <span class="row">
+                        <span>Оставьте <span class="gray">заявку</span></span>
+                        <span class="animated-arrow-img big-size">
+                            <img class="animated-arrow-img__out" src="/assets/img/arrow-icon.svg" alt="arrow-icon">
+                            <img class="animated-arrow-img__in" src="/assets/img/arrow-icon.svg" alt="arrow-icon">
+                        </span>
+                    </span>
+                    <span>
+                        
+                        <!-- <svg width="128" height="86" viewBox="0 0 128 69" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect id="circle1" class="circle" y="14" width="50" height="50" rx="25" fill="#BAFE35"
                                 fill-opacity="0.2" />
@@ -36,9 +44,9 @@
                                         result="shape" />
                                 </filter>
                             </defs>
-                        </svg>
-                        обратной связи
-                    </div>
+                        </svg> -->
+                        Мы с <span class="grey">вами</span> свяжемся
+                    </span>
                 </h2>
                 <div class="form-section__socials">
                     <a href="" class="social">
@@ -64,16 +72,16 @@
                 <form method="POST">
                     <div class="form-row row gap-2">
                         <div class="input-group w-1_3">
-                            <input type="text" id="name" name="name" class="input inpt-name" data-required="true" data-error="Please fill this field">
+                            <input type="text" id="name" name="name" class="input inpt-name" data-required="true" data-error="Обязательно для заполнения">
                             <label for="name">Ваше имя *</label>
                           </div>
                           <div class="input-group w-1_3">
-                            <input type="email" id="email" name="email" class="input inpt-email">
-                            <label for="email">Email </label>
+                            <input type="email" id="email" name="email" class="input inpt-email" data-required="true" data-error="Обязательно для заполнения">
+                            <label for="email">Email *</label>
                           </div>
                           <div class="input-group w-1_3" >
-                            <input type="tel" id="tel" name="tel" class="input inpt-tel" data-required="true" data-error="Please fill this field">
-                            <label for="tel">Номер телефона *</label>
+                            <input type="tel" id="tel" name="tel" class="input inpt-tel" data-required="true" data-error="Обязательно для заполнения">
+                            <label for="tel">Контакт в Telegram *</label>
                           </div>
                     </div>
                     <div class="form-row row">
@@ -83,15 +91,15 @@
                         </div>
                     </div>
                     <button class="btn btn--primary" type="submit">
-                        Оставить заявку
-                        <svg>
-                            <use xlink:href="assets/img/sprite.svg#arrow-right-white"></use>
-                        </svg>
+                        Отправить
+                        <span class="hover-animated-arrow">
+                            <img class="hover-animated-arrow__out" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                            <img class="hover-animated-arrow__in" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                        </span>
                     </button>
                     <input type="hidden" name="action" value="call">
                 </form>
             </div>
         </div>
     </div>
-    <img src="/assets/img/eezydev-big-letters.svg" alt="eezydev-decorate-letters" class="eezydev-big-letters">
 </section>

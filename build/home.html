@@ -31,18 +31,20 @@
                     <div class="header__nav-cta">
                         <a href="#call" class="btn btn--primary open-popup">
                             Оставить заявку
-                            <svg>
-                                <use xlink:href="assets/img/sprite.svg#arrow-right-white"></use>
-                            </svg>
+                            <span class="hover-animated-arrow">
+                                <img class="hover-animated-arrow__out" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                                <img class="hover-animated-arrow__in" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                            </span>
                         </a>
                     </div>
                 </div>
                 <div class="header__cta">
                     <a href="#call" class="btn btn--primary open-popup">
                         Оставить заявку
-                        <svg>
-                            <use xlink:href="assets/img/sprite.svg#arrow-right-white"></use>
-                        </svg>
+                        <span class="hover-animated-arrow">
+                            <img class="hover-animated-arrow__out" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                            <img class="hover-animated-arrow__in" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                        </span>
                     </a>
                 </div>
                 <div class="header__burger"><span></span><span></span><span></span></div>
@@ -65,10 +67,10 @@
                 <div class="hero__btn-block">
                     <a href="#consultation" class="btn btn--accent btn-6 wow fadeInUp open-popup" data-wow-duration="1s" data-wow-delay="1.0s">
                         Оставить заявку
-                        <svg>
-                            <use xlink:href="assets/img/sprite.svg#arrow-right-black"></use>
-                        </svg>
-                        <span></span>
+                        <span class="hover-animated-arrow">
+                            <img class="hover-animated-arrow__out" src="/assets/img/arrow-icon.svg" alt="arrow-icon">
+                            <img class="hover-animated-arrow__in" src="/assets/img/arrow-icon.svg" alt="arrow-icon">
+                        </span>
                     </a>
                     <div class="btn-lil-txt wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.2s">Получите бесплатную консультацию <br> уже сегодня</div>
                 </div>
@@ -158,6 +160,10 @@
             <p class="paragraph">Мы свяжемся с Вами в ближайшее время</p>
             <button class="btn btn--primary">
                 Оставить заявку
+                <span class="hover-animated-arrow">
+                    <img class="hover-animated-arrow__out" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                    <img class="hover-animated-arrow__in" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                </span>
             </button>
         </div>
     </div>
@@ -219,7 +225,6 @@
         </div>
     </div>
 </section>
-    
 
     <div class="spacer spacer--10"></div>
     <div class="spacer spacer--16"></div>
@@ -566,6 +571,10 @@
             <p class="paragraph">Мы свяжемся с Вами в ближайшее время</p>
             <button class="btn btn--primary">
                 Оставить заявку
+                <span class="hover-animated-arrow">
+                    <img class="hover-animated-arrow__out" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                    <img class="hover-animated-arrow__in" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                </span>
             </button>
         </div>
     </div>
@@ -1051,9 +1060,17 @@
     <div class="container">
         <div class="form-section__wrapper stagger-in">
             <div class="form-section__heading">
-                <h2 class="h2 imaged">Наши <span class="gray">контакты</span> и форма
-                    <div class="row">
-                        <svg width="128" height="86" viewBox="0 0 128 69" fill="none"
+                <h2 class="h2 imaged">
+                    <span class="row">
+                        <span>Оставьте <span class="gray">заявку</span></span>
+                        <span class="animated-arrow-img big-size">
+                            <img class="animated-arrow-img__out" src="/assets/img/arrow-icon.svg" alt="arrow-icon">
+                            <img class="animated-arrow-img__in" src="/assets/img/arrow-icon.svg" alt="arrow-icon">
+                        </span>
+                    </span>
+                    <span>
+                        
+                        <!-- <svg width="128" height="86" viewBox="0 0 128 69" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <rect id="circle1" class="circle" y="14" width="50" height="50" rx="25" fill="#BAFE35"
                                 fill-opacity="0.2" />
@@ -1085,9 +1102,9 @@
                                         result="shape" />
                                 </filter>
                             </defs>
-                        </svg>
-                        обратной связи
-                    </div>
+                        </svg> -->
+                        Мы с <span class="grey">вами</span> свяжемся
+                    </span>
                 </h2>
                 <div class="form-section__socials">
                     <a href="" class="social">
@@ -1113,16 +1130,16 @@
                 <form method="POST">
                     <div class="form-row row gap-2">
                         <div class="input-group w-1_3">
-                            <input type="text" id="name" name="name" class="input inpt-name" data-required="true" data-error="Please fill this field">
+                            <input type="text" id="name" name="name" class="input inpt-name" data-required="true" data-error="Обязательно для заполнения">
                             <label for="name">Ваше имя *</label>
                           </div>
                           <div class="input-group w-1_3">
-                            <input type="email" id="email" name="email" class="input inpt-email">
-                            <label for="email">Email </label>
+                            <input type="email" id="email" name="email" class="input inpt-email" data-required="true" data-error="Обязательно для заполнения">
+                            <label for="email">Email *</label>
                           </div>
                           <div class="input-group w-1_3" >
-                            <input type="tel" id="tel" name="tel" class="input inpt-tel" data-required="true" data-error="Please fill this field">
-                            <label for="tel">Номер телефона *</label>
+                            <input type="tel" id="tel" name="tel" class="input inpt-tel" data-required="true" data-error="Обязательно для заполнения">
+                            <label for="tel">Контакт в Telegram *</label>
                           </div>
                     </div>
                     <div class="form-row row">
@@ -1132,20 +1149,21 @@
                         </div>
                     </div>
                     <button class="btn btn--primary" type="submit">
-                        Оставить заявку
-                        <svg>
-                            <use xlink:href="assets/img/sprite.svg#arrow-right-white"></use>
-                        </svg>
+                        Отправить
+                        <span class="hover-animated-arrow">
+                            <img class="hover-animated-arrow__out" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                            <img class="hover-animated-arrow__in" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                        </span>
                     </button>
                     <input type="hidden" name="action" value="call">
                 </form>
             </div>
         </div>
     </div>
-    <img src="/assets/img/eezydev-big-letters.svg" alt="eezydev-decorate-letters" class="eezydev-big-letters">
 </section>
 
-    <footer class="footer">
+    <img src="/assets/img/eezydev-big-letters.svg" alt="eezydev-decorate-letters" class="eezydev-big-letters">
+<footer class="footer">
     <div class="container">
         <div class="footer__wrapper">
             <div class="footer__left">
@@ -1194,11 +1212,11 @@
                         <button href="" class="copy-btn" data-copy="info@eesydev.kz">
                             <span class="boxes">
                                 <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M9.0459 0.100586C10.1494 0.100643 10.9694 0.345356 11.5117 0.887695C12.0541 1.43003 12.2988 2.25005 12.2988 3.35352V5.69727C12.2988 6.80092 12.0541 7.62166 11.5117 8.16406C10.9694 8.70633 10.1493 8.95111 9.0459 8.95117H8.9502V9.04688C8.95014 10.1503 8.70535 10.9704 8.16309 11.5127C7.62068 12.0551 6.79995 12.2998 5.69629 12.2998H3.35254C2.24908 12.2997 1.42906 12.055 0.886719 11.5127C0.344379 10.9704 0.0996665 10.1503 0.0996094 9.04688V6.70312C0.0996094 5.59947 0.344316 4.77873 0.886719 4.23633C1.42906 3.69406 2.24915 3.44928 3.35254 3.44922H3.44824V3.35352C3.4483 2.25012 3.69308 1.43004 4.23535 0.887695C4.77775 0.345292 5.59849 0.100586 6.70215 0.100586H9.0459ZM3.35254 4.48633C2.49356 4.48637 1.94949 4.63352 1.61621 4.9668C1.28315 5.30016 1.13672 5.84426 1.13672 6.70312V9.04688C1.13676 9.90585 1.28293 10.4499 1.61621 10.7832C1.94949 11.1165 2.49356 11.2627 3.35254 11.2627H5.69629C6.55516 11.2627 7.09925 11.1163 7.43262 10.7832C7.7659 10.4499 7.91304 9.90585 7.91309 9.04688V6.70312C7.91309 5.84393 7.76595 5.30013 7.43262 4.9668C7.09929 4.63347 6.55549 4.48633 5.69629 4.48633H3.35254ZM6.70215 1.1377C5.84328 1.1377 5.29919 1.28413 4.96582 1.61719C4.63254 1.95047 4.4854 2.49454 4.48535 3.35352V3.44922H5.69629C6.79995 3.44922 7.62068 3.69393 8.16309 4.23633C8.70549 4.77873 8.9502 5.59947 8.9502 6.70312V7.91406H9.0459C9.90487 7.91402 10.4489 7.76688 10.7822 7.43359C11.1153 7.10023 11.2617 6.55613 11.2617 5.69727V3.35352C11.2617 2.49454 11.1155 1.95047 10.7822 1.61719C10.4489 1.28391 9.90487 1.13774 9.0459 1.1377H6.70215Z" fill="white" stroke="white" stroke-width="0.2"/>
+                                    <path d="M9.0459 0.100586C10.1494 0.100643 10.9694 0.345356 11.5117 0.887695C12.0541 1.43003 12.2988 2.25005 12.2988 3.35352V5.69727C12.2988 6.80092 12.0541 7.62166 11.5117 8.16406C10.9694 8.70633 10.1493 8.95111 9.0459 8.95117H8.9502V9.04688C8.95014 10.1503 8.70535 10.9704 8.16309 11.5127C7.62068 12.0551 6.79995 12.2998 5.69629 12.2998H3.35254C2.24908 12.2997 1.42906 12.055 0.886719 11.5127C0.344379 10.9704 0.0996665 10.1503 0.0996094 9.04688V6.70312C0.0996094 5.59947 0.344316 4.77873 0.886719 4.23633C1.42906 3.69406 2.24915 3.44928 3.35254 3.44922H3.44824V3.35352C3.4483 2.25012 3.69308 1.43004 4.23535 0.887695C4.77775 0.345292 5.59849 0.100586 6.70215 0.100586H9.0459ZM3.35254 4.48633C2.49356 4.48637 1.94949 4.63352 1.61621 4.9668C1.28315 5.30016 1.13672 5.84426 1.13672 6.70312V9.04688C1.13676 9.90585 1.28293 10.4499 1.61621 10.7832C1.94949 11.1165 2.49356 11.2627 3.35254 11.2627H5.69629C6.55516 11.2627 7.09925 11.1163 7.43262 10.7832C7.7659 10.4499 7.91304 9.90585 7.91309 9.04688V6.70312C7.91309 5.84393 7.76595 5.30013 7.43262 4.9668C7.09929 4.63347 6.55549 4.48633 5.69629 4.48633H3.35254ZM6.70215 1.1377C5.84328 1.1377 5.29919 1.28413 4.96582 1.61719C4.63254 1.95047 4.4854 2.49454 4.48535 3.35352V3.44922H5.69629C6.79995 3.44922 7.62068 3.69393 8.16309 4.23633C8.70549 4.77873 8.9502 5.59947 8.9502 6.70312V7.91406H9.0459C9.90487 7.91402 10.4489 7.76688 10.7822 7.43359C11.1153 7.10023 11.2617 6.55613 11.2617 5.69727V3.35352C11.2617 2.49454 11.1155 1.95047 10.7822 1.61719C10.4489 1.28391 9.90487 1.13774 9.0459 1.1377H6.70215Z" fill="white" stroke="white" stroke-width="0.2"/>
                                 </svg>
                             </span>
                             <span class="icon check">✔</span>
-                            <span class="text">info@eesydev.kz</span>
+                            <span class="text">info@eezydev.net</span>
                         </button>
                     </div>
                     <div class="footer__timework">

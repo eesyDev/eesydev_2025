@@ -55,7 +55,7 @@
                     transition:
                         transform .35s cubic-bezier(.34,1.56,.64,1),
                         box-shadow .2s;
-                    transition-delay: 0s; // 👈 дефолт
+                    transition-delay: 0.06s; // 👈 дефолт
                 }
             }
         }

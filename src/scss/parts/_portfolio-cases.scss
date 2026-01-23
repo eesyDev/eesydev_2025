@@ -1,10 +1,4 @@
 .cases {
-    &__heading {
-        margin-top: 2.25rem;
-        display: flex;
-        gap: 50px;
-        align-items: center;
-    }
     &__wrapper {
         margin-top: 20px;
         display: flex;
@@ -16,34 +10,36 @@
         padding-bottom: 21px;
         padding-right: 37px;
         margin-right: 37px;
+        margin-bottom: 50px;
         position: relative;
         &::after {
             content: '';
             height: 100%;
-            width: 1px;
-            background-color: var(--border-grey);
+            width: 0.5px;
+            background-color: var(--mid-gray);
             position: absolute;
             top: 0;
             right: 0;
         }
         &__tags {
-            margin-top: 30px;
+            margin-top: 20px;
             display: flex;
             gap: 10px;
             align-items: center;
         }
         .tag {
-            padding: 4px 16px;
-            font-size: 10px;
-            font-weight: 500;
-            border: 1px solid #000;
+            padding: 6px 16px 4px;
+            font-size: 9px;
+            line-height: 1;
+            font-weight: 400;
+            background: var(--mid-gray);
             border-radius: 4px;
-            color: #000;
+            color: var(--grey);
             &.tag--fill {
                 background-color: #E0E0E0;
             }
             &.tag--outline {
-                border-color: var(--grey);
+                border-color: var(--gray);
                 color: var(--blue-accent);
             }
             &.tag--outline-dotted {
@@ -52,11 +48,48 @@
         }
         &__title {
             font-weight: 400;
-            margin-top: 20px;
+            margin-top: 10px;
         }
         &__link {
             margin-top: 30px;
             min-width: 178px;
+            background: var(--black);
+            border: none;
+            color: var(--white);
+            .lil-icons {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                margin-top: 2px;
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    transition: 
+                        transform 0.35s ease,
+                        opacity 0.25s ease;
+                }
+                .arrow-icon {
+                    position: absolute;
+                    font-size: 18px;
+                    left: -20px;
+                    top: -5px;
+                    transition: 
+                        transform 0.35s ease,
+                        opacity 0.25s ease;
+                }
+            }
+            &:hover {
+                background: var(--dark-grey);
+                transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+                .lil-icons {
+                    svg {
+                        transform: translateX(-20px);
+                    }
+                    .arrow-icon {
+                        transform: translateX(20px);
+                    }
+                }
+            }
         }
     }
 }

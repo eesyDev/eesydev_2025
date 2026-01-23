@@ -1,15 +1,18 @@
 @use 'utils/_mixins' as mixin;
 :root {
     --black: #000;
-    --white: #fff;
     --light-black: #1F1F1F;
     --dark-bg: #16171a;
-    --gray: #838383;
     --accent: #BAFE35;
+    --white: #fff;
     --light-gray: #F9F9F9;
-    --mid-gray: #F4F4F4;
-    --error: #e64832;
+    --mid-gray: #e0e0e0;
+    --light-grey: #9D9D9D;
+    --gray: #838383;
     --grey: #606060;
+    --dark-grey: #474747;
+    --grey-dark-ver: #BABABA;
+    --error: #e64832;
     --border-grey: #DBDBDB;
     --blue-accent: #0500FF;
 }
@@ -38,6 +41,66 @@
         width: 22px;
         height: 22px;
     }
+    .hover-animated-arrow {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        img {
+            width: 20px;
+        }
+        &__out {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 16px;
+            transform: translate(-50%, -50%) translate(0, 0);
+            opacity: 1;
+            transition:
+                transform 0.45s cubic-bezier(.4,0,.2,1),
+                opacity 0.25s ease;
+            transition-timing-function: cubic-bezier(.6,0,.4,1);
+            &.right {
+                transform: translate(-50%, -50%) translateX(0);
+                opacity: 1;
+            }
+        }
+        &__in {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 16px;
+            transform: translate(-50%, -50%) translate(-14px, 14px);
+            opacity: 0;
+            transition:
+                transform 0.45s cubic-bezier(.4,0,.2,1),
+                opacity 0.25s ease;
+            transition-delay: 0.08s;
+            &.right {
+                transform: translate(-50%, -50%) translateX(-14px);
+                opacity: 0;
+            }
+        }
+    }
+    &:hover {
+        .hover-animated-arrow__out {
+            transform: translate(-50%, -50%) translate(14px, -14px);
+            opacity: 0;
+            &.right {
+                transform: translate(-50%, -50%) translateX(14px);
+                opacity: 0;
+            }
+        }
+        .hover-animated-arrow__in {
+            transform: translate(-50%, -50%) translate(0, 0);
+            opacity: 1;
+            &.right {
+                transform: translate(-50%, -50%) translateX(0);
+                opacity: 1;
+            }
+        }
+    }
     &.btn--primary {
         background-color: var(--black);
         color: #fff;
@@ -57,7 +120,6 @@
             z-index: 0;
           }
           &:hover {
-  
             &:after {
               left: 120%;
               transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -77,8 +139,13 @@
     &.btn--accent {
         color: var(--black);
         background-color: var(--accent);
-        border-color: var(--black);
         transition: all 0.15s;
+        overflow: hidden;
+        .hover-animated-arrow {
+            img {
+                width: 16px;
+            }
+        }
         &:after {
             background: #fff;
             content: "";
@@ -214,6 +281,9 @@ a.underlined {
 
 .spacer {
     display: block;
+    &.spacer--4 {
+        height: 4em;
+    }
     &.spacer--8 {
         height: 8em;
     }
