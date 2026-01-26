@@ -161,6 +161,34 @@
         pauseOtherVideos('.swiper-slide');
     });
 
+
+    // LENIS - LENIS - LENIS 1. Инициализация Lenis 
+    const lenis = new Lenis({
+        duration: 1.3, // Длительность скролла (чем больше, тем плавнее)
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Функция плавности
+        smoothWheel: true,
+        orientation: 'vertical', 
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        smoothTouch: false, // На мобильных обычно лучше оставлять нативный скролл
+        touchMultiplier: 2,
+    });
+
+    // 2. ВАЖНО: Связка Lenis и GSAP ScrollTrigger
+    // Говорим ScrollTrigger обновляться каждый раз, когда Lenis скроллит
+    lenis.on('scroll', ScrollTrigger.update);
+
+    // Добавляем Lenis в ticker GSAP'а, чтобы они работали синхронно в одном кадре анимации
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+
+    // Отключаем лаг-сглаживание GSAP, так как Lenis берет это на себя
+    gsap.ticker.lagSmoothing(0);
+    // LENIS - LENIS - LENIS
+
+
 	const workTitleLinks = document.querySelectorAll('.work-title-link');
 	const workItems = document.querySelectorAll('.work-item');
 	let activeIndex = null;
@@ -205,6 +233,7 @@
 			console.log(index)
 		});
 	});
+
 
 	$(document).ready(function () {
 		$('.accordion-header-packs:first').addClass('active');
