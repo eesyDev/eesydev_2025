@@ -11,8 +11,21 @@
             margin-top: 10px;
             font-weight: 500;
         }
-        .btn {
-            margin-top: 35px;
+    }
+    &__btns {
+        margin-top: 35px;
+        display: flex;
+        gap: 30px;
+    }
+    &__pdf {
+        display: none;
+    }
+}
+
+.cooperation-page {
+    .request {
+        &__pdf {
+            display: flex;
         }
     }
 }

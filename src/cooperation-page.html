@@ -16,7 +16,7 @@
                         <span>Современный рынок требует гибкости и умения объединять усилия, поэтому мы открыты к сотрудничеству с агентствами и студиями, которым нужен надёжный подрядчик для дизайна и разработки сайтов</span>
                     </div>
                     <div class="cooperation-page__advantages advantages__main-wrapper">
-                        <div class="cooperation-page__advantages-wrapper advantages__wrapper">
+                        <div class="cooperation-page__advantages-wrapper advantages__wrapper wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
                             <div class="advantages__item">
                                 <div class="advantages__item-title">
                                     <img src="/assets/img/adv7-dark-b2b.svg" alt="individual" class="icon">
@@ -48,7 +48,7 @@
                         </div>
                     </div>
                     <div class="cooperation-page__btn-block">
-                        <a href="#consultation" class="btn btn--accent btn-6 wow fadeInUp open-popup" data-wow-duration="1s" data-wow-delay="1.0s">
+                        <a href="#consultation" class="btn btn--accent btn-6 wow fadeInUp open-popup" data-wow-duration="1s" data-wow-delay="1.3s">
                             Начать сотрудничество
                             <span class="hover-animated-arrow">
                                 <img class="hover-animated-arrow__out" src="/assets/img/arrow-icon.svg" alt="arrow-icon">
@@ -66,45 +66,13 @@
     </section>
 
     <div class="spacer spacer--8"></div>
-    <section class="for-who">
-        <div class="container">
-            <div class="for-who__main-wrapper">
-                <h2 class="h2 h2-block head-animated-scroll wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s">
-                    <span>Для кого</span>
-                    <span class="h2-small">Удобен <span class="gray">такой формат</span><br> сотрудничества?</span>
-                </h2>
-                <div class="for-who__wrapper stagger-in">
-                    <div class="for-who__item">
-                        <img src="/assets/img/b2b-img1-marketing.svg" alt="illustration-image">
-                        <div class="for-who__item-text-block">
-                            <h3 class="for-who__item-title">SEO и Маркетинговые агентства</h3>
-                            <p class="for-who__item-text">Внедряем ваши правки, оптимизируем скорость (Core Web Vitals), настраиваем цели, не ломая структуру сайта</p>
-                        </div>
-                    </div>
-                    <div class="for-who__item">
-                        <img src="/assets/img/b2b-img2-digital.svg" alt="illustration-image">
-                        <div class="for-who__item-text-block">
-                            <h3 class="for-who__item-title">Digital и Веб-агентства</h3>
-                            <p class="for-who__item-text">Мы - ваш резервный отдел разработки, подключаемся, когда не хватает ресурсов или времени</p>
-                        </div>
-                    </div>
-                    <div class="for-who__item">
-                        <img src="/assets/img/b2b-img3-design.svg" alt="illustration-image">
-                        <div class="for-who__item-text-block">
-                            <h3 class="for-who__item-title">Дизайн-студии</h3>
-                            <p class="for-who__item-text">Вы рисуете крутой UI - мы реализуем это в коде, с вниманием к деталям и адаптиву</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    @@include('sections/for-whom.html')
 
     <div class="spacer spacer--8"></div>
     @@include('sections/request.html')
 
     <div class="spacer spacer--8"></div>
-    @@include('sections/advantages.html')
+    @@include('sections/advantages-coop.html')
 
     <div class="spacer spacer--8"></div>
     @@include('sections/services.html')
@@ -116,7 +84,7 @@
     @@include('sections/platforms.html')
 
     <div class="spacer spacer--8"></div>
-
+    @@include('sections/process-b2b.html')
 
     <div class="spacer spacer--8"></div>
     @@include('sections/faq.html')

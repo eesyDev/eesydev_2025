@@ -50,6 +50,9 @@
         img {
             width: 20px;
         }
+        &.down {
+            border-radius: 2px;
+        }
         &__out {
             position: absolute;
             top: 50%;
@@ -63,7 +66,9 @@
             transition-timing-function: cubic-bezier(.6,0,.4,1);
             &.right, &.left {
                 transform: translate(-50%, -50%) translateX(0);
-                opacity: 1;
+            }
+            &.down {
+                transform: translate(-50%, -50%) translateY(0);
             }
         }
         &__in {
@@ -79,11 +84,12 @@
             transition-delay: 0.08s;
             &.right {
                 transform: translate(-50%, -50%) translateX(-14px);
-                opacity: 0;
             }
             &.left {
                 transform: translate(-50%, -50%) translateX(14px);
-                opacity: 0;
+            }
+            &.down {
+                transform: translate(-50%, -50%) translateY(-14px);
             }
         }
     }
@@ -93,11 +99,12 @@
             opacity: 0;
             &.right {
                 transform: translate(-50%, -50%) translateX(14px);
-                opacity: 0;
             }
             &.left {
                 transform: translate(-50%, -50%) translateX(-14px);
-                opacity: 0;
+            }
+            &.down {
+                transform: translate(-50%, -50%) translateY(14px);
             }
         }
         .hover-animated-arrow__in {
@@ -106,6 +113,9 @@
             &.right, &.left {
                 transform: translate(-50%, -50%) translateX(0);
                 opacity: 1;
+            }
+            &.down {
+                transform: translate(-50%, -50%) translateY(0);
             }
         }
     }
@@ -168,7 +178,6 @@
             z-index: 0;
           }
           &:hover {
-  
             &:after {
               left: 120%;
               transition: all 850ms cubic-bezier(0.19, 1, 0.22, 1);
@@ -180,6 +189,13 @@
         svg {
             stroke: var(--black);
         }
+    }
+    &.btn--light {
+        border: 2px solid var(--light-black);
+        // &:hover {
+        //     color: var(--grey);
+        //     border: 2px solid var(--grey);
+        // }
     }
     @media screen and (max-width: 1350px) {
         height: 56px;
