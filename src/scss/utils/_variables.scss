@@ -5,7 +5,7 @@
     --dark-bg: #16171a;
     --accent: #BAFE35;
     --white: #fff;
-    --light-gray: #F9F9F9;
+    --light-gray: #eaeaea;
     --mid-gray: #e0e0e0;
     --light-grey: #9D9D9D;
     --gray: #838383;
@@ -67,7 +67,7 @@
             &.right, &.left {
                 transform: translate(-50%, -50%) translateX(0);
             }
-            &.down {
+            &.down, &.up {
                 transform: translate(-50%, -50%) translateY(0);
             }
         }
@@ -91,6 +91,9 @@
             &.down {
                 transform: translate(-50%, -50%) translateY(-14px);
             }
+            &.up {
+                transform: translate(-50%, -50%) translateY(14px);
+            }
         }
     }
     &:hover {
@@ -106,6 +109,9 @@
             &.down {
                 transform: translate(-50%, -50%) translateY(14px);
             }
+            &.up {
+                transform: translate(-50%, -50%) translateY(-14px);
+            }
         }
         .hover-animated-arrow__in {
             transform: translate(-50%, -50%) translate(0, 0);
@@ -114,7 +120,7 @@
                 transform: translate(-50%, -50%) translateX(0);
                 opacity: 1;
             }
-            &.down {
+            &.down, &.up {
                 transform: translate(-50%, -50%) translateY(0);
             }
         }

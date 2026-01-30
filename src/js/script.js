@@ -234,6 +234,53 @@
 		});
 	});
 
+    // Cookie логика
+    const cookieBanner = document.getElementById("cookieBanner");
+    const cookieBtn = document.getElementById("cookieAccept");
+
+    if (localStorage.getItem("cookieAccepted")) {
+        cookieBanner.style.display = "none";
+    }
+    cookieBtn.addEventListener("click", () => {
+        localStorage.setItem("cookieAccepted", "true");
+        cookieBanner.style.display = "none";
+    });
+    // Cookie логика
+
+    // Header смена fixed
+    const header = document.querySelector('.header');
+    const headerHeight = header.offsetHeight;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('header--fixed');
+            document.body.style.paddingTop = headerHeight + 'px';
+        } else {
+            header.classList.remove('header--fixed');
+            document.body.style.paddingTop = '';
+        }
+    });
+    // Header смена fixed
+
+    // Кнопки Быстрая связь и Вверх
+    const upBtn = document.querySelector('.fixed-btns__go-up');
+
+    window.addEventListener('scroll', () => {
+        upBtn.classList.toggle('is-visible', window.scrollY > 2000);
+    });
+
+    upBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const phoneFab = document.querySelector('.fixed-btns__direct');
+    const mainBtn = phoneFab.querySelector('.fixed-btns__direct-main');
+
+    mainBtn.addEventListener('click', () => {
+    phoneFab.classList.toggle('is-open');
+    });
+    // Кнопки Быстрой связь и Вверх
+
 
 	$(document).ready(function () {
 		$('.accordion-header-packs:first').addClass('active');

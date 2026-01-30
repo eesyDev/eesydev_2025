@@ -1,9 +1,40 @@
 @use 'utils/mixins' as mixin;
 .header {
     padding: 24px 0;
+    position: relative;
+    transition: box-shadow 0.3s ease, background 0.3s ease;
+    z-index: 15;
+    width: 100%;
+    &.header--fixed {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 82%;
+        transform: translateX(-50%);
+        margin-top: 10px;
+        padding: 15px 0;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        box-shadow:
+            0 1px 0 rgba(0, 0, 0, 0.15),
+            0 10px 30px rgba(0, 0, 0, 0.08);
+        .container {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+        .btn.btn--primary {
+            border-radius: 50px;
+            height: 52px;
+        }
+    }
     &__logo {
         width: 141px;
         height: 38px;
+        img {
+            height: 100%;
+        }
     }
     &__right-wrapper {
         display: flex;

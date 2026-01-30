@@ -153,3 +153,173 @@
         }
     }
 }
+
+.cookie-banner {
+    position: fixed;
+    bottom: 50px;
+    right: 100px;
+    max-width: 900px;
+    width: calc(100% - 32px);
+    height: 115px;
+    padding: 25px 70px;
+    background: var(--light-black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    z-index: 100;
+
+    /* рваные края — см. пункт 2 */
+    mask-image: url("../img/cookie-bg.svg");
+    mask-size: 100% 100%;
+    &__text {
+        font-size: 13px;
+        font-weight: 200;
+        line-height: 1.4;
+        a {
+            font-weight: 400;
+            text-decoration: underline;
+            color: var(--grey-dark-ver);
+            &:hover {
+                color: var(--white);
+            }
+        }
+    }
+    &__btn {
+        background: transparent;
+        border: none;
+        color: #baff00;
+        font-weight: 700;
+        cursor: pointer;
+        font-size: 16px;
+        text-decoration: underline;
+        &:hover {
+            color: var(--white);
+        }
+    }
+}
+
+.fixed-btns {
+    position: fixed;
+    right: 25px;
+    bottom: 40px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    &__go-up {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: var(--mid-gray);
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(10px);
+        transition: opacity .3s ease, transform .3s ease;
+        min-width: 56px;
+        padding: 0;
+        &:hover {
+            background: var(--light-grey);
+        }
+        &.is-visible {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateY(0);
+        }
+    }
+    &__direct {
+        position: relative;
+        display: flex;
+        align-items: center;
+        border: 0.5px solid #ff007a;
+        border-radius: 30px;
+        &-main {
+            background: #fff;
+            transition: background .3s ease;
+            border-radius: 30px;
+            width: 56px;
+            height: 56px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            order: 1;
+            overflow: hidden;
+            position: relative;
+            &:hover {
+                background: #ff007a;
+                svg path {
+                    fill: var(--white);
+                }
+                svg:last-child path {
+                    stroke: var(--white);
+                }
+            }
+            .icon {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) translate(0, 0);
+                opacity: 1;
+                transition:
+                    transform 0.25s cubic-bezier(.4,0,.2,1),
+                    opacity 0.25s ease;
+                transition-timing-function: cubic-bezier(.6,0,.4,1);
+                &-out {
+                    transform: translate(-50%, -50%) translateY(0);
+                    opacity: 1;
+                }
+                &-in {
+                    transform: translate(-50%, -50%) translateY(14px);
+                    opacity: 0;
+                }
+            }
+        }
+        &.is-open {
+            .fixed-btns__direct-main {
+                .icon {
+                    &-out {
+                        transform: translate(-50%, -50%) translateY(-14px);
+                        opacity: 0;
+                    }
+                    &-in {
+                        transform: translate(-50%, -50%) translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        &-menu {
+            display: flex;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(10px);
+            transition: .35s ease;
+            a {
+                display: none;
+            }
+        }
+        &.is-open {
+            background: var(--white);
+            .fixed-btns__direct-menu {
+                opacity: 1;
+                pointer-events: auto;
+                transform: translateX(0);
+                a {
+                    width: 56px;
+                    height: 56px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: var(--white);
+                    &:hover {
+                        background: var(--light-gray);
+                    }
+                }
+            }
+        }
+    }
+}
