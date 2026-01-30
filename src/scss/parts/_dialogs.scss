@@ -323,3 +323,46 @@
         }
     }
 }
+
+@media screen and (max-width: 1180px) {
+    .cookie-banner {
+        max-width: 780px;
+        padding: 25px 35px;
+        bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cookie-banner {
+        max-width: 740px;
+        right: 20px;
+        bottom: 20px;
+        &__text {
+            line-height: 1.2;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .cookie-banner {
+        mask-image: none;
+        height: auto;
+        padding: 20px 30px;
+        border-radius: 16px;
+        right: 15px;
+        bottom: 15px;
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cookie-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+        gap: 15px;
+        &__text {
+            font-size: 11px;
+        }
+    }
+}

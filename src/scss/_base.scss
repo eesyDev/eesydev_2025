@@ -182,20 +182,9 @@ html.lenis, html.lenis body {
         font-size: 4em;
     }
     
-    h3, .h3 {
-        font-size: 3.5em;
-    }
-    
-    h4, .h4 {
-        font-size: 3em;
-    }
-    
-    h5, .h5 {
-        font-size: 2.5em;
-    }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1280px) {
     body {
         font-size: 14px;
     }
@@ -221,19 +210,11 @@ html.lenis, html.lenis body {
                 margin-top: 12px;
             }
         }
+        &-small {
+            font-size: 20px;
+        }
     }
     
-    h3, .h3 {
-        font-size: 3em;
-    }
-    
-    h4, .h4 {
-        font-size: 2.5em;
-    }
-    
-    h5, .h5 {
-        font-size: 2em;
-    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -243,9 +224,16 @@ html.lenis, html.lenis body {
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
     .container {
         padding-left: 24px;
         padding-right: 24px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }

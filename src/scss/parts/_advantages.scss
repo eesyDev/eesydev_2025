@@ -27,25 +27,48 @@
     }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1280px) {
     .advantages {
         &__wrapper {
             width: 70%;
+        }
+        &__item {
+            width: 47%;
         }
     }
 }
 
 @media screen and (max-width: 1024px) {
+    .advantages__main-wrapper {
+        flex-direction: column;
+        gap: 50px;
+    }
     .advantages__wrapper {
         width: 100%;
+        margin-top: 0;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .advantages__wrapper {
-        margin-top: 4.125em;
+@media screen and (max-width: 640px) {
+    .advantages {
+        &__item {
+            .title {
+                font-size: 16px;
+            }
+            .icon {
+                width: 40px;
+            }
+        }
     }
-    .advantages__item {
-        width: 47%;
+}
+
+@media screen and (max-width: 480px) {
+    .advantages {
+        &__wrapper {
+            row-gap: 30px;
+        }
+        &__item {
+            width: 100%;
+        }
     }
 }

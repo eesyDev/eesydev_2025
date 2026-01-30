@@ -60,36 +60,10 @@
     }
 }
 
-@media screen and (max-width: 1600px) {
+@media screen and (max-width: 1480px) {
     .hero {
-        .h1.huge {
-            font-size: 11em;
-        }
-    }
-}
-
-@media screen and (max-width: 1550px) {
-    .hero {
-        .h1.huge {
-            font-size: 10em;
-        }
-        &__illustr {
-            max-width: 570px;
-        }
-    }
-}
-
-@media screen and (max-width: 1470px) {
-    .hero {
-        .h1.huge {
-            font-size: 9.5em;
-        }
-        &__illustr {
-            max-width: 520px;
-            .globe {
-                width: 70px;
-                height: 70px;
-            }
+        &__wrapper {
+            align-items: center;
         }
     }
 }
@@ -97,68 +71,134 @@
 @media screen and (max-width: 1380px) {
     .hero {
         .h1.huge {
-            font-size: 9em;
+            font-size: 106px;
+        }
+        &__info {
+            width: 52%;
         }
         &__illustr {
-            max-width: 460px;
-            .globe {
-                width: 60px;
-                height: 60px;
-            }
+            width: 43%;
         }
     }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1180px) {
     .hero {
         .h1.huge {
-            font-size: 7.5em;
+            font-size: 86px;
+        }
+        &__info {
+            width: 65%;
+            z-index: 2;
         }
         &__illustr {
-            max-width: 420px;
-            .globe {
-                width: 50px;
-                height: 50px;
-            }
+            position: absolute;
+            top: 0;
+            right: -50px;
         }
-        .h3 {
-            font-size: 2.9em;
-        }
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .hero {
-        .h1.huge {
-            font-size: 5.5em;
-        }
-        &__illustr {
-            max-width: 320px;
-            .globe {
-                width: 40px;
-                height: 40px;
-            }
-        }
-        .h3 {
-            font-size: 2.2em;
-        }
+        z-index: 1;
     }
 }
 
 @media screen and (max-width: 1024px) {
     .hero {
         .h1.huge {
-            font-size: 5em;
+            font-size: 72px;
+        }
+        .h1-small {
+            font-size: 24px;
+            padding-left: 5px;
+        }
+        &__info {
+            width: 75%;
+        }
+        &__info-txt {
+            width: 100%;
+            padding-left: 5px;
+            padding-right: 100px;
+            margin-top: 20px;
+        }
+        &__btn-block {
+            padding-left: 5px;
+            gap: 20px;
         }
         &__illustr {
-            max-width: 260px;
-            .globe {
-                width: 30px;
-                height: 30px;
+            width: 45%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        .h1.huge {
+            font-size: 65px;
+        }
+        &__info {
+            width: 85%;
+            &-txt {
+                padding-right: 150px;
             }
         }
-        .h3 {
-            font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .hero {
+        overflow: hidden;
+        padding-bottom: 100px;
+        .h1.huge {
+            font-size: 58px;
+        }
+        &__info {
+            &-txt {
+                padding-right: 50px;
+            }
+        }
+        &__illustr {
+            width: 70%;
+            top: -10px;
+            right: -200px;
+        }
+        &__btn-block {
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 30px;
+            gap: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .hero {
+        &__info {
+            &-txt {
+                padding-right: 30px;
+            }
+        }
+        &__illustr {
+            width: 100%;
+            top: 50px;
+            right: -250px;
+        }
+        &__btn-block {
+            .btn-lil-txt {
+                font-size: 10px;
+                font-weight: 300;
+                padding-left: 5px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 375px) {
+    .hero {
+        .h1.huge {
+            font-size: 52px;
+        }
+        &__info {
+            width: 90%;
+            &-txt {
+                padding-right: 40px;
+            }
         }
     }
 }
