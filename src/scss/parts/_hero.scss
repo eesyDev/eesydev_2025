@@ -1,5 +1,6 @@
 .hero {
     margin-top: 30px;
+    overflow: hidden;
     .h1 {
         &.huge {
             font-size: 148px;
@@ -84,6 +85,7 @@
 
 @media screen and (max-width: 1180px) {
     .hero {
+        padding-bottom: 100px;
         .h1.huge {
             font-size: 86px;
         }
@@ -96,7 +98,6 @@
             top: 0;
             right: -50px;
         }
-        z-index: 1;
     }
 }
 
@@ -130,6 +131,7 @@
 
 @media screen and (max-width: 768px) {
     .hero {
+        padding-bottom: 20px;
         .h1.huge {
             font-size: 65px;
         }
@@ -189,7 +191,7 @@
         }
     }
 }
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 370px) {
     .hero {
         .h1.huge {
             font-size: 52px;

@@ -88,12 +88,13 @@ h3, .h3 {
 }
 
 h4, .h4 {
-    font-size: 3.5em;
+    font-size: 28px;
     line-height: normal;
 }
 
 h5, .h5 {
-    font-size: 3em;
+    // font-size: 3em;
+    font-size: 24px;
     line-height: normal;
 }
 
@@ -169,6 +170,46 @@ html.lenis, html.lenis body {
     pointer-events: none; /* Улучшает производительность скролла над iframe */
 }
 
+.animation-arrow-up {
+    position: relative;
+    height: fit-content;
+    &-main {
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(0, 0);
+            opacity: 1;
+            transition:
+                transform 0.25s cubic-bezier(.4,0,.2,1),
+                opacity 0.25s ease;
+            transition-timing-function: cubic-bezier(.6,0,.4,1);
+            &-out {
+                transform: translate(-50%, -50%) translateY(0);
+                opacity: 1;
+            }
+            &-in {
+                transform: translate(-50%, -50%) translateY(14px);
+                opacity: 0;
+            }
+        }
+    }
+    &.is-open {
+        .animation-arrow-up-main {
+            .icon {
+                &-out {
+                    transform: translate(-50%, -50%) translateY(-14px);
+                    opacity: 0;
+                }
+                &-in {
+                    transform: translate(-50%, -50%) translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1350px) {
     .container {
         padding-left: 60px;
@@ -177,11 +218,6 @@ html.lenis, html.lenis body {
     h1, .h1 {
         font-size: 6em;
     }
-    
-    h2, .h2 {
-        font-size: 4em;
-    }
-    
 }
 
 @media screen and (max-width: 1280px) {
@@ -201,7 +237,7 @@ html.lenis, html.lenis body {
     }
     
     h2, .h2 {
-        font-size: 3.5em;
+        font-size: 52px;
         &.imaged {
             img {
                 width: 110px;
@@ -213,6 +249,9 @@ html.lenis, html.lenis body {
         &-small {
             font-size: 20px;
         }
+        &.h2-sm {
+            font-size: 42px;
+        }
     }
     
 }
@@ -222,6 +261,9 @@ html.lenis, html.lenis body {
         padding-left: 36px;
         padding-right: 36px;
     }
+    h2, .h2 {
+        font-size: 48px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -229,11 +271,30 @@ html.lenis, html.lenis body {
         padding-left: 24px;
         padding-right: 24px;
     }
+    h2, .h2 {
+        &.h2-sm {
+            font-size: 36px;
+        }
+    }
+    h3, .h3 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    h3, .h3 {
+        font-size: 26px;
+    }
 }
 
 @media screen and (max-width: 480px) {
     .container {
         padding-left: 10px;
         padding-right: 10px;
+    }
+    h2, .h2 {
+        &.h2-sm {
+            font-size: 28px;
+        }
     }
 }

@@ -33,6 +33,7 @@
     &-title-wrap {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         width: 100%;
     }
     &-item {
@@ -65,6 +66,7 @@
         transform: perspective(50vw);
         &-wrap {
             display: flex;
+            align-items: center;
         }
     }
     h1 {
@@ -78,7 +80,7 @@
     }
     .title-toggle {
         display: block;
-        width: 170px;
+        width: 140px;
         flex: none;
         margin-left: 30px;
         position: relative;
@@ -454,13 +456,10 @@
         display: flex;
     }
 }
- @media screen and (max-width: 1350px) {
+ @media screen and (max-width: 1380px) {
     .work {
-        h1 {
-            font-size: 70px;
-        }
         .title-toggle {
-            width: 150px;
+            width: 120px;
         }
         &-infos {
             .u-subt {
@@ -470,13 +469,10 @@
     }
  }
 
- @media screen and (max-width: 1200px) {
+ @media screen and (max-width: 1280px) {
     .work {
         h1 {
             font-size: 60px;
-        }
-        .title-toggle {
-            width: 130px;
         }
         &-infos {
             .u-subt {
@@ -559,16 +555,7 @@
             }
             &-link-wrap {
                 flex-wrap: wrap; 
-                h1 {
-                }
-                // > * {
-                //     width: 100%;
-                // }
             }
-        }
-        .title-toggle {
-            width: 200px;
-            margin-left: 0;
         }
     }
  }

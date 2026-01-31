@@ -231,13 +231,12 @@
         }
     }
     &__direct {
-        position: relative;
         display: flex;
         align-items: center;
-        border: 0.5px solid #ff007a;
+        border: 0.5px solid var(--light-black);
         border-radius: 30px;
         &-main {
-            background: #fff;
+            background: var(--light-black);
             transition: background .3s ease;
             border-radius: 30px;
             width: 56px;
@@ -248,46 +247,19 @@
             order: 1;
             overflow: hidden;
             position: relative;
+            svg path {
+                fill: var(--white);
+            }
+            svg:last-child path {
+                stroke: var(--white);
+            }
             &:hover {
-                background: #ff007a;
+                background: var(--accent);
                 svg path {
-                    fill: var(--white);
+                    fill: var(--light-black);
                 }
                 svg:last-child path {
-                    stroke: var(--white);
-                }
-            }
-            .icon {
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) translate(0, 0);
-                opacity: 1;
-                transition:
-                    transform 0.25s cubic-bezier(.4,0,.2,1),
-                    opacity 0.25s ease;
-                transition-timing-function: cubic-bezier(.6,0,.4,1);
-                &-out {
-                    transform: translate(-50%, -50%) translateY(0);
-                    opacity: 1;
-                }
-                &-in {
-                    transform: translate(-50%, -50%) translateY(14px);
-                    opacity: 0;
-                }
-            }
-        }
-        &.is-open {
-            .fixed-btns__direct-main {
-                .icon {
-                    &-out {
-                        transform: translate(-50%, -50%) translateY(-14px);
-                        opacity: 0;
-                    }
-                    &-in {
-                        transform: translate(-50%, -50%) translateY(0);
-                        opacity: 1;
-                    }
+                    stroke: var(--light-black);
                 }
             }
         }

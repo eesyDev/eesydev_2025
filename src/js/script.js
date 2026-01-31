@@ -273,11 +273,14 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
-    const phoneFab = document.querySelector('.fixed-btns__direct');
-    const mainBtn = phoneFab.querySelector('.fixed-btns__direct-main');
+    document.querySelectorAll('.animation-arrow-up').forEach(phoneFab => {
+        const mainBtn = phoneFab.querySelector('.animation-arrow-up-main');
 
-    mainBtn.addEventListener('click', () => {
-    phoneFab.classList.toggle('is-open');
+        if (!mainBtn) return;
+
+        mainBtn.addEventListener('click', () => {
+            phoneFab.classList.toggle('is-open');
+        });
     });
     // Кнопки Быстрой связь и Вверх
 

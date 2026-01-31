@@ -24,13 +24,101 @@
             width: 46%;
             &-title {
                 display: flex;
+                align-items: center;
                 gap: 15px;
                 font-size: 24px;
+                img {
+                    width: 40px;
+                }
             }
             &-text {
                 font-size: 13px;
                 font-weight: 300;
                 color: var(--grey);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .why-price {
+        .h2-long-block {
+            &__wrap {
+                .why-price__title-img {
+                    width: 120px;
+                }
+            }
+        }
+        &__content-row {
+            flex-direction: column;
+            gap: 50px;
+        }
+        &__content-item {
+            width: 90%;
+            &-title {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .why-price {
+        .h2-long-block {
+            font-size: 42px;
+            &__wrap {
+                .why-price__title-img {
+                    width: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .why-price {
+        .h2-long-block {
+            font-size: 32px;
+            &__wrap {
+                .why-price__title-img {
+                    width: 80px;
+                }
+            }
+        }
+        &__content-item {
+            &-title img {
+                width: 35px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .why-price {
+        .h2-long-block {
+            font-size: 26px;
+            &__wrap {
+                .why-price__title-img {
+                    width: 70px;
+                }
+            }
+        }
+        &__content-item {
+            &-title {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .why-price {
+        .h2-long-block {
+            font-size: 24px;
+            &__wrap {
+                .why-price__title-img {
+                    width: 50px;
+                }
             }
         }
     }
