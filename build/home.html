@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/lib/animate.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
     <link rel="stylesheet" href="/assets/css/style.css">
     <title>Document</title>
 </head>
@@ -168,7 +169,61 @@
 </section>
 
     <div class="spacer spacer--8"></div>
-    
+    <section class="about-us">
+    <div class="about-us__bg-wrap container">
+        <div class="about-us__bg wow stagger-in">
+            <span>Us</span>
+            <span>About</span>
+        </div>
+    </div>
+    <div class="about-us__circle-wrap container">
+        <img src="/assets/img/lil-letters-round.svg" alt="bg-letters-image" class="about-us__circle">
+    </div>
+    <div class="container">
+        <div class="about-us__wrapper">
+            <div class="about-us__upper">
+                <h2 class="h2 h2-block head-animated-scroll wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0s">
+                    <span class="h2-small">Пару <span class="gray">слов</span></span>
+                    <span>О нас</span>
+                </h2>
+                <div class="about-us__upper-blocks">
+                    <div class="about-us__upper-block stagger-in">
+                        <div class="about-us__upper-title">
+                            <div class="">С <span class="big">2020</span></div>
+                            <div class="">года</div>
+                        </div>
+                        <div class="about-us__upper-text">Веб агентство <span>eezydev</span> помогает компаниям с разработкой и дизайном сайтов для бизнеса любой сложности</div>
+                    </div>
+                    <div class="about-us__upper-block stagger-in">
+                        <div class="about-us__upper-title">
+                            <div class="">Более <span class="big">70</span></div>
+                            <div class="">проектов</div>
+                        </div>
+                        <div class="about-us__upper-text">Мы реализовали за это время, от лаконичных лендингов до масштабных интернет-магазинов и корпоративных сайтов</div>
+                    </div>
+                </div>
+            </div>
+            <div class="about-us__lower">
+                <div class="about-us__lower-block stagger-in">
+                    <h3 class="about-us__lower-title">Наш <span class="grey">подход</span></h3>
+                    <p class="about-us__lower-text">
+                        Строится на взаимовыгодном партнёрстве. Мы говорим простым языком, предлагаем понятные решения и всегда нацелены на результат. 
+                        <br><br>
+                        Благодаря этому с нами сотрудничают не только компании, но и другие агентства, которым нужен надёжный подрядчик для проектов
+                    </p>
+                </div>
+                <div class="about-us__lower-block stagger-in">
+                    <h3 class="about-us__lower-title">Мы <span class="grey">уверены</span></h3>
+                    <p class="about-us__lower-text">
+                        Сайт — это не просто набор страниц и функций. Это в первую очередь лицо компании, отражающее её характер, ценности и отношение к клиентам.
+                        <br><br>
+                        Именно здесь формируется первое впечатление о бизнесе, и от того, каким оно будет, зависит доверие и желание продолжать взаимодействие. Поэтому мы уделяем внимание каждой детали — от визуального восприятия и атмосферы до логики взаимодействия и удобства навигации
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <div class="spacer spacer--10"></div>
     <div class="spacer spacer--16"></div>
@@ -575,12 +630,357 @@
 
     <div class="spacer spacer--8"></div>
     
+    <section class="portfolio">
+    <div class="container">
+        <div class="portfolio__main-wrapper">
+            <div class="portfolio__left">
+                <h2 class="h2 h2-block " data-wow-duration="1.5s" data-wow-delay="0s">
+                    <span>Кейсы</span>
+                    <span class="h2-small"><span class="gray">Нашего</span> агентства</span>
+                </h2>
+                <!-- Левый слайдер -->
+                <div class="portfolio__left-slider splide" id="cases-content">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="splide__slide">
+                                <div class="portfolio__left-content">
+                                    <div class="portfolio__left-tags">
+                                        <span class="tag">Дизайн</span>
+                                        <span class="tag">Разработка</span>
+                                        <span class="tag">White Label</span>
+                                    </div>
+                                    <div class="portfolio__left-title">
+                                        Интернет-магазин для ювелирной компании <span>Anita Jewelry</span>
+                                    </div>
+                                    <div class="portfolio__left-btns">
+                                        <a href="" class="portfolio__left-link btn">
+                                            Подробнее
+                                            <span class="lil-icons">
+                                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 3.10714C8.00227 3.10714 9.01744 4.06653 9.01744 5.25C9.01744 6.43347 8.00227 7.39286 6.75 7.39286C5.49773 7.39286 4.48256 6.43347 4.48256 5.25C4.48256 4.06653 5.49773 3.10714 6.75 3.10714ZM6.75 3.96429C5.99864 3.96429 5.38953 4.53992 5.38953 5.25C5.38953 5.96008 5.99864 6.53571 6.75 6.53571C7.50136 6.53571 8.11046 5.96008 8.11046 5.25C8.11046 4.53992 7.50136 3.96429 6.75 3.96429Z" fill="white"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 0.25C9.47947 0.25 11.3179 1.79537 12.3849 3.10547C12.6337 3.41082 12.8638 3.68955 13.0185 4.02065C13.18 4.36604 13.25 4.74244 13.25 5.25C13.25 5.75756 13.18 6.13396 13.0185 6.47935C12.8638 6.81045 12.6337 7.08918 12.3849 7.39453C11.3179 8.70463 9.47947 10.25 6.75 10.25C4.02053 10.25 2.1821 8.70463 1.11505 7.39453C0.866347 7.08918 0.636243 6.81045 0.481468 6.47935C0.320029 6.13396 0.25 5.75756 0.25 5.25C0.25 4.74244 0.320029 4.36604 0.481468 4.02065C0.636244 3.68955 0.866347 3.41082 1.11505 3.10547C2.1821 1.79537 4.02052 0.25 6.75 0.25ZM6.75 1.10714C4.42231 1.10714 2.8189 2.4187 1.83367 3.62835C1.56864 3.95374 1.41325 4.14819 1.31109 4.36663C1.2156 4.5709 1.15698 4.82082 1.15698 5.25C1.15698 5.67918 1.2156 5.9291 1.31109 6.13337C1.41325 6.35181 1.56864 6.54626 1.83367 6.87165C2.8189 8.0813 4.42231 9.39286 6.75 9.39286C9.07769 9.39286 10.6811 8.0813 11.6663 6.87165C11.9314 6.54626 12.0867 6.35181 12.1889 6.13337C12.2844 5.9291 12.343 5.67918 12.343 5.25C12.343 4.82082 12.2844 4.5709 12.1889 4.36663C12.0867 4.14819 11.9314 3.95374 11.6663 3.62835C10.6811 2.4187 9.07769 1.10714 6.75 1.10714Z" fill="white"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 3.10714C8.00227 3.10714 9.01744 4.06653 9.01744 5.25C9.01744 6.43347 8.00227 7.39286 6.75 7.39286C5.49773 7.39286 4.48256 6.43347 4.48256 5.25C4.48256 4.06653 5.49773 3.10714 6.75 3.10714ZM6.75 3.96429C5.99864 3.96429 5.38953 4.53992 5.38953 5.25C5.38953 5.96008 5.99864 6.53571 6.75 6.53571C7.50136 6.53571 8.11046 5.96008 8.11046 5.25C8.11046 4.53992 7.50136 3.96429 6.75 3.96429Z" stroke="white" stroke-width="0.5"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 0.25C9.47947 0.25 11.3179 1.79537 12.3849 3.10547C12.6337 3.41082 12.8638 3.68955 13.0185 4.02065C13.18 4.36604 13.25 4.74244 13.25 5.25C13.25 5.75756 13.18 6.13396 13.0185 6.47935C12.8638 6.81045 12.6337 7.08918 12.3849 7.39453C11.3179 8.70463 9.47947 10.25 6.75 10.25C4.02053 10.25 2.1821 8.70463 1.11505 7.39453C0.866347 7.08918 0.636243 6.81045 0.481468 6.47935C0.320029 6.13396 0.25 5.75756 0.25 5.25C0.25 4.74244 0.320029 4.36604 0.481468 4.02065C0.636244 3.68955 0.866347 3.41082 1.11505 3.10547C2.1821 1.79537 4.02052 0.25 6.75 0.25ZM6.75 1.10714C4.42231 1.10714 2.8189 2.4187 1.83367 3.62835C1.56864 3.95374 1.41325 4.14819 1.31109 4.36663C1.2156 4.5709 1.15698 4.82082 1.15698 5.25C1.15698 5.67918 1.2156 5.9291 1.31109 6.13337C1.41325 6.35181 1.56864 6.54626 1.83367 6.87165C2.8189 8.0813 4.42231 9.39286 6.75 9.39286C9.07769 9.39286 10.6811 8.0813 11.6663 6.87165C11.9314 6.54626 12.0867 6.35181 12.1889 6.13337C12.2844 5.9291 12.343 5.67918 12.343 5.25C12.343 4.82082 12.2844 4.5709 12.1889 4.36663C12.0867 4.14819 11.9314 3.95374 11.6663 3.62835C10.6811 2.4187 9.07769 1.10714 6.75 1.10714Z" stroke="white" stroke-width="0.5"/>
+                                                </svg>
+                                                <span class="arrow-icon">→</span>
+                                            </span>
+                                        </a>
+                                        <a href="" class="hovered-underline">Все кейсы</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="splide__slide">
+                                <div class="portfolio__left-content">
+                                    <div class="portfolio__left-tags">
+                                        <span class="tag">Дизайн</span>
+                                        <span class="tag">Разработка</span>
+                                    </div>
+                                    <div class="portfolio__left-title">
+                                        Иетернет-магазин мебели <span>Astudio</span>
+                                    </div>
+                                    <div class="portfolio__left-btns">
+                                        <a href="" class="portfolio__left-link btn">
+                                            Подробнее
+                                            <span class="lil-icons">
+                                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 3.10714C8.00227 3.10714 9.01744 4.06653 9.01744 5.25C9.01744 6.43347 8.00227 7.39286 6.75 7.39286C5.49773 7.39286 4.48256 6.43347 4.48256 5.25C4.48256 4.06653 5.49773 3.10714 6.75 3.10714ZM6.75 3.96429C5.99864 3.96429 5.38953 4.53992 5.38953 5.25C5.38953 5.96008 5.99864 6.53571 6.75 6.53571C7.50136 6.53571 8.11046 5.96008 8.11046 5.25C8.11046 4.53992 7.50136 3.96429 6.75 3.96429Z" fill="white"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 0.25C9.47947 0.25 11.3179 1.79537 12.3849 3.10547C12.6337 3.41082 12.8638 3.68955 13.0185 4.02065C13.18 4.36604 13.25 4.74244 13.25 5.25C13.25 5.75756 13.18 6.13396 13.0185 6.47935C12.8638 6.81045 12.6337 7.08918 12.3849 7.39453C11.3179 8.70463 9.47947 10.25 6.75 10.25C4.02053 10.25 2.1821 8.70463 1.11505 7.39453C0.866347 7.08918 0.636243 6.81045 0.481468 6.47935C0.320029 6.13396 0.25 5.75756 0.25 5.25C0.25 4.74244 0.320029 4.36604 0.481468 4.02065C0.636244 3.68955 0.866347 3.41082 1.11505 3.10547C2.1821 1.79537 4.02052 0.25 6.75 0.25ZM6.75 1.10714C4.42231 1.10714 2.8189 2.4187 1.83367 3.62835C1.56864 3.95374 1.41325 4.14819 1.31109 4.36663C1.2156 4.5709 1.15698 4.82082 1.15698 5.25C1.15698 5.67918 1.2156 5.9291 1.31109 6.13337C1.41325 6.35181 1.56864 6.54626 1.83367 6.87165C2.8189 8.0813 4.42231 9.39286 6.75 9.39286C9.07769 9.39286 10.6811 8.0813 11.6663 6.87165C11.9314 6.54626 12.0867 6.35181 12.1889 6.13337C12.2844 5.9291 12.343 5.67918 12.343 5.25C12.343 4.82082 12.2844 4.5709 12.1889 4.36663C12.0867 4.14819 11.9314 3.95374 11.6663 3.62835C10.6811 2.4187 9.07769 1.10714 6.75 1.10714Z" fill="white"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 3.10714C8.00227 3.10714 9.01744 4.06653 9.01744 5.25C9.01744 6.43347 8.00227 7.39286 6.75 7.39286C5.49773 7.39286 4.48256 6.43347 4.48256 5.25C4.48256 4.06653 5.49773 3.10714 6.75 3.10714ZM6.75 3.96429C5.99864 3.96429 5.38953 4.53992 5.38953 5.25C5.38953 5.96008 5.99864 6.53571 6.75 6.53571C7.50136 6.53571 8.11046 5.96008 8.11046 5.25C8.11046 4.53992 7.50136 3.96429 6.75 3.96429Z" stroke="white" stroke-width="0.5"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 0.25C9.47947 0.25 11.3179 1.79537 12.3849 3.10547C12.6337 3.41082 12.8638 3.68955 13.0185 4.02065C13.18 4.36604 13.25 4.74244 13.25 5.25C13.25 5.75756 13.18 6.13396 13.0185 6.47935C12.8638 6.81045 12.6337 7.08918 12.3849 7.39453C11.3179 8.70463 9.47947 10.25 6.75 10.25C4.02053 10.25 2.1821 8.70463 1.11505 7.39453C0.866347 7.08918 0.636243 6.81045 0.481468 6.47935C0.320029 6.13396 0.25 5.75756 0.25 5.25C0.25 4.74244 0.320029 4.36604 0.481468 4.02065C0.636244 3.68955 0.866347 3.41082 1.11505 3.10547C2.1821 1.79537 4.02052 0.25 6.75 0.25ZM6.75 1.10714C4.42231 1.10714 2.8189 2.4187 1.83367 3.62835C1.56864 3.95374 1.41325 4.14819 1.31109 4.36663C1.2156 4.5709 1.15698 4.82082 1.15698 5.25C1.15698 5.67918 1.2156 5.9291 1.31109 6.13337C1.41325 6.35181 1.56864 6.54626 1.83367 6.87165C2.8189 8.0813 4.42231 9.39286 6.75 9.39286C9.07769 9.39286 10.6811 8.0813 11.6663 6.87165C11.9314 6.54626 12.0867 6.35181 12.1889 6.13337C12.2844 5.9291 12.343 5.67918 12.343 5.25C12.343 4.82082 12.2844 4.5709 12.1889 4.36663C12.0867 4.14819 11.9314 3.95374 11.6663 3.62835C10.6811 2.4187 9.07769 1.10714 6.75 1.10714Z" stroke="white" stroke-width="0.5"/>
+                                                </svg>
+                                                <span class="arrow-icon">→</span>
+                                            </span>
+                                        </a>
+                                        <a href="" class="hovered-underline">Все кейсы</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio__left-arrows">
+                    <button class="btn btn--back portfolio__left-arrow portfolio__left-arrow--prev">
+                        <span class="hover-animated-arrow">
+                            <img class="hover-animated-arrow__out left" src="/assets/img/white-arrow-icon-left.svg" alt="arrow-icon">
+                            <img class="hover-animated-arrow__in left" src="/assets/img/white-arrow-icon-left.svg" alt="arrow-icon">
+                        </span>
+                    </button>
+
+                    <button class="btn portfolio__left-arrow portfolio__left-arrow--next">
+                        <span class="hover-animated-arrow right">
+                            <img class="hover-animated-arrow__out right" src="/assets/img/white-arrow-icon-right.svg" alt="arrow-icon">
+                            <img class="hover-animated-arrow__in right" src="/assets/img/white-arrow-icon-right.svg" alt="arrow-icon">
+                        </span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Правый слайдер -->
+            <div class="portfolio__right-slider splide" id="cases-images">
+                <div class="splide__track">
+                    <div class="splide__list">
+                        <div class="splide__slide">
+                            <img src="/assets/img/case-2.png" alt="case-image">
+                        </div>
+                        <div class="splide__slide">
+                            <img src="/assets/img/case-2.png" alt="case-image">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div class="spacer spacer--8"></div>
-    
+    <section class="work wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.2s">
+    <div class="" data-w-id="70aab8e7-ab4a-a151-dfaa-afcea07f7acb" class="u-design">
+        <div class="work-wrap">
+            <div class="o-section wf-section work-item dev">
+                <div class="container relative dark">
+                    <div class="work-title-wrap">
+                        <div class="work-title tab-link">
+                            <h2>Разработка</h2>
+                        </div>
+                        <a href="#" class="work-title-link tab-link link">
+                            <div class="work-title-link-wrap">
+                                <h2 class="op-16">Продвижение</h2>
+                                <div class="title-toggle">
+                                    <div class="title-toggle-item">
+                                        <svg fill="none" viewBox="0 0 232 128">
+                                            <rect class="u-htg-target" width="232" height="128" fill="#000" rx="64"></rect>
+                                            <circle class="u-htg-item" cx="64" cy="64" r="58" fill="#fff"></circle>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="container dark">
+                    <div class="work-infos ">
+                        <div class="work-infos-item">
+                            <a href="#work-start" class="work-anchor-down">
+                                <div class="anchor">
+                                    <svg fill="none" viewBox="0 0 38 37">
+                                        <path fill="#bafe35" fill-rule="evenodd" d="M17 29.172V0h4v29.172l13.586-13.586 2.828 2.828L19 36.828.586 18.414l2.828-2.828L17 29.172Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                            <div class="work-infos-txt">
+                                <p>Опираясь на контекстно-ориентированный дизайн, мы пересматриваем цифровые решения для достижения ваших основных бизнес-целей.</p>
+                            </div>
+                        </div>
+                        <div class="work-infos-wrap">
+                            <div class="work-infos-left-line"></div>
+                            <div class="work-infos-unit u-1">
+                                <a href="" class="work-infos-unit-title">Исследование</a>
+                                <div class="work-infos-unit-subt">
+                                    <a href="" class="u-subt u-1-1">
+                                        Определение продукта
+                                        <span class="u-sup">1</span>
+                                    </a>
+                                    <a href="" class="u-subt u-1-2">
+                                        Анализ конкурентов
+                                        <span class="u-sup">2</span>
+                                    </a>
+                                    <a href="" class="u-subt u-1-3">
+                                        Идеи
+                                        <span class="u-sup">3</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="work-infos-unit u-2">
+                                <a href="" class="work-infos-unit-title">Прототип</a>
+                                <div class="work-infos-left-line u2"></div>
+                                <div class="work-infos-unit-subt">
+                                    <a href="" class="u-subt u-2-1">
+                                        Прототип
+                                        <span class="u-sup">4</span>
+                                    </a>
+                                    <a href="" class="u-subt u-2-2">
+                                        User-тестирование
+                                        <span class="u-sup">5</span>
+                                    </a>
+                                    <a href="" class="u-subt u-2-3">
+                                        Проектирование
+                                        <span class="u-sup">6</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="work-infos-unit u-3">
+                                <a href="" class="work-infos-unit-title">Дизайн</a>
+                                <div class="work-infos-left-line u3"></div>
+                                <div class="work-infos-unit-subt">
+                                    <a href="" class="u-subt u-3-1">
+                                        Концепт
+                                        <span class="u-sup">7</span>
+                                    </a>
+                                    <a href="" class="u-subt u-3-2">
+                                        Мудборд
+                                        <span class="u-sup">8</span>
+                                    </a>
+                                    <a href="" class="u-subt u-3-3">
+                                        Окончательный проект
+                                        <span class="u-sup">9</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="work-infos-unit u-4">
+                                <a href="" class="work-infos-unit-title">Разработка</a>
+                                <div class="work-infos-left-line u4"></div>
+                                <div class="work-infos-unit-subt"><a href="" class="u-subt"><span class="u-sup"></span></a><a href="" class="u-subt"><span class="u-sup"></span></a><a href="" class="u-subt"><span class="u-sup"></span></a></div>
+                            </div>
+                        </div>
+                    </div>						
+                </div>
+                
+            </div>
+            <div class="work-item mvp">
+                <div class="container relative dark">
+                    <div class="work-title-wrap ">
+                        <a href="#" class="work-title-link tab-link">
+                            <h2 class="op-16">Разработка</h2>
+                        </a>
+                        <a href="#" class="work-title-link">
+                            <div class="work-title-link-wrap">
+                                <h2 class="">Продвижение</h2>
+                                <div class="title-toggle">
+                                    <div class="title-toggle-item">
+                                        <svg fill="none" viewBox="0 0 232 128">
+                                            <rect class="u-htg-target--active" width="232" height="128" fill="#bafe35" rx="64" transform="matrix(-1 0 0 1 232 0)"/>
+                                            <circle class="u-htg-item--active" r="58" fill="#fff" transform="matrix(-1 0 0 1 168 64)"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div class="container dark">
+                    <div class="work-infos">
+                        <div class="work-infos-item">
+                            <a href="#work-start" class="work-anchor-down">
+                                <div class="">
+                                    <svg fill="none" viewBox="0 0 38 37">
+                                        <path fill="#16171a" fill-rule="evenodd" d="M17 29.172V0h4v29.172l13.586-13.586 2.828 2.828L19 36.828.586 18.414l2.828-2.828L17 29.172Z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                            </a>
+                            <div class="work-infos-txt">
+                                <p>Опираясь на контекстно-ориентированный дизайн, мы пересматриваем цифровые решения для достижения ваших основных бизнес-целей.</p>
+                            </div>
+                        </div>
+                        <div class="work-infos-wrap">
+                            <div class="work-infos-left-line"></div>
+                            <div class="work-infos-unit u-1">
+                                <a href="" class="work-infos-unit-title">Исследование</a>
+                                <div class="work-infos-unit-subt">
+                                    <a href="" class="u-subt u-1-1">
+                                        Определение продукта
+                                        <span class="u-sup">1</span>
+                                    </a>
+                                    <a href="" class="u-subt u-1-2">
+                                        Анализ конкурентов
+                                        <span class="u-sup">2</span>
+                                    </a>
+                                    <a href="" class="u-subt u-1-3">
+                                        Идеи
+                                        <span class="u-sup">3</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="work-infos-unit u-2">
+                                <a href="" class="work-infos-unit-title">Анализ</a>
+                                <div class="work-infos-left-line u2"></div>
+                                <div class="work-infos-unit-subt">
+                                    <a href="" class="u-subt u-2-1">
+                                        Прототип
+                                        <span class="u-sup">4</span>
+                                    </a>
+                                    <a href="" class="u-subt u-2-2">
+                                        User-тестирование
+                                        <span class="u-sup">5</span>
+                                    </a>
+                                    <a href="" class="u-subt u-2-3">
+                                        Проектирование
+                                        <span class="u-sup">6</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="work-infos-unit u-3">
+                                <a href="" class="work-infos-unit-title">План</a>
+                                <div class="work-infos-left-line u3 bord-left"></div>
+                                <div class="work-infos-unit-subt">
+                                    <a href="" class="u-subt u-3-1">
+                                        Концепт
+                                        <span class="u-sup">7</span>
+                                    </a>
+                                    <a href="" class="u-subt u-3-2">
+                                        Мудборд
+                                        <span class="u-sup">8</span>
+                                    </a>
+                                    <a href="" class="u-subt u-3-3">
+                                        Окончательный проект
+                                        <span class="u-sup">9</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="work-infos-unit u-4">
+                                <a href="" class="work-infos-unit-title">Продвижение</a>
+                                <div class="work-infos-left-line u4"></div>
+                                <div class="work-infos-unit-subt"><a href="" class="u-subt"><span class="u-sup"></span></a><a href="" class="u-subt"><span class="u-sup"></span></a><a href="" class="u-subt"><span class="u-sup"></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
 
     <div class="spacer spacer--8"></div>
-    
+    <section class="platforms">
+    <div class="container">
+        <div class="platforms__wrapper">
+            <h2 class="h2-highlight-block h2">
+                <div class="">Какие <span class="grey">платформы</span> мы используем</div>
+                <div class="">
+                    <span>для разработки</span>
+                    <span><img src="/assets/img/platforms-title-icon.svg" alt=""></span>
+                    <span>сайтов</span>
+                </div>
+            </h2>
+            <div class="platforms__type-wrap">
+                <div class="platforms__type-item">
+                    <img src="/assets/img/insales.svg" alt="icon-image" class="platforms__type-logo">
+                    <div class="platforms__type-text">
+                        <h3>Insales</h3>
+                        <p>- российская платформа для создания интернет-магазинов и онлайн-торговли. Подходит для малого и среднего бизнеса, поддерживает интеграции с маркетплейсами, CRM и службами доставки</p>
+                    </div>
+                </div>
+                <div class="platforms__type-item">
+                    <img src="/assets/img/wordpress.svg" alt="icon-image" class="platforms__type-logo">
+                    <div class="platforms__type-text">
+                        <h3>Wordpress</h3>
+                        <p>- самая популярная CMS в мире, идеально подходящая для корпоративных сайтов, блогов и интернет-магазинов. Гибкая, удобная и SEO-дружелюбная платформа с тысячами плагинов и тем</p>
+                    </div>
+                </div>
+                <div class="platforms__type-item">
+                    <img src="/assets/img/shopify.svg" alt="icon-image" class="platforms__type-logo">
+                    <div class="platforms__type-text">
+                        <h3>Shopify</h3>
+                        <p>- это мощная e-commerce-платформа для запуска интернет-магазинов «под ключ». Простая в управлении, с готовыми интеграциями для продаж и маркетинга, отлично подходит для быстрого старта онлайн-бизнеса</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <div class="spacer spacer--8"></div>
     <section class="faq">
@@ -1039,6 +1439,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
 <script defer src="assets/lib/svgxuse.min.js"></script>
 <script defer src="assets/lib/jquery.maskedinput.js"></script>
 <!-- project's js -->

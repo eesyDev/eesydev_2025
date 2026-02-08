@@ -381,4 +381,45 @@
         });
     });
 
+    document.addEventListener('DOMContentLoaded', function () {
+        const content = new Splide('#cases-content', {
+            type: 'fade',
+            rewind: true,
+            arrows: false,
+            pagination: false,
+            drag: false
+        });
+        const images = new Splide('#cases-images', {
+            rewind: true,
+            pagination: false,
+            arrows: false,
+            direction: 'ttb', // top to bottom (вертикаль)
+            height: '900px',
+            padding: {
+                top: '20%',
+                bottom: '20%',
+            },
+            focus  : 'center',
+            type: 'loop',
+            perPage: 1,
+            speed: 1200, // замедляем
+            easing: 'cubic-bezier(0.25, 1, 0.5, 1)', // мягкий easing
+            breakpoints: {
+                768: {
+                    direction: 'ltr', // горизонталь на мобилке
+                    height: 'auto'
+                }
+            }
+        });
+        content.sync(images);
+        content.mount();
+        images.mount();
+
+        document.querySelector('.portfolio__left-arrow--prev')
+            .addEventListener('click', () => images.go('<'));
+
+        document.querySelector('.portfolio__left-arrow--next')
+            .addEventListener('click', () => images.go('>'));
+    });
+
 })(jQuery);
