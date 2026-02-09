@@ -384,6 +384,7 @@
     document.addEventListener('DOMContentLoaded', function () {
         const content = new Splide('#cases-content', {
             type: 'fade',
+            speed: 1000, // замедляем
             rewind: true,
             arrows: false,
             pagination: false,
@@ -395,14 +396,14 @@
             arrows: false,
             direction: 'ttb', // top to bottom (вертикаль)
             height: '900px',
+            gap: '60px',
             padding: {
                 top: '20%',
                 bottom: '20%',
             },
             focus  : 'center',
-            type: 'loop',
             perPage: 1,
-            speed: 1200, // замедляем
+            speed: 1400, // замедляем
             easing: 'cubic-bezier(0.25, 1, 0.5, 1)', // мягкий easing
             breakpoints: {
                 768: {
