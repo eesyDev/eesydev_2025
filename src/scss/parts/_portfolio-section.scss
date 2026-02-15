@@ -114,58 +114,62 @@
         }
     }
     #cases-images .splide__track {
-        perspective: 1400px;
         transform-style: preserve-3d;
-        border-top: 1px solid #a7a7a7;
-        border-bottom: 1px solid #a7a7a7;
     }
+  
     #cases-images .splide__slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0.25;
-        will-change: transform;
-        filter: blur(8px);
+        position: relative;
+        transform: scale(0.9) translateY(60px);
+        opacity: 0;
         transition:
             transform 1.4s cubic-bezier(0.22, 1, 0.36, 1),
-            opacity 0.8s ease,
-            filter 0.8s ease;
+            opacity 1s ease,
+            filter 1s ease;
 
-        transform: 
-            scale(0.75)
-            rotateX(18deg)
-            translateZ(-160px);
-
+        &-img-wrap {
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
         &.is-active {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             opacity: 1;
             filter: blur(0);
-
-            transform: 
-                scale(1)
-                rotateX(0deg)
-                translateZ(0);
         }
         img {
+            transform: scale(1.08);
+            transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1);
             width: 100%;
             height: 100%;
             object-fit: cover;
             will-change: transform;
             transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        &-img-wrap {
-            overflow: hidden;
+            backface-visibility: hidden;
             transform-style: preserve-3d;
         }
+        &.is-active img {
+            transform: scale(1);
+        }
     }
-    #cases-images .splide__slide.is-prev,
-    #cases-images .splide__slide.is-next {
-        transform: 
-            scale(0.85)
-            rotateX(10deg)
-            translateZ(-60px);
+}
 
-        opacity: 0.6;
-        filter: blur(3px);
+.portfolio__left-title {
+    // Убираем блюр и повороты, которые могут размыть границу среза
+    perspective: none; 
+
+    .reveal-line {
+        overflow: hidden;         // Тот самый жесткий срез
+        display: block;           // Линия занимает всю ширину
+        vertical-align: bottom;
+        line-height: 1.2;         // Настрой под свой шрифт
+        margin-bottom: -0.1em;    // Компенсация, чтобы линии стояли плотно
+        
+        // ВАЖНО: Никаких padding-bottom, иначе срез будет "мягким"
     }
-    
+
+    .char {
+        display: inline-block;
+        will-change: transform;
+        // Убираем filter: blur из CSS, если он там был, 
+        // чтобы не "пачкать" границу среза
+    }
 }

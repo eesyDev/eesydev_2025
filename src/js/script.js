@@ -381,46 +381,219 @@
         });
     });
 
-    document.addEventListener('DOMContentLoaded', function () {
+   document.addEventListener('DOMContentLoaded', function () {
+        // 1. Инициализация слайдеров
         const content = new Splide('#cases-content', {
             type: 'fade',
-            speed: 1000, // замедляем
+            speed: 1000,
             rewind: true,
             arrows: false,
             pagination: false,
             drag: false
         });
+
         const images = new Splide('#cases-images', {
-            rewind: true,
-            pagination: false,
-            arrows: false,
-            direction: 'ttb', // top to bottom (вертикаль)
-            height: '900px',
-            gap: '60px',
-            padding: {
-                top: '20%',
-                bottom: '20%',
-            },
-            focus  : 'center',
+            type: 'fade',
+            height: '700px',
             perPage: 1,
-            speed: 1400, // замедляем
-            easing: 'cubic-bezier(0.25, 1, 0.5, 1)', // мягкий easing
-            breakpoints: {
-                768: {
-                    direction: 'ltr', // горизонталь на мобилке
-                    height: 'auto'
-                }
-            }
+            arrows: false,
+            pagination: false,
+            speed: 1200,
+            drag: false,
+            // easing: 'cubic-bezier(0.22, 1, 0.5, 1)'
         });
+
         content.sync(images);
         content.mount();
         images.mount();
 
+        // images.on('active', function (slide) {
+        //     // Анимируем маску (clip-path)
+        //     gsap.fromTo(slide.slide, 
+        //         { clipPath: 'inset(0% 0% 100% 0%)' }, // Скрыта снизу
+        //         { 
+        //             clipPath: 'inset(0% 0% 0% 0%)',   // Полное раскрытие
+        //             duration: 1.2, 
+        //             ease: "expo.out" 
+        //         }
+        //     );
+        // });
+
+        images.on('active', function (slide) {
+            const img = slide.slide.querySelector('img');
+            gsap.fromTo(img, 
+                { 
+                    filter: 'blur(20px) brightness(1.2)', 
+                    scale: 1.1 
+                }, 
+                { 
+                    filter: 'blur(0px) brightness(1)', 
+                    scale: 1, 
+                    duration: 1.5, 
+                    ease: "power2.out" 
+                }
+            );
+        });
+
+        // 2. Регистрация плагинов
+        gsap.registerPlugin(SplitText);
+
+        // Функция для анимации текста GSAP Split text
+        function initTextReveals(selector = '.gsap-reveal') {
+            const elements = document.querySelectorAll(selector);
+
+            elements.forEach(el => {
+                // Делаем видимым ПЕРЕД разбивкой, чтобы SplitText правильно посчитал геометрию
+                gsap.set(el, { visibility: "visible" });
+
+                const split = new SplitText(el, {
+                    type: "lines, chars",
+                    linesClass: "reveal-line"
+                });
+
+                gsap.from(split.chars, {
+                    yPercent: 102,          // Выплывают строго снизу
+                    rotateX: -3,           // Легкий наклон для объема
+                    opacity: 0,
+                    filter: "blur(10px)",   // Эффект мягкого фокуса в начале
+                    duration: 1.5,
+                    stagger: 0.005,          // Последовательное появление
+                    // ease: "expo.out",       // Идеально плавно без баунса
+                    ease: "power4.out",    // Резкий старт, плавный стоп
+                    overwrite: true,
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 90%", // Когда верх элемента достигает 90% высоты экрана
+                        end: "bottom 10%", // Когда низ элемента уходит выше 10% экрана
+                        
+                        // Настройка действий:
+                        // onEnter, onLeave, onEnterBack, onLeaveBack
+                        // play - играть, reset - сбросить в начало, pause - пауза, reverse - назад
+                        toggleActions: "play none none none", 
+                        
+                        // Если хочешь, чтобы анимация "перезапускалась" при каждом появлении:
+                        // toggleActions: "restart none none none"
+                    }
+                });
+            });
+        }
+        // Запускаем
+        initTextReveals();
+
+
+
+        // function initTextReveals(selector = '.gsap-reveal') {
+        //     const elements = document.querySelectorAll(selector);
+
+        //     elements.forEach(el => {
+        //         gsap.set(el, { visibility: "visible" });
+
+        //         const split = new SplitText(el, {
+        //             type: "lines, chars",
+        //             linesClass: "reveal-line"
+        //         });
+
+        //         // Создаем анимацию
+        //         gsap.from(split.chars, {
+        //             yPercent: 102,          // Выплывают строго снизу
+        //             rotateX: -3,           // Легкий наклон для объема
+        //             opacity: 0,
+        //             filter: "blur(10px)",   // Эффект мягкого фокуса в начале
+        //             duration: 1.5,
+        //             stagger: 0.005,          // Последовательное появление
+        //             // ease: "expo.out",       // Идеально плавно без баунса
+        //             ease: "power4.out",    // Резкий старт, плавный стоп
+        //             overwrite: true,
+        //             scrollTrigger: {
+        //                 trigger: el,
+        //                 start: "top 95%",
+        //                 end: "bottom 5%",
+        //                 // play - вперед (при входе снизу)
+        //                 // reverse - назад (при уходе вверх)
+        //                 // restart - заново (при входе сверху обратно)
+        //                 // reverse - назад (при уходе вниз)
+        //                 toggleActions: "play reverse restart reverse"
+        //             }
+        //         });
+
+        //         // Привязываем к скроллу
+        //         ScrollTrigger.create({
+        //             trigger: el,
+        //             start: "top 90%",     // Когда текст появляется снизу
+        //             end: "bottom 10%",    // Когда текст уходит вверх
+        //             onEnter: () => animation.play(),          // Играем вперед при скролле вниз
+        //             onLeaveBack: () => animation.reverse(),   // Играем назад (прячем за шторку) при скролле вверх
+        //             // toggleActions: "play reverse play reverse" // Альтернативный вариант проще
+        //         });
+        //     });
+        // }
+        // initTextReveals();
+        
+        // Функция для анимации текста GSAP Split text
+
+        
+        // Функция для анимации секции Кейсы
+        function animateTitle(slideElement) {
+            const title = slideElement.querySelector('.portfolio__left-title');
+            if (!title) return;
+
+            if (title.revert) title.revert(); 
+
+            gsap.set(title, { visibility: "visible" });
+
+            const split = new SplitText(title, {
+                type: "lines, chars",
+                linesClass: "reveal-line"
+            });
+
+            // Анимация символов: плавно, чисто, без отскоков
+            gsap.from(split.chars, {
+                yPercent: 102,          // Выплывают строго снизу
+                rotateX: -3,           // Легкий наклон для объема
+                opacity: 0,
+                filter: "blur(10px)",   // Эффект мягкого фокуса в начале
+                duration: 1.2,
+                stagger: 0.005,          // Последовательное появление
+                // ease: "expo.out",       // Идеально плавно без баунса
+                ease: "power4.out",    // Резкий старт, плавный стоп
+                overwrite: true
+            });
+
+            // Теги: аккуратное появление сверху вниз
+            const tags = slideElement.querySelectorAll('.tag');
+            gsap.fromTo(tags, 
+                { 
+                    opacity: 0, 
+                    y: -10 
+                }, 
+                { 
+                    opacity: 1, 
+                    y: 0, 
+                    duration: 0.8, 
+                    stagger: 0.1, 
+                    ease: "power2.out",
+                    delay: 0.3 
+                }
+            );
+
+            title.revert = () => split.revert();
+        }
+
+        // Запускаем анимацию для первого активного слайда сразу
+        animateTitle(content.Components.Elements.slides[0]);
+
+        // Запускаем анимацию при смене слайда
+        content.on('active', function (EventInterface) {
+            animateTitle(EventInterface.slide);
+        });
+
+        // 3. Управление кнопками
         document.querySelector('.portfolio__left-arrow--prev')
-            .addEventListener('click', () => images.go('<'));
+            .addEventListener('click', () => content.go('<'));
 
         document.querySelector('.portfolio__left-arrow--next')
-            .addEventListener('click', () => images.go('>'));
+            .addEventListener('click', () => content.go('>'));
     });
 
 })(jQuery);
+

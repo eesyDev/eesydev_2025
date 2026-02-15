@@ -210,6 +210,19 @@ html.lenis, html.lenis body {
     }
 }
 
+.gsap-reveal {
+    visibility: hidden; // Предотвращает "мигание" текста до загрузки JS
+    .reveal-line {
+        overflow: hidden !important;
+        display: block;
+        vertical-align: bottom;
+    }
+    .char {
+        display: inline-block;
+        will-change: transform;
+    }
+}
+
 @media screen and (max-width: 1350px) {
     .container {
         padding-left: 60px;
