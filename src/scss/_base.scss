@@ -54,7 +54,7 @@ h6 {
 }
 
 h1, .h1 {
-    font-size: 6.5em;
+    font-size: 92px;
     line-height: normal;
 }
 
@@ -93,7 +93,6 @@ h4, .h4 {
 }
 
 h5, .h5 {
-    // font-size: 3em;
     font-size: 24px;
     line-height: normal;
 }
@@ -215,7 +214,7 @@ html.lenis, html.lenis body {
     .reveal-line {
         overflow: hidden !important;
         display: block;
-        vertical-align: bottom;
+        // vertical-align: bottom;
     }
     .char {
         display: inline-block;
@@ -229,7 +228,7 @@ html.lenis, html.lenis body {
         padding-right: 60px;
     }
     h1, .h1 {
-        font-size: 6em;
+        font-size: 84px;
     }
 }
 
@@ -246,7 +245,7 @@ html.lenis, html.lenis body {
     }
 
     h1, .h1 {
-        font-size: 5.5em;
+        font-size: 78px;
     }
     
     h2, .h2 {
@@ -269,20 +268,37 @@ html.lenis, html.lenis body {
     
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991.9px) {
     .container {
         padding-left: 36px;
         padding-right: 36px;
+    }
+    h1, .h1 {
+        font-size: 64px;
+    }
+    .h1-other {
+        font-size: 82px;
+        &__small {
+            font-size: 20px;
+            margin-top: 10px;
+        }
     }
     h2, .h2 {
         font-size: 48px;
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767.9px) {
     .container {
         padding-left: 24px;
         padding-right: 24px;
+    }
+    .h1-other {
+        font-size: 64px;
+        &__small {
+            font-size: 18px;
+            margin-top: 5px;
+        }
     }
     h2, .h2 {
         &.h2-sm {
@@ -295,6 +311,18 @@ html.lenis, html.lenis body {
 }
 
 @media screen and (max-width: 640px) {
+    .h1-other {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+        &__small {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+    }
     h3, .h3 {
         font-size: 26px;
     }
@@ -304,6 +332,15 @@ html.lenis, html.lenis body {
     .container {
         padding-left: 10px;
         padding-right: 10px;
+    }
+    .h1-other {
+        font-size: 56px;
+        &__small {
+            gap: 0;
+            span:first-child {
+                margin-right: 7px;
+            }
+        }
     }
     h2, .h2 {
         &.h2-sm {

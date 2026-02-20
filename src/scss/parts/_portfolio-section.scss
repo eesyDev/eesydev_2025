@@ -1,4 +1,8 @@
 .portfolio {
+    .h2-block.mobile {
+        font-weight: 500;
+        display: none;
+    }
     &__main-wrapper {
         display: flex;
         align-items: center;
@@ -6,11 +10,10 @@
     }
     &__left {
         width: 50%;
-        height: 700px;
+        height: 540px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        padding-bottom: 80px;
         &-slider {
             height: fit-content;
             .splide__track {
@@ -106,7 +109,6 @@
     }
     &__right-slider {
         width: 50%;
-        height: 700px;
         .splide__slide {
             display: flex;
             align-items: center;
@@ -153,23 +155,84 @@
 }
 
 .portfolio__left-title {
-    // Убираем блюр и повороты, которые могут размыть границу среза
     perspective: none; 
-
     .reveal-line {
         overflow: hidden;         // Тот самый жесткий срез
         display: block;           // Линия занимает всю ширину
-        vertical-align: bottom;
+        // vertical-align: bottom;
         line-height: 1.2;         // Настрой под свой шрифт
         margin-bottom: -0.1em;    // Компенсация, чтобы линии стояли плотно
-        
-        // ВАЖНО: Никаких padding-bottom, иначе срез будет "мягким"
     }
 
     .char {
         display: inline-block;
         will-change: transform;
-        // Убираем filter: blur из CSS, если он там был, 
-        // чтобы не "пачкать" границу среза
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .portfolio__main-wrapper {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .portfolio {
+        &__main-wrapper {
+            position: relative;
+        }
+        &__right-slider {
+            position: absolute;
+            right: 0;
+            width: 65%;
+            z-index: 1;
+        }
+        &__left {
+            z-index: 2;
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 991.9px) {
+    .portfolio {
+        &__main-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+            .h2-block.mobile {
+                display: flex;
+                font-weight: 500;
+                order: 1;
+            }
+        }
+        &__right-slider {
+            position: relative;
+            width: 100%;
+            order: 2;
+            .splide__slide-img-wrap {
+                width: 100%;
+            }
+        }
+        &__left {
+            width: 100%;
+            height: auto;
+            gap: 25px;
+            order: 3;
+            .h2-block {
+                display: none;
+            }
+            &-arrows {
+                display: none;
+            }
+            &-title {
+                font-size: 24px;
+            }
+
+            &-btns {
+                .hovered-underline {
+                    display: none;
+                }
+            }
+        }
     }
 }

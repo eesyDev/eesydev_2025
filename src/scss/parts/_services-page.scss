@@ -154,7 +154,6 @@
         &-subtitle {
             font-size: 18px;
             font-weight: 500;
-            // color: var(--grey);
         }
         ul {
             margin-top: 15px;
@@ -162,6 +161,7 @@
         li {
             font-size: 12px;
             font-weight: 400;
+            line-height: 1.2;
             color: var(--grey);
             margin-top: 10px;
             display: flex;
@@ -179,7 +179,145 @@
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: center;
+                flex-shrink: 0;
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .services-page-item {
+        &__left {
+            width: 45%;
+            padding-right: 0;
+        }
+        &__right {
+            width: calc(55% - 25px);
+            margin-top: 5px;
+        }
+    }
+}
+
+@media screen and (max-width: 991.9px) {
+    .services-page-item {
+        flex-direction: column;
+        &__left {
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        &__right {
+            width: 100%;
+            margin-top: 0;
+        }
+        &__titles {
+            width: 100%;
+            order: 1;
+        }
+        &__texts {
+            width: 100%;
+            order: 2;
+        }
+        &__info {
+            order: 4;
+            gap: 0;
+        }
+        .btn.btn--primary {
+            order: 3;
+            margin-right: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 767.9px) {
+    .services-page-tabs {
+        &__controls {
+            margin-left: 80px;
+        }
+    }
+    .services-page-item {
+        &__title {
+            font-size: 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .services-page-tabs {
+        &__controls {
+            margin-left: 0;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        &__tab {
+            font-size: 16px;
+        }
+    }
+    .services-page-item {
+        .btn.btn--primary {
+            margin-right: 0;
+            order: 4;
+        }
+        &__info {
+            order: 3;
+            width: 100%;
+        }
+        &__right {
+            flex-direction: column;
+        }
+        &__list {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .services-page-tabs {
+        &__controls {
+            gap: 15px;
+            margin-top: 15px;
+            padding: 8px 12px;
+        }
+        &__tab {
+            font-size: 14px;
+            gap: 8px;
+            .switch {
+                width: 30px;
+                height: 18px;
+                span {
+                    width: 16px;
+                    height: 16px;
+                }
+            }
+            &.is-active {
+                .switch {
+                    span {
+                        transform: translateX(12px);
+                    }
+                }
+            }
+        }
+    }
+    .services-page-item {
+        &__title {
+            font-size: 26px;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .services-page-tabs {
+        &__tab {
+            font-size: 12px;
+        }
+        &__content {
+            margin-top: 25px;
+        }
+    }
+    .services-page-item {
+        &__title {
+            font-size: 22px;
         }
     }
 }

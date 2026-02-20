@@ -7,12 +7,13 @@
     .h2-highlight-block {
         font-size: 48px;
         display: flex;
-        flex-direction: column;
-        gap: 5px;
-        div:last-child {
+        align-items: center;
+        gap: 15px;
+        &__upper {
             display: flex;
             align-items: center;
-            gap: 25px;
+            gap: 15px;
+
         }
     }
     &__type {
@@ -34,6 +35,110 @@
                 font-weight: 300;
                 color: var(--grey);
                 display: inline;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .platforms {
+        &__wrapper {
+            padding: 50px;
+            border-radius: 32px;
+        }
+        .h2-highlight-block {
+            font-size: 42px;
+        }
+        &__type-wrap {
+            margin-top: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        &__type-item {
+            width: calc(50% - 15px);
+            &:first-child {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991.9px) {
+    .platforms {
+        &__type-item {
+            width: 100%;
+        }
+        .h2-highlight-block {
+            flex-direction: column;
+            gap: 0;
+            align-items: flex-start;
+            &__upper {
+                span {
+                    &:last-child {
+                        order: 1;
+                        transform: translateY(25px);
+                    }
+                    &:first-child {
+                        order: 2;
+                    }
+                }
+            }
+            &__lower {
+                margin-top: -10px;
+                margin-left: 109px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .platforms {
+        &__wrapper {
+            padding: 20px;
+            border-radius: 24px;
+        }
+        .h2-highlight-block {
+            font-size: 36px;
+        }
+        &__type-logo {
+            width: 160px;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .platforms {
+        .h2-highlight-block {
+            font-size: 28px;
+            &__upper {
+                span img {
+                    width: 70px;
+                }
+                span:last-child {
+                    transform: translateY(15px);
+                }
+            }
+            &__lower {
+                margin-left: 86px;
+            }
+        }
+        &__type-logo {
+            width: 140px;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .platforms {
+        .h2-highlight-block {
+            font-size: 24px;
+            &__upper {
+                span img {
+                    width: 60px;
+                }
+            }
+            &__lower {
+                margin-left: 76px;
             }
         }
     }
