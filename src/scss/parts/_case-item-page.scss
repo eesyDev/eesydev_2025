@@ -82,3 +82,29 @@
         }
     }
 }
+
+@media screen and (max-width: 991.9px) {
+    .case-item-page {
+        &__wrapper-inner {
+            flex-direction: column;
+        }
+        &__left {
+            width: 100%;
+            position: static;
+        }
+        &__left-btns-mouse {
+            display: none;
+        }
+        &__right {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 767.9px) {
+    .case-item-page {
+        &__left-moving {
+            gap: 30px;
+        }
+    }
+}
