@@ -58,11 +58,11 @@
                 align-items: center;
                 border-radius: 50px;
                 border: 0.3px solid var(--light-black);
-                transition: transform 0.3s ease;
+                transition: background 0.3s ease;
             }
             &-text {
                 text-decoration: underline;
-                transition: transform 0.3s ease;
+                transition: text 0.3s ease;
             }
             &:hover {
                 color: var(--light-black);

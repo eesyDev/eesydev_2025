@@ -54,11 +54,11 @@
             @include mixin.wrapper($justify: flex-start, $gap: 24px);
             width: fit-content;
             display: flex;
-            gap: 25px;
             align-items: center;
             li {
                 transition: all 0.5s cubic-bezier(0.15, 0, 0.175, 1);
                 a {
+                    padding: 0 12px;
                     width: 100%;
                     height: 100%;
                     cursor: pointer;
@@ -123,11 +123,11 @@
                 min-width: 220px;
             }
         }
-        &__nav ul {
-            gap: 15px;
-        }
         &.header--fixed {
             width: 95%;
+        }
+        &__nav ul li a {
+            padding: 0 8px;
         }
     }
 
@@ -150,8 +150,11 @@
             width: 500px;
             ul {
                 flex-direction: column;
-                
                 align-items: flex-start;
+                gap: 8px;
+                li a {
+                    padding: 0;
+                }
             }
             &-logo, &-cta {
                 display: block;
@@ -199,7 +202,6 @@
             display: block;
             margin-top: 50px;
             ul {
-                gap: 0;
                 li {
                     font-size: 24px;
                     font-weight: 700;

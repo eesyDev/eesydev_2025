@@ -1,5 +1,7 @@
 .about-us {
     position: relative;
+    overflow: hidden;
+    padding: 30px 0 300px;
     &__wrapper {
         display: flex;
         flex-direction: column;
@@ -70,17 +72,13 @@
         }
     }
     &__circle {
-            position: absolute;
-            right: -250px;
-            top: 0;
-            max-height: 780px;
-        &-wrap {
-            position: relative;
-            padding-top: 30px;
-            pointer-events: none;
-            user-select: none;
-            z-index: 1;
-        }
+        position: absolute;
+        right: -250px;
+        top: 30px;
+        max-height: 780px;
+        z-index: 1;
+        pointer-events: none;
+        user-select: none;
     }
     &__bg {
         color: #F9F9F9;
@@ -105,9 +103,7 @@
 
 @media screen and (max-width: 1280px) {
     .about-us {
-        &__circle-wrap {
-            display: none;
-        }
+        padding: 30px 0 350px;
         &__upper {
             gap: 5%;
             &-title {
@@ -140,6 +136,10 @@
 
 @media screen and (max-width: 991.9px) {
     .about-us {
+        padding: 0;
+        &__circle {
+            display: none;
+        }
         &__wrapper {
             flex-direction: column;
             gap: 50px;

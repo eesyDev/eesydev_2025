@@ -120,6 +120,10 @@ h5, .h5 {
     font-size: 96px;
     font-weight: 700;
 }
+.h1-coop {
+    font-size: 64px;
+    font-weight: 700;
+}
 
 .h2-block-wrap {
     width: 33%;
@@ -259,6 +263,9 @@ html.lenis, html.lenis body {
     .h1-case, .h1-404-page {
         font-size: 76px;
     }
+    .h1-coop {
+        font-size: 58px;
+    }
 
     h2, .h2 {
         font-size: 52px;
@@ -301,6 +308,9 @@ html.lenis, html.lenis body {
     }
     .h1-404-page {
         font-size: 64px;
+    }
+    .h1-coop {
+        font-size: 48px;
     }
 }
 
@@ -345,6 +355,9 @@ html.lenis, html.lenis body {
     .h1-404-page {
         font-size: 56px;
     }
+    .h1-coop {
+        font-size: 42px;
+    }
     h3, .h3 {
         font-size: 26px;
     }
@@ -370,6 +383,9 @@ html.lenis, html.lenis body {
     .h1-404-page {
         font-size: 48px;
     }
+    .h1-coop {
+        font-size: 34px;
+    }
     h2, .h2 {
         &.h2-sm {
             font-size: 28px;
@@ -383,5 +399,11 @@ html.lenis, html.lenis body {
     }
     .h1-404-page {
         font-size: 42px;
+    }
+    .h1-coop {
+        font-size: 28px;
+    }
+    h2, .h2 {
+        font-size: 36px;
     }
 }
