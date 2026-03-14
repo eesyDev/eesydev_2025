@@ -54,7 +54,7 @@ h6 {
 }
 
 h1, .h1 {
-    font-size: 6.5em;
+    font-size: 92px;
     line-height: normal;
 }
 
@@ -88,12 +88,12 @@ h3, .h3 {
 }
 
 h4, .h4 {
-    font-size: 3.5em;
+    font-size: 28px;
     line-height: normal;
 }
 
 h5, .h5 {
-    font-size: 3em;
+    font-size: 24px;
     line-height: normal;
 }
 
@@ -114,6 +114,15 @@ h5, .h5 {
         flex-direction: column;
         margin-top: 15px;
     }
+}
+
+.h1-case {
+    font-size: 96px;
+    font-weight: 700;
+}
+.h1-coop {
+    font-size: 64px;
+    font-weight: 700;
 }
 
 .h2-block-wrap {
@@ -149,33 +158,93 @@ p {
     }
 }
 
+html.lenis, html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important; /* Отключаем нативный smooth behavior */
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: hidden; /* Это нужно только когда ты программно стопаешь скролл (например, в модалке) */
+}
+
+.lenis.lenis-scrolling iframe {
+    pointer-events: none; /* Улучшает производительность скролла над iframe */
+}
+
+.animation-arrow-up {
+    position: relative;
+    height: fit-content;
+    &-main {
+        .icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) translate(0, 0);
+            opacity: 1;
+            transition:
+                transform 0.25s cubic-bezier(.4,0,.2,1),
+                opacity 0.25s ease;
+            transition-timing-function: cubic-bezier(.6,0,.4,1);
+            &-out {
+                transform: translate(-50%, -50%) translateY(0);
+                opacity: 1;
+            }
+            &-in {
+                transform: translate(-50%, -50%) translateY(14px);
+                opacity: 0;
+            }
+        }
+    }
+    &.is-open {
+        .animation-arrow-up-main {
+            .icon {
+                &-out {
+                    transform: translate(-50%, -50%) translateY(-14px);
+                    opacity: 0;
+                }
+                &-in {
+                    transform: translate(-50%, -50%) translateY(0);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.gsap-reveal {
+    visibility: hidden; // Предотвращает "мигание" текста до загрузки JS
+    .reveal-line {
+        overflow: hidden !important;
+        display: block;
+        // vertical-align: bottom;
+    }
+    .char {
+        display: inline-block;
+        will-change: transform;
+    }
+}
+
 @media screen and (max-width: 1350px) {
     .container {
         padding-left: 60px;
         padding-right: 60px;
     }
     h1, .h1 {
-        font-size: 6em;
+        font-size: 84px;
     }
-    
-    h2, .h2 {
-        font-size: 4em;
-    }
-    
-    h3, .h3 {
-        font-size: 3.5em;
-    }
-    
-    h4, .h4 {
-        font-size: 3em;
-    }
-    
-    h5, .h5 {
-        font-size: 2.5em;
+    .h1-case, .h1-404-page {
+        font-size: 84px;
     }
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1280px) {
     body {
         font-size: 14px;
     }
@@ -188,11 +257,18 @@ p {
     }
 
     h1, .h1 {
-        font-size: 5.5em;
+        font-size: 78px;
     }
     
+    .h1-case, .h1-404-page {
+        font-size: 76px;
+    }
+    .h1-coop {
+        font-size: 58px;
+    }
+
     h2, .h2 {
-        font-size: 3.5em;
+        font-size: 52px;
         &.imaged {
             img {
                 width: 110px;
@@ -201,31 +277,133 @@ p {
                 margin-top: 12px;
             }
         }
+        &-small {
+            font-size: 20px;
+        }
+        &.h2-sm {
+            font-size: 42px;
+        }
     }
     
-    h3, .h3 {
-        font-size: 3em;
-    }
-    
-    h4, .h4 {
-        font-size: 2.5em;
-    }
-    
-    h5, .h5 {
-        font-size: 2em;
-    }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991.9px) {
     .container {
         padding-left: 36px;
         padding-right: 36px;
     }
+    h1, .h1 {
+        font-size: 64px;
+    }
+    .h1-other {
+        font-size: 82px;
+        &__small {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+    }
+    
+    h2, .h2 {
+        font-size: 48px;
+    }
+    .h1-404-page {
+        font-size: 64px;
+    }
+    .h1-coop {
+        font-size: 48px;
+    }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 767.9px) {
     .container {
         padding-left: 24px;
         padding-right: 24px;
+    }
+    .h1-other {
+        font-size: 64px;
+        &__small {
+            font-size: 18px;
+            margin-top: 5px;
+        }
+    }
+    h2, .h2 {
+        &.h2-sm {
+            font-size: 36px;
+        }
+    }
+    h3, .h3 {
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .h1-other {
+        flex-direction: column;
+        gap: 0;
+        align-items: flex-start;
+        &__small {
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 18px;
+            margin-top: 5px;
+        }
+    }
+    .h1-case {
+        font-size: 64px;
+    }
+    .h1-404-page {
+        font-size: 56px;
+    }
+    .h1-coop {
+        font-size: 42px;
+    }
+    h3, .h3 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .h1-other {
+        font-size: 56px;
+        &__small {
+            gap: 0;
+            span:first-child {
+                margin-right: 7px;
+            }
+        }
+    }
+    .h1-case {
+        font-size: 56px;
+    }
+    .h1-404-page {
+        font-size: 48px;
+    }
+    .h1-coop {
+        font-size: 34px;
+    }
+    h2, .h2 {
+        &.h2-sm {
+            font-size: 28px;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .h1-case {
+        font-size: 48px;
+    }
+    .h1-404-page {
+        font-size: 42px;
+    }
+    .h1-coop {
+        font-size: 28px;
+    }
+    h2, .h2 {
+        font-size: 36px;
     }
 }

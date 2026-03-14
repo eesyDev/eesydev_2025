@@ -11,13 +11,26 @@
             margin-top: 10px;
             font-weight: 500;
         }
-        .btn {
-            margin-top: 35px;
+    }
+    &__btns {
+        margin-top: 35px;
+        display: flex;
+        gap: 30px;
+    }
+    &__pdf {
+        display: none;
+    }
+}
+
+.cooperation-page {
+    .request {
+        &__pdf {
+            display: flex;
         }
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991.9px) {
     .request {
         &__wrapper {
             padding: 2.75em;
@@ -25,4 +38,12 @@
         }
     }
     
+}
+
+@media screen and (max-width: 370px) {
+    .request {
+        &__wrapper {
+            padding: 1.8em;
+        }
+    }
 }

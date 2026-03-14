@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('utilities/head.html')
+<body class="u-body">
+    @@include('sections/header.html')
+    
+    <section class="cases-page-section">
+        <div class="container">
+            <h1 class="h1-other">
+                <span class="h1-other__big gsap-reveal">Кейсы</span>
+                <span class="h1-other__small gsap-reveal">
+                    <span>Выполненные <span class="grey">нашей</span></span>
+                    <span>команды</span>
+                </span>
+            </h1>
+            <section class="cases">
+                <div class="cases__wrapper wow fadeIn" data-wow-duration="1.1s" data-wow-delay="0.5s">
+                    @@include('sections/case-card.html')
+                    @@include('sections/case-card.html')
+                    @@include('sections/case-card.html')
+                    @@include('sections/case-card.html')
+                    @@include('sections/case-card.html')
+                    @@include('sections/case-card.html')
+                    @@include('sections/case-card.html')
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <div class="spacer spacer--4"></div>
+    @@include('sections/faq.html')
+
+    <div class="spacer spacer--8"></div>
+    @@include('sections/form.html')
+
+    <div class="cursor"></div>
+	<div class="cursor-follower"></div>
+
+    @@include('sections/footer.html')
+    @@include('sections/dialogs.html')
+    @@include('utilities/scripts.html')
+
+    <script src="./index.js"></script>
+</body>
+</html>

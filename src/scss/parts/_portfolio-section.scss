@@ -1,0 +1,238 @@
+.portfolio {
+    .h2-block.mobile {
+        font-weight: 500;
+        display: none;
+    }
+    &__main-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+    }
+    &__left {
+        width: 50%;
+        height: 540px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &-slider {
+            height: fit-content;
+            .splide__track {
+                padding-left: 1px;
+            }
+        }
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+        &-tags {
+            display: flex;
+            gap: 10px;
+            .tag {
+                padding: 6px 16px 4px;
+                font-size: 9px;
+                line-height: 1;
+                font-weight: 400;
+                background: var(--mid-gray);
+                border-radius: 4px;
+                color: var(--grey);
+            }
+        }
+        &-title {
+            font-size: 28px;
+            font-weight: 300;
+            line-height: 1.2;
+            span {
+                font-weight: 500;
+            }
+        }
+        &-btns {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        &-arrows {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        &-arrow {
+            min-width: 58px;
+            height: 58px;
+            padding: 10px;
+            background-color: var(--black);
+            &::after {
+                content: none;
+            }
+        }
+        &-link {
+            min-width: 178px;
+            background: var(--black);
+            border: none;
+            color: var(--white);
+            .lil-icons {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                margin-top: 2px;
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    transition: 
+                        transform 0.35s ease,
+                        opacity 0.25s ease;
+                }
+                .arrow-icon {
+                    position: absolute;
+                    font-size: 18px;
+                    left: -20px;
+                    top: -5px;
+                    transition: 
+                        transform 0.35s ease,
+                        opacity 0.25s ease;
+                }
+            }
+            &:hover {
+                background: var(--dark-grey);
+                transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+                .lil-icons {
+                    svg {
+                        transform: translateX(-20px);
+                    }
+                    .arrow-icon {
+                        transform: translateX(20px);
+                    }
+                }
+            }
+        }
+    }
+    &__right-slider {
+        width: 50%;
+        .splide__slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    #cases-images .splide__track {
+        transform-style: preserve-3d;
+    }
+  
+    #cases-images .splide__slide {
+        position: relative;
+        transform: scale(0.9) translateY(60px);
+        opacity: 0;
+        transition:
+            transform 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+            opacity 1s ease,
+            filter 1s ease;
+
+        &-img-wrap {
+            overflow: hidden;
+            transform-style: preserve-3d;
+        }
+        &.is-active {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            opacity: 1;
+            filter: blur(0);
+        }
+        img {
+            transform: scale(1.08);
+            transition: transform 2s cubic-bezier(0.16, 1, 0.3, 1);
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            will-change: transform;
+            transition: transform 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+        }
+        &.is-active img {
+            transform: scale(1);
+        }
+    }
+}
+
+.portfolio__left-title {
+    perspective: none; 
+    .reveal-line {
+        overflow: hidden;         // Тот самый жесткий срез
+        display: block;           // Линия занимает всю ширину
+        // vertical-align: bottom;
+        line-height: 1.2;         // Настрой под свой шрифт
+        margin-bottom: -0.1em;    // Компенсация, чтобы линии стояли плотно
+    }
+
+    .char {
+        display: inline-block;
+        will-change: transform;
+    }
+}
+
+@media screen and (max-width: 1350px) {
+    .portfolio__main-wrapper {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .portfolio {
+        &__main-wrapper {
+            position: relative;
+        }
+        &__right-slider {
+            position: absolute;
+            right: 0;
+            width: 65%;
+            z-index: 1;
+        }
+        &__left {
+            z-index: 2;
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 991.9px) {
+    .portfolio {
+        &__main-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+            .h2-block.mobile {
+                display: flex;
+                font-weight: 500;
+                order: 1;
+            }
+        }
+        &__right-slider {
+            position: relative;
+            width: 100%;
+            order: 2;
+            .splide__slide-img-wrap {
+                width: 100%;
+            }
+        }
+        &__left {
+            width: 100%;
+            height: auto;
+            gap: 25px;
+            order: 3;
+            .h2-block {
+                display: none;
+            }
+            &-arrows {
+                display: none;
+            }
+            &-title {
+                font-size: 24px;
+            }
+
+            &-btns {
+                .hovered-underline {
+                    display: none;
+                }
+            }
+        }
+    }
+}

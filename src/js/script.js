@@ -161,6 +161,34 @@
         pauseOtherVideos('.swiper-slide');
     });
 
+
+    // LENIS - LENIS - LENIS 1. Инициализация Lenis 
+    const lenis = new Lenis({
+        duration: 1.3, // Длительность скролла (чем больше, тем плавнее)
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Функция плавности
+        smoothWheel: true,
+        orientation: 'vertical', 
+        gestureOrientation: 'vertical',
+        smoothWheel: true,
+        wheelMultiplier: 1,
+        smoothTouch: false, // На мобильных обычно лучше оставлять нативный скролл
+        touchMultiplier: 2,
+    });
+
+    // 2. ВАЖНО: Связка Lenis и GSAP ScrollTrigger
+    // Говорим ScrollTrigger обновляться каждый раз, когда Lenis скроллит
+    lenis.on('scroll', ScrollTrigger.update);
+
+    // Добавляем Lenis в ticker GSAP'а, чтобы они работали синхронно в одном кадре анимации
+    gsap.ticker.add((time) => {
+        lenis.raf(time * 1000);
+    });
+
+    // Отключаем лаг-сглаживание GSAP, так как Lenis берет это на себя
+    gsap.ticker.lagSmoothing(0);
+    // LENIS - LENIS - LENIS
+
+
 	const workTitleLinks = document.querySelectorAll('.work-title-link');
 	const workItems = document.querySelectorAll('.work-item');
 	let activeIndex = null;
@@ -205,6 +233,57 @@
 			console.log(index)
 		});
 	});
+
+    // Cookie логика
+    const cookieBanner = document.getElementById("cookieBanner");
+    const cookieBtn = document.getElementById("cookieAccept");
+
+    if (localStorage.getItem("cookieAccepted")) {
+        cookieBanner.style.display = "none";
+    }
+    cookieBtn.addEventListener("click", () => {
+        localStorage.setItem("cookieAccepted", "true");
+        cookieBanner.style.display = "none";
+    });
+    // Cookie логика
+
+    // Header смена fixed
+    const header = document.querySelector('.header');
+    const headerHeight = header.offsetHeight;
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('header--fixed');
+            document.body.style.paddingTop = headerHeight + 'px';
+        } else {
+            header.classList.remove('header--fixed');
+            document.body.style.paddingTop = '';
+        }
+    });
+    // Header смена fixed
+
+    // Кнопки Быстрая связь и Вверх
+    const upBtn = document.querySelector('.fixed-btns__go-up');
+
+    window.addEventListener('scroll', () => {
+        upBtn.classList.toggle('is-visible', window.scrollY > 2000);
+    });
+
+    upBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    document.querySelectorAll('.animation-arrow-up').forEach(phoneFab => {
+        const mainBtn = phoneFab.querySelector('.animation-arrow-up-main');
+
+        if (!mainBtn) return;
+
+        mainBtn.addEventListener('click', () => {
+            phoneFab.classList.toggle('is-open');
+        });
+    });
+    // Кнопки Быстрой связь и Вверх
+
 
 	$(document).ready(function () {
 		$('.accordion-header-packs:first').addClass('active');
@@ -301,5 +380,141 @@
             .addClass('is-active');
         });
     });
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        // 1. Регистрация плагинов (всегда в начале)
+        gsap.registerPlugin(SplitText, ScrollTrigger);
 
+        // --- БЛОК 1: УНИВЕРСАЛЬНАЯ АНИМАЦИЯ (ДЛЯ ВСЕХ СТРАНИЦ) ---
+        function initTextReveals(selector = '.gsap-reveal') {
+            const elements = document.querySelectorAll(selector);
+            if (!elements.length) return; // Если элементов нет, просто выходим
+
+            elements.forEach(el => {
+                gsap.set(el, { visibility: "visible" });
+
+                const split = new SplitText(el, {
+                    type: "lines, chars",
+                    linesClass: "reveal-line"
+                });
+
+                gsap.from(split.chars, {
+                    yPercent: 102,
+                    rotateX: -3,
+                    opacity: 0,
+                    filter: "blur(10px)",
+                    duration: 1.5,
+                    stagger: 0.005,
+                    // ease: "expo.out",       // Идеально плавно без баунса
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 90%",
+                        end: "bottom 10%",
+                        // toggleActions: "play reverse restart reverse", // Включил реверс по твоему запросу
+                        toggleActions: "play none none none", // Включил реверс по твоему запросу
+                    }
+                });
+            });
+        }
+        initTextReveals();
+
+
+        // --- БЛОК 2: СЛАЙДЕРЫ (ТОЛЬКО ДЛЯ ГЛАВНОЙ) ---
+        const contentNode = document.querySelector('#cases-content');
+        const imagesNode = document.querySelector('#cases-images');
+
+        // Инициализируем слайдеры ТОЛЬКО если они есть в DOM
+        if (contentNode && imagesNode) {
+            const content = new Splide('#cases-content', {
+                type: 'fade',
+                speed: 1000,
+                rewind: true,
+                arrows: false,
+                pagination: false,
+                drag: false
+            });
+
+            const images = new Splide('#cases-images', {
+                type: 'fade',
+                perPage: 1,
+                arrows: false,
+                pagination: false,
+                speed: 1200,
+                drag: false,
+                breakpoints: {
+                    1024: { drag: true }
+                }
+            });
+
+            content.sync(images);
+            content.mount();
+            images.mount();
+
+            // Эффект линзы
+            images.on('active', function (slide) {
+                const img = slide.slide.querySelector('img');
+                if (img) {
+                    gsap.fromTo(img, 
+                        { filter: 'blur(20px) brightness(1.2)', scale: 1.1 }, 
+                        { filter: 'blur(0px) brightness(1)', scale: 1, duration: 1.5, ease: "power2.out" }
+                    );
+                }
+            });
+
+            // Функция анимации для слайда
+            function animateTitle(slideElement) {
+                const title = slideElement.querySelector('.portfolio__left-title');
+                if (!title) return;
+
+                if (title.revert) title.revert(); 
+                gsap.set(title, { visibility: "visible" });
+
+                const split = new SplitText(title, {
+                    type: "lines, chars",
+                    linesClass: "reveal-line"
+                });
+
+                gsap.from(split.chars, {
+                    yPercent: 102,
+                    rotateX: -3,
+                    opacity: 0,
+                    filter: "blur(10px)",
+                    duration: 1.2,
+                    stagger: 0.005,
+                    ease: "power4.out",
+                    overwrite: true
+                });
+
+                const tags = slideElement.querySelectorAll('.tag');
+                gsap.fromTo(tags, 
+                    { opacity: 0, y: -10 }, 
+                    { opacity: 1, y: 0, duration: 0.8, stagger: 0.1, ease: "power2.out", delay: 0.3 }
+                );
+
+                title.revert = () => split.revert();
+            }
+
+            // Запуск анимации слайдера
+            if (content.Components.Elements.slides[0]) {
+                animateTitle(content.Components.Elements.slides[0]);
+            }
+            
+            content.on('active', (EventInterface) => {
+                animateTitle(EventInterface.slide);
+            });
+
+            // --- БЕЗОПАСНЫЕ КНОПКИ ---
+            const prevBtn = document.querySelector('.portfolio__left-arrow--prev');
+            const nextBtn = document.querySelector('.portfolio__left-arrow--next');
+
+            if (prevBtn) {
+                prevBtn.addEventListener('click', () => content.go('<'));
+            }
+            if (nextBtn) {
+                nextBtn.addEventListener('click', () => content.go('>'));
+            }
+        }
+    });
 })(jQuery);
+

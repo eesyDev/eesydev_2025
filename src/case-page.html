@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('utilities/head.html')
+<body class="case-item-page">
+    @@include('sections/header.html')
+    
+    <section class="case-item-page-section">
+        <div class="container">
+            <div class="case-item-page__wrapper">
+                <div class="case-item-page__wrapper-inner">
+                    <div class="case-item-page__left">
+                        <div class="case-item-page__left-moving">
+                            <h1 class="h1-case wow fadeInUp" data-wow-duration="1s" data-wow-delay="0s">
+                                <span class="h1-other__big">Profildoors</span>
+                            </h1>
+                            <div class="case-item-page__left-item">
+                                <h2 class="case-item-page__left-title">Проект:</h2>
+                                <div class="case-item-page__left-text">Интернет-магазин дверей</div>
+                            </div>
+                            <div class="case-item-page__left-item">
+                                <h2 class="case-item-page__left-title">Цели проекта:</h2>
+                                <div class="case-item-page__left-text">Разработать современный и удобный интернет-магазин с простым поиском товаров и кастомной фильтрацией по цветам в лайв-режиме. Также была задача настроить автоматическую подгрузку товаров из CRM каждый час</div>
+                            </div>
+                            <div class="case-item-page__left-btns">
+                                <div class="case-item-page__left-btns-block">
+                                    <a href="" class="btn btn--back">
+                                        <span class="hover-animated-arrow">
+                                            <img class="hover-animated-arrow__out left" src="/assets/img/black-arrow-icon-back.svg" alt="arrow-icon">
+                                            <img class="hover-animated-arrow__in left" src="/assets/img/black-arrow-icon-back.svg" alt="arrow-icon">
+                                        </span>
+                                        Назад
+                                    </a>
+                                    <a href="" class="btn btn--primary">
+                                        На сайт
+                                        <span class="hover-animated-arrow">
+                                            <img class="hover-animated-arrow__out" src="/assets/img/white-arrow-icon.svg" alt="arrow-icon">
+                                            <img class="hover-animated-arrow__in" src="/assets/img/chain-link.svg" alt="arrow-icon">
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="case-item-page__left-btns-mouse">
+                                    <span>Скролл</span>
+                                    <img src="/assets/img/mouse-icon.svg" alt="mouse-icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="case-item-page__right">
+                        <div class="case-item-page__right-imgs">
+                            <img src="/assets/img/case-1.png" alt="case-image">
+                            <img src="/assets/img/case-2.png" alt="case-image">
+                            <img src="/assets/img/case-1.png" alt="case-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="spacer spacer--8"></div>
+    @@include('sections/form.html')
+
+    <div class="cursor"></div>
+	<div class="cursor-follower"></div>
+
+    @@include('sections/footer.html')
+    @@include('sections/dialogs.html')
+    @@include('utilities/scripts.html')
+
+    <script src="./index.js"></script>
+</body>
+</html>

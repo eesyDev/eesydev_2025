@@ -21,7 +21,7 @@
       width: 100%;
       padding: 10px 10px 25px 0;
       border: none;
-      border-bottom: 1px solid var(--gray);
+      border-bottom: 1px solid var(--mid-gray);
       outline: none;
       font-size: 16px;
       &.input-large {
@@ -79,7 +79,7 @@
       a {
         width: 50px;
         height: 50px;
-        border: 1px solid var(--gray);
+        border: 1px solid var(--mid-gray);
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -113,8 +113,71 @@
     }
 }
 
-.eezydev-big-letters {
-  width: 100%;
-  transform: translateY(2px);
-  margin-top: 50px;
+@media screen and (max-width: 991.9px) {
+  .form-section {
+    .form-row {
+      flex-wrap: wrap;
+      .input-group {
+        width: calc(50% - var(--gap) * 2 / 3);
+        &:last-child {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .form-section {
+    &__heading {
+      flex-direction: column;
+    }
+    &__socials {
+      flex-direction: row;
+      width: auto;
+    }
+    .input-group .input.input-large, .input-group input.input-large {
+      padding: 10px 10px 20px 0;
+    }
+    .input-group {
+      label {
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .form-section {
+    .h2 {
+      font-size: 32px;
+    }
+    .h2.imaged .row, h2.imaged .row {
+      gap: 15px;
+    }
+    .animated-arrow-img.big-size {
+      width: 52px;
+      height: 52px;
+      img {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-section {
+    .h2 {
+      font-size: 28px;
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .form-section {
+    .h2 {
+      font-size: 26px;
+    }
+  }
 }
